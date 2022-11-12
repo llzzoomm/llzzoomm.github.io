@@ -970,7 +970,7 @@
 <p>JDBC   就是使用Java语言操作关系型数据库的一套API</p>
 <p>全称：( Java DataBase Connectivity ) Java 数据库连接</p>
 </blockquote>
-<p><img src="https://github.com/llzzoomm/images/blob/main/1556823-20181220220551145-1198958872%20-%20%E5%89%AF%E6%9C%AC.png"><br><img src="https://github.com/llzzoomm/images/blob/main/1556823-20181220220551145-1198958872%20-%20%E5%89%AF%E6%9C%AC.png"><br><a target="_blank" rel="noopener" href="https://github.com/llzzoomm/images/blob/main/1556823-20181220220551145-1198958872%20-%20%E5%89%AF%E6%9C%AC.png"></a></p>
+<p><img src="https://github.com/llzzoomm/images/blob/main/1556823-20181220220551145-1198958872%20-%20%E5%89%AF%E6%9C%AC.png"><br><a target="_blank" rel="noopener" href="https://github.com/llzzoomm/images/blob/main/1556823-20181220220551145-1198958872%20-%20%E5%89%AF%E6%9C%AC.png"></a><br><a target="_blank" rel="noopener" href="https://github.com/llzzoomm/images/raw/main/1556823-20181220220551145-1198958872%20-%20%E5%89%AF%E6%9C%AC.png"></a></p>
 <p>我们开发的同一套Java代码是无法操作不同的关系型数据库，因为每一个关系型数据库的底层实现细节都不一样。如果这样，问题就很大了，在公司中可以在开发阶段使用的是MySQL数据库，而上线时公司最终选用oracle数据库，我们就需要对代码进行大批量修改，这显然并不是我们想看到的。我们要做到的是同一套Java代码操作不同的关系型数据库，而此时sun公司就指定了一套标准接口（JDBC），JDBC中定义了所有操作关系型数据库的规则。众所周知接口是无法直接使用的，我们需要使用接口的实现类，而这套实现类（称之为：驱动）就由各自的数据库厂商给出。</p>
 <h3 id="1-2-JDBC本质"><a href="#1-2-JDBC本质" class="headerlink" title="1.2  JDBC本质"></a>1.2  JDBC本质</h3><ul>
 <li>官方（sun公司）定义的一套操作所有关系型数据库的规则，即接口</li>
