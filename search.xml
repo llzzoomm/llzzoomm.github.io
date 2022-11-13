@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>springBoot</title>
+      <link href="/2022/11/13/springboot/"/>
+      <url>/2022/11/13/springboot/</url>
+      
+        <content type="html"><![CDATA[<p>##springBoot项目的创建<br>创建sringboot项目的方式<br>###1.通过idea 基础流程创建<br>###2.通过直接官网创建</p><ul><li>以上两种都是通过访问国外网站进行访问，有时候访问不了，或者访问很慢<br>###3.基于aliyun进行访问国内网站yyds,值得推荐<blockquote><ul><li>如果创建的版本号不是心仪版本可以在，xml文件更改</li></ul></blockquote></li><li>*</li></ul><blockquote><p>`</p><p>`**</p></blockquote><pre><code>代码块</code></pre><pre><code>`static`</code></pre><p><a href="https://github.com/llzzoomm/images/raw/main/image-20210721184354001.png"></a><br><a href="https://github.com/llzzoomm/images/raw/main/image-20210721184354001.png">https://github.com/llzzoomm/images/raw/main/image-20210721184354001.png</a></p><ul><li></li><li></li><li></li></ul><ol><li></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/2022/11/12/jdbc/"/>
       <url>/2022/11/12/jdbc/</url>
