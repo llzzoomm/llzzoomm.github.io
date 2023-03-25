@@ -1,309 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>newpapername</title>
-    <url>/2023/03/25/newpapername/</url>
-    <content><![CDATA[<p>11111</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/01/14/rui-ji-wai-mai-day01/</url>
-    <content><![CDATA[<h1 id="瑞吉外卖day01"><a href="#瑞吉外卖day01" class="headerlink" title="瑞吉外卖day01"></a>瑞吉外卖day01</h1><h3 id="1-软件开发整体介绍"><a href="#1-软件开发整体介绍" class="headerlink" title="1.软件开发整体介绍"></a>1.软件开发整体介绍</h3><h4 id="软件开发流程"><a href="#软件开发流程" class="headerlink" title="软件开发流程"></a>软件开发流程</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123130756-1733012196.png" alt="image"></p>
-<h4 id="角色分工"><a href="#角色分工" class="headerlink" title="角色分工"></a>角色分工</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123150314-650202841.png" alt="image"></p>
-<h4 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123204505-1863229436.png" alt="image"></p>
-<h3 id="2-瑞吉外卖项目介绍"><a href="#2-瑞吉外卖项目介绍" class="headerlink" title="2.瑞吉外卖项目介绍"></a>2.瑞吉外卖项目介绍</h3><h4 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123211801-1044758170.png" alt="image"></p>
-<h4 id="产品原型展示"><a href="#产品原型展示" class="headerlink" title="产品原型展示"></a>产品原型展示</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123219726-2084944276.png" alt="image"></p>
-<h4 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123231626-575162095.png" alt="image"></p>
-<h4 id="功能架构"><a href="#功能架构" class="headerlink" title="功能架构"></a>功能架构</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123239027-1984679471.png" alt="image"></p>
-<h4 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123248931-1123357008.png" alt="image"></p>
-<h3 id="3-环境搭建"><a href="#3-环境搭建" class="headerlink" title="3.环境搭建"></a>3.环境搭建</h3><h4 id="数据库环境搭建"><a href="#数据库环境搭建" class="headerlink" title="数据库环境搭建"></a>数据库环境搭建</h4><ul>
-<li><h5 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h5></li>
-</ul>
-<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123257302-1357036713.png" alt="image"></p>
-<ul>
-<li><h5 id="执行SQL脚本"><a href="#执行SQL脚本" class="headerlink" title="执行SQL脚本"></a>执行SQL脚本</h5><p>使用命令执行SQL脚本时，需要将脚本文件放在非中文目录下面</p>
-<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123303864-477395673.png" alt="image"></p>
-</li>
-<li><h5 id="数据表"><a href="#数据表" class="headerlink" title="数据表"></a>数据表</h5><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123310731-63671494.png" alt="image"></p>
-</li>
-</ul>
-<h4 id="MAVEN项目搭建"><a href="#MAVEN项目搭建" class="headerlink" title="MAVEN项目搭建"></a>MAVEN项目搭建</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123316764-1806838277.png" alt="image"></p>
-<h5 id="解决IDEA加载maven工程缓慢"><a href="#解决IDEA加载maven工程缓慢" class="headerlink" title="解决IDEA加载maven工程缓慢"></a>解决IDEA加载maven工程缓慢</h5><p>VM Options:-DarchetypeCatalog=local</p>
-<h5 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h5><pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.4.5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>relativePath</span><span class="token punctuation">/></span></span> <span class="token comment" spellcheck="true">&lt;!-- lookup parent from repository --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.ka<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>reggie<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>java.version</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>java.version</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>compile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.baomidou<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>mybatis-plus-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.4.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.projectlombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>lombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.18.20<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>fastjson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.2.76<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>commons-lang<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>commons-lang<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>mysql<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>mysql-connector-java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>druid-spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.1.23<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
-
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.4.5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">></span></span>
-</code></pre>
-<h5 id="application-yml"><a href="#application-yml" class="headerlink" title="application.yml"></a>application.yml</h5><pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">server</span><span class="token punctuation">:</span>
-  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8080</span>
-<span class="token key atrule">spring</span><span class="token punctuation">:</span>
-  <span class="token key atrule">application</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#应用名称</span>
-    <span class="token key atrule">name</span><span class="token punctuation">:</span> reggie_take_out
-  <span class="token key atrule">datasource</span><span class="token punctuation">:</span>
-    <span class="token key atrule">druid</span><span class="token punctuation">:</span>
-      <span class="token key atrule">driver-class-name</span><span class="token punctuation">:</span> com.mysql.cj.jdbc.Driver
-      <span class="token key atrule">url</span><span class="token punctuation">:</span> jdbc<span class="token punctuation">:</span>mysql<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>3306/reggie<span class="token punctuation">?</span>serverTimezone=Asia/Shanghai<span class="token important">&amp;useUnicode</span>=true<span class="token important">&amp;characterEncoding</span>=utf<span class="token punctuation">-</span>8<span class="token important">&amp;zeroDateTimeBehavior</span>=convertToNull<span class="token important">&amp;useSSL</span>=false<span class="token important">&amp;allowPublicKeyRetrieval</span>=true
-      <span class="token key atrule">username</span><span class="token punctuation">:</span> root
-      <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token number">1234</span>
-<span class="token key atrule">mybatis-plus</span><span class="token punctuation">:</span>
-  <span class="token key atrule">configuration</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#address_book->AddressBook</span>
-    <span class="token comment" spellcheck="true">#在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射</span>
-    <span class="token key atrule">map-underscore-to-camel-case</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-    <span class="token key atrule">log-impl</span><span class="token punctuation">:</span> org.apache.ibatis.logging.stdout.StdOutImpl
-  <span class="token key atrule">global-config</span><span class="token punctuation">:</span>
-    <span class="token key atrule">db-config</span><span class="token punctuation">:</span>
-      <span class="token key atrule">id-type</span><span class="token punctuation">:</span> ASSIGN_ID
-</code></pre>
-<h5 id="配置application启动类"><a href="#配置application启动类" class="headerlink" title="配置application启动类"></a>配置application启动类</h5><pre><code>@Slf4j
-@SpringBootApplication
-public class ReggieApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(ReggieApplication.class,args);
-        log.info("项目启动成功！！！");
-    }
-}
-</code></pre>
-<h5 id="把前端静态资源放在resource目录"><a href="#把前端静态资源放在resource目录" class="headerlink" title="把前端静态资源放在resource目录"></a>把前端静态资源放在resource目录</h5><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123331936-203759622.png" alt="image"></p>
-<h5 id="设置静态资源映射"><a href="#设置静态资源映射" class="headerlink" title="设置静态资源映射"></a>设置静态资源映射</h5><pre><code>@Slf4j
-@Configuration
-public class WebMvcConfig extends WebMvcConfigurationSupport {
-    @Override
-    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-        log.info("开始静态资源映射");
-        registry.addResourceHandler("/backend/**").addResourceLocations("classpath:/backend/");
-        registry.addResourceHandler("/front/**").addResourceLocations("classpath:/front/");
-    }
-}
-</code></pre>
-<h5 id="启动项目，访问http-localhost-8080-backend-index-html"><a href="#启动项目，访问http-localhost-8080-backend-index-html" class="headerlink" title="启动项目，访问http://localhost:8080/backend/index.html"></a>启动项目，访问<a href="http://localhost:8080/backend/index.html">http://localhost:8080/backend/index.html</a></h5><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123339931-1757305467.png" alt="image"></p>
-<h3 id="4-后台登录功能开发"><a href="#4-后台登录功能开发" class="headerlink" title="4.后台登录功能开发"></a>4.后台登录功能开发</h3><h5 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h5><ul>
-<li><p>登录页面展示</p>
-<p>(<a href="http://localhost:8080/backend/page/login/login.html">http://localhost:8080/backend/page/login/login.html</a>)</p>
-<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123347587-234330237.png" alt="image"></p>
-</li>
-<li><p>查看登录请求信息</p>
-<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123358600-1619688452.png" alt="image"></p>
-</li>
-<li><p>数据模型（employee）</p>
-<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123410033-1787558885.png" alt="image"></p>
-</li>
-</ul>
-<h5 id="代码开发"><a href="#代码开发" class="headerlink" title="代码开发"></a>代码开发</h5><ul>
-<li><p>创建实体类Employee,和emplyee表进行映射</p>
-<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Data</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
-
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">long</span> serialVersionUID <span class="token operator">=</span> 1L<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> Long id<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> String username<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> String password<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> String phone<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> String sex<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> String idNumber<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//身份证号码</span>
-
-    <span class="token keyword">private</span> Integer status<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> LocalDateTime createTime<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> LocalDateTime updateTime<span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span>fill <span class="token operator">=</span> FieldFill<span class="token punctuation">.</span>INSERT<span class="token punctuation">)</span>
-    <span class="token keyword">private</span> Long createUser<span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span>fill <span class="token operator">=</span> FieldFill<span class="token punctuation">.</span>INSERT_UPDATE<span class="token punctuation">)</span>
-    <span class="token keyword">private</span> Long updateUser<span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-<li><p>创建Controller，Service，Mapper</p>
-<h6 id="employeeMapper"><a href="#employeeMapper" class="headerlink" title="employeeMapper"></a>employeeMapper</h6><pre class=" language-Java"><code class="language-Java">@Mapper
-public interface EmployeeMapper extends BaseMapper<Employee> {
-}
-</code></pre>
-</li>
-<li><p>导入返回结果类R</p>
-<ul>
-<li>此类是一个通用结果类，服务端响应的所有结果最终都会包装成一个统一的实体类给前端页面</li>
-</ul>
-</li>
-</ul>
-<pre><code>@Data
-public class R&lt;T&gt; {
-
-    private Integer code; //编码：1成功，0和其它数字为失败
-
-    private String msg; //错误信息
-
-    private T data; //数据
-
-    private Map map = new HashMap(); //动态数据
-
-    public static &lt;T&gt; R&lt;T&gt; success(T object) {
-        R&lt;T&gt; r = new R&lt;T&gt;();
-        r.data = object;
-        r.code = 1;
-        return r;
-    }
-
-    public static &lt;T&gt; R&lt;T&gt; error(String msg) {
-        R r = new R();
-        r.msg = msg;
-        r.code = 0;
-        return r;
-    }
-
-    public R&lt;T&gt; add(String key, Object value) {
-        this.map.put(key, value);
-        return this;
-    }
-
-}
-</code></pre>
-<ul>
-<li><p>在Controller中创建登录方法</p>
-<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123423471-562739216.png" alt="image"></p>
-</li>
-</ul>
-<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123427122-1922929796.png" alt="image"></p>
-<pre><code>@Slf4j
-@RestController
-@RequestMapping("/employee")
-public class EmployeeController {
-    @Autowired
-    private EmployeeServiceImpl employeeService;
-
-    @PostMapping("/login")
-    public R&lt;Employee&gt; logib(HttpServletRequest request, @RequestBody Employee employee) {
-
-        //1、将页面提交的密码进行md5加密处理
-        String password = employee.getPassword();
-        password = DigestUtils.md5DigestAsHex(password.getBytes());
-
-        //2、根据页面提交的用户名来查数据库
-        LambdaQueryWrapper&lt;Employee&gt; queryWrapper = new LambdaQueryWrapper&lt;&gt;();
-        queryWrapper.eq(Employee::getUsername, employee.getUsername());
-        Employee emp = employeeService.getOne(queryWrapper);
-
-        //3、如果没有查询到则返回失败结果
-        if (emp == null) {
-            return R.error("登录失败");
-        }
-
-        //4、比对密码，如果不一致则返回失败结果
-        if (!emp.getPassword().equals(password)) {
-            return R.error("密码错误");
-        }
-
-        //5、查看员工状态，如果已禁用状态，则返回员工已禁用结果
-        if (emp.getStatus() == 0) {
-            return R.error("账号已禁用");
-        }
-
-        //6、登录成功，将用户id存入Session并返回成功结果
-        request.getSession().setAttribute("employee", emp.getId());
-        return R.success(emp);
-    }
-}
-</code></pre>
-<h3 id="5-后台退出功能开发"><a href="#5-后台退出功能开发" class="headerlink" title="5.后台退出功能开发"></a>5.后台退出功能开发</h3><h5 id="需求分析-1"><a href="#需求分析-1" class="headerlink" title="需求分析"></a>需求分析</h5><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123437517-88337477.png" alt="image"></p>
-<h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h5><p>在Controller中创建退出方法</p>
-<pre class=" language-Java"><code class="language-Java">    //员工退出
-    @PostMapping("/logout")
-    public R<String> logout(HttpServletRequest request){
-        //清理Session中保存的当前员工登录的id
-        request.getSession().removeAttribute("employee");
-        return R.success("退出成功");
-    }
-</code></pre>
-]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/2023/01/14/xml/</url>
     <content><![CDATA[<h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><h3 id="XML-1"><a href="#XML-1" class="headerlink" title="XML"></a>XML</h3><h5 id="xml概述"><a href="#xml概述" class="headerlink" title="xml概述"></a>xml概述</h5><ul>
@@ -629,11 +326,6 @@ XML文件中可以存在以下特殊字符
 <p>②定义原始类，继承父类，定义功能。</p>
 <p>③定义装饰类，继承父类，包装原始类，增强功能！！</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/01/14/java-huan-chong-liu/</url>
-    <content><![CDATA[<h1 id="java缓冲流"><a href="#java缓冲流" class="headerlink" title="java缓冲流"></a>java缓冲流</h1>]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1793,6 +1485,54 @@ XML文件中可以存在以下特殊字符
 ]]></content>
   </entry>
   <entry>
+    <title></title>
+    <url>/2023/01/14/java-huan-chong-liu/</url>
+    <content><![CDATA[<h1 id="java缓冲流"><a href="#java缓冲流" class="headerlink" title="java缓冲流"></a>java缓冲流</h1>]]></content>
+  </entry>
+  <entry>
+    <title>my-first-blog</title>
+    <url>/2022/11/08/my-first-blog/</url>
+    <content><![CDATA[<h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><p><strong>今日目标：</strong></p>
+<blockquote>
+<ul>
+<li>完成MySQL的安装及登陆基本操作</li>
+<li>能通过SQL对数据库进行CRUD</li>
+<li>能通过SQL对表进行CRUD</li>
+<li>能通过SQL对数据进行CRUD</li>
+</ul>
+</blockquote>
+<h2 id="1，数据库相关概念"><a href="#1，数据库相关概念" class="headerlink" title="1，数据库相关概念"></a>1，数据库相关概念</h2><p>以前我们做系统，数据持久化的存储采用的是文件存储。存储到文件中可以达到系统关闭数据不会丢失的效果，当然文件存储也有它的弊端。</p>
+<p>假设在文件中存储以下的数据：</p>
+<pre><code>姓名    年龄    性别    住址
+张三    23    男    北京西三旗
+李四    24    女    北京西二旗
+王五    25    男    西安软件新城
+</code></pre>
+<p>现要修改李四这条数据的性别数据改为男，我们现学习的IO技术可以通过将所有的数据读取到内存中，然后进行修改再存到该文件中。通过这种方式操作存在很大问题，现在只有三条数据，如果文件中存储1T的数据，那么就会发现内存根本就存储不了。</p>
+<p>现需要既能持久化存储数据，也要能避免上述问题的技术使用在我们的系统中。数据库就是这样的一门技术。</p>
+<h3 id="1-1-数据库"><a href="#1-1-数据库" class="headerlink" title="1.1  数据库"></a>1.1  数据库</h3><ul>
+<li><p>==存储和管理数据的仓库，数据是有组织的进行存储。==</p>
+</li>
+<li><p>数据库英文名是 DataBase，简称DB。</p>
+</li>
+</ul>
+<p>数据库就是将数据存储在硬盘上，可以达到持久化存储的效果。那又是如何解决上述问题的？使用数据库管理系统。</p>
+<h3 id="1-2-数据库管理系统"><a href="#1-2-数据库管理系统" class="headerlink" title="1.2  数据库管理系统"></a>1.2  数据库管理系统</h3><ul>
+<li>==管理数据库的大型软件==</li>
+<li>英文：DataBase Management System，简称 DBMS</li>
+</ul>
+<p>在电脑上安装了数据库管理系统后，就可以通过数据库管理系统创建数据库来存储数据，也可以通过该系统对数据库中的数据进行数据的增删改查相关的操作。我们平时说的MySQL数据库其实是MySQL数据库管理系统。</p>
+<p><img src="https://github.com/llzzoomm/images/raw/main/image-20210721184354001.png" alt="这是一张图片"></p>
+<p>通过上面的描述，大家应该已经知道了 <code>数据库管理系统</code> 和 <code>数据库</code> 的关系。那么有有哪些常见的数据库管理系统呢？</p>
+]]></content>
+      <categories>
+        <category>MySQL基础</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2022/11/16/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -1812,6 +1552,309 @@ XML文件中可以存在以下特殊字符
       <categories>
         <category>java</category>
       </categories>
+  </entry>
+  <entry>
+    <title>newpapername</title>
+    <url>/2023/03/25/newpapername/</url>
+    <content><![CDATA[<p>11111</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/01/14/rui-ji-wai-mai-day01/</url>
+    <content><![CDATA[<h1 id="瑞吉外卖day01"><a href="#瑞吉外卖day01" class="headerlink" title="瑞吉外卖day01"></a>瑞吉外卖day01</h1><h3 id="1-软件开发整体介绍"><a href="#1-软件开发整体介绍" class="headerlink" title="1.软件开发整体介绍"></a>1.软件开发整体介绍</h3><h4 id="软件开发流程"><a href="#软件开发流程" class="headerlink" title="软件开发流程"></a>软件开发流程</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123130756-1733012196.png" alt="image"></p>
+<h4 id="角色分工"><a href="#角色分工" class="headerlink" title="角色分工"></a>角色分工</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123150314-650202841.png" alt="image"></p>
+<h4 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123204505-1863229436.png" alt="image"></p>
+<h3 id="2-瑞吉外卖项目介绍"><a href="#2-瑞吉外卖项目介绍" class="headerlink" title="2.瑞吉外卖项目介绍"></a>2.瑞吉外卖项目介绍</h3><h4 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123211801-1044758170.png" alt="image"></p>
+<h4 id="产品原型展示"><a href="#产品原型展示" class="headerlink" title="产品原型展示"></a>产品原型展示</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123219726-2084944276.png" alt="image"></p>
+<h4 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123231626-575162095.png" alt="image"></p>
+<h4 id="功能架构"><a href="#功能架构" class="headerlink" title="功能架构"></a>功能架构</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123239027-1984679471.png" alt="image"></p>
+<h4 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123248931-1123357008.png" alt="image"></p>
+<h3 id="3-环境搭建"><a href="#3-环境搭建" class="headerlink" title="3.环境搭建"></a>3.环境搭建</h3><h4 id="数据库环境搭建"><a href="#数据库环境搭建" class="headerlink" title="数据库环境搭建"></a>数据库环境搭建</h4><ul>
+<li><h5 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h5></li>
+</ul>
+<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123257302-1357036713.png" alt="image"></p>
+<ul>
+<li><h5 id="执行SQL脚本"><a href="#执行SQL脚本" class="headerlink" title="执行SQL脚本"></a>执行SQL脚本</h5><p>使用命令执行SQL脚本时，需要将脚本文件放在非中文目录下面</p>
+<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123303864-477395673.png" alt="image"></p>
+</li>
+<li><h5 id="数据表"><a href="#数据表" class="headerlink" title="数据表"></a>数据表</h5><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123310731-63671494.png" alt="image"></p>
+</li>
+</ul>
+<h4 id="MAVEN项目搭建"><a href="#MAVEN项目搭建" class="headerlink" title="MAVEN项目搭建"></a>MAVEN项目搭建</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123316764-1806838277.png" alt="image"></p>
+<h5 id="解决IDEA加载maven工程缓慢"><a href="#解决IDEA加载maven工程缓慢" class="headerlink" title="解决IDEA加载maven工程缓慢"></a>解决IDEA加载maven工程缓慢</h5><p>VM Options:-DarchetypeCatalog=local</p>
+<h5 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h5><pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.4.5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>relativePath</span><span class="token punctuation">/></span></span> <span class="token comment" spellcheck="true">&lt;!-- lookup parent from repository --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.ka<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>reggie<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>java.version</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>java.version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>compile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.baomidou<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>mybatis-plus-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.4.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.projectlombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>lombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.18.20<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>fastjson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.2.76<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>commons-lang<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>commons-lang<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>mysql<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>mysql-connector-java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>druid-spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.1.23<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.4.5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">></span></span>
+</code></pre>
+<h5 id="application-yml"><a href="#application-yml" class="headerlink" title="application.yml"></a>application.yml</h5><pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#应用名称</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> reggie_take_out
+  <span class="token key atrule">datasource</span><span class="token punctuation">:</span>
+    <span class="token key atrule">druid</span><span class="token punctuation">:</span>
+      <span class="token key atrule">driver-class-name</span><span class="token punctuation">:</span> com.mysql.cj.jdbc.Driver
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> jdbc<span class="token punctuation">:</span>mysql<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>3306/reggie<span class="token punctuation">?</span>serverTimezone=Asia/Shanghai<span class="token important">&amp;useUnicode</span>=true<span class="token important">&amp;characterEncoding</span>=utf<span class="token punctuation">-</span>8<span class="token important">&amp;zeroDateTimeBehavior</span>=convertToNull<span class="token important">&amp;useSSL</span>=false<span class="token important">&amp;allowPublicKeyRetrieval</span>=true
+      <span class="token key atrule">username</span><span class="token punctuation">:</span> root
+      <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token number">1234</span>
+<span class="token key atrule">mybatis-plus</span><span class="token punctuation">:</span>
+  <span class="token key atrule">configuration</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#address_book->AddressBook</span>
+    <span class="token comment" spellcheck="true">#在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射</span>
+    <span class="token key atrule">map-underscore-to-camel-case</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">log-impl</span><span class="token punctuation">:</span> org.apache.ibatis.logging.stdout.StdOutImpl
+  <span class="token key atrule">global-config</span><span class="token punctuation">:</span>
+    <span class="token key atrule">db-config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">id-type</span><span class="token punctuation">:</span> ASSIGN_ID
+</code></pre>
+<h5 id="配置application启动类"><a href="#配置application启动类" class="headerlink" title="配置application启动类"></a>配置application启动类</h5><pre><code>@Slf4j
+@SpringBootApplication
+public class ReggieApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ReggieApplication.class,args);
+        log.info("项目启动成功！！！");
+    }
+}
+</code></pre>
+<h5 id="把前端静态资源放在resource目录"><a href="#把前端静态资源放在resource目录" class="headerlink" title="把前端静态资源放在resource目录"></a>把前端静态资源放在resource目录</h5><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123331936-203759622.png" alt="image"></p>
+<h5 id="设置静态资源映射"><a href="#设置静态资源映射" class="headerlink" title="设置静态资源映射"></a>设置静态资源映射</h5><pre><code>@Slf4j
+@Configuration
+public class WebMvcConfig extends WebMvcConfigurationSupport {
+    @Override
+    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+        log.info("开始静态资源映射");
+        registry.addResourceHandler("/backend/**").addResourceLocations("classpath:/backend/");
+        registry.addResourceHandler("/front/**").addResourceLocations("classpath:/front/");
+    }
+}
+</code></pre>
+<h5 id="启动项目，访问http-localhost-8080-backend-index-html"><a href="#启动项目，访问http-localhost-8080-backend-index-html" class="headerlink" title="启动项目，访问http://localhost:8080/backend/index.html"></a>启动项目，访问<a href="http://localhost:8080/backend/index.html">http://localhost:8080/backend/index.html</a></h5><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123339931-1757305467.png" alt="image"></p>
+<h3 id="4-后台登录功能开发"><a href="#4-后台登录功能开发" class="headerlink" title="4.后台登录功能开发"></a>4.后台登录功能开发</h3><h5 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h5><ul>
+<li><p>登录页面展示</p>
+<p>(<a href="http://localhost:8080/backend/page/login/login.html">http://localhost:8080/backend/page/login/login.html</a>)</p>
+<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123347587-234330237.png" alt="image"></p>
+</li>
+<li><p>查看登录请求信息</p>
+<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123358600-1619688452.png" alt="image"></p>
+</li>
+<li><p>数据模型（employee）</p>
+<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123410033-1787558885.png" alt="image"></p>
+</li>
+</ul>
+<h5 id="代码开发"><a href="#代码开发" class="headerlink" title="代码开发"></a>代码开发</h5><ul>
+<li><p>创建实体类Employee,和emplyee表进行映射</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Data</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">long</span> serialVersionUID <span class="token operator">=</span> 1L<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> Long id<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String username<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String password<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String phone<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String sex<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String idNumber<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//身份证号码</span>
+
+    <span class="token keyword">private</span> Integer status<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> LocalDateTime createTime<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> LocalDateTime updateTime<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span>fill <span class="token operator">=</span> FieldFill<span class="token punctuation">.</span>INSERT<span class="token punctuation">)</span>
+    <span class="token keyword">private</span> Long createUser<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span>fill <span class="token operator">=</span> FieldFill<span class="token punctuation">.</span>INSERT_UPDATE<span class="token punctuation">)</span>
+    <span class="token keyword">private</span> Long updateUser<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>创建Controller，Service，Mapper</p>
+<h6 id="employeeMapper"><a href="#employeeMapper" class="headerlink" title="employeeMapper"></a>employeeMapper</h6><pre class=" language-Java"><code class="language-Java">@Mapper
+public interface EmployeeMapper extends BaseMapper<Employee> {
+}
+</code></pre>
+</li>
+<li><p>导入返回结果类R</p>
+<ul>
+<li>此类是一个通用结果类，服务端响应的所有结果最终都会包装成一个统一的实体类给前端页面</li>
+</ul>
+</li>
+</ul>
+<pre><code>@Data
+public class R&lt;T&gt; {
+
+    private Integer code; //编码：1成功，0和其它数字为失败
+
+    private String msg; //错误信息
+
+    private T data; //数据
+
+    private Map map = new HashMap(); //动态数据
+
+    public static &lt;T&gt; R&lt;T&gt; success(T object) {
+        R&lt;T&gt; r = new R&lt;T&gt;();
+        r.data = object;
+        r.code = 1;
+        return r;
+    }
+
+    public static &lt;T&gt; R&lt;T&gt; error(String msg) {
+        R r = new R();
+        r.msg = msg;
+        r.code = 0;
+        return r;
+    }
+
+    public R&lt;T&gt; add(String key, Object value) {
+        this.map.put(key, value);
+        return this;
+    }
+
+}
+</code></pre>
+<ul>
+<li><p>在Controller中创建登录方法</p>
+<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123423471-562739216.png" alt="image"></p>
+</li>
+</ul>
+<p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123427122-1922929796.png" alt="image"></p>
+<pre><code>@Slf4j
+@RestController
+@RequestMapping("/employee")
+public class EmployeeController {
+    @Autowired
+    private EmployeeServiceImpl employeeService;
+
+    @PostMapping("/login")
+    public R&lt;Employee&gt; logib(HttpServletRequest request, @RequestBody Employee employee) {
+
+        //1、将页面提交的密码进行md5加密处理
+        String password = employee.getPassword();
+        password = DigestUtils.md5DigestAsHex(password.getBytes());
+
+        //2、根据页面提交的用户名来查数据库
+        LambdaQueryWrapper&lt;Employee&gt; queryWrapper = new LambdaQueryWrapper&lt;&gt;();
+        queryWrapper.eq(Employee::getUsername, employee.getUsername());
+        Employee emp = employeeService.getOne(queryWrapper);
+
+        //3、如果没有查询到则返回失败结果
+        if (emp == null) {
+            return R.error("登录失败");
+        }
+
+        //4、比对密码，如果不一致则返回失败结果
+        if (!emp.getPassword().equals(password)) {
+            return R.error("密码错误");
+        }
+
+        //5、查看员工状态，如果已禁用状态，则返回员工已禁用结果
+        if (emp.getStatus() == 0) {
+            return R.error("账号已禁用");
+        }
+
+        //6、登录成功，将用户id存入Session并返回成功结果
+        request.getSession().setAttribute("employee", emp.getId());
+        return R.success(emp);
+    }
+}
+</code></pre>
+<h3 id="5-后台退出功能开发"><a href="#5-后台退出功能开发" class="headerlink" title="5.后台退出功能开发"></a>5.后台退出功能开发</h3><h5 id="需求分析-1"><a href="#需求分析-1" class="headerlink" title="需求分析"></a>需求分析</h5><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123437517-88337477.png" alt="image"></p>
+<h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h5><p>在Controller中创建退出方法</p>
+<pre class=" language-Java"><code class="language-Java">    //员工退出
+    @PostMapping("/logout")
+    public R<String> logout(HttpServletRequest request){
+        //清理Session中保存的当前员工登录的id
+        request.getSession().removeAttribute("employee");
+        return R.success("退出成功");
+    }
+</code></pre>
+]]></content>
   </entry>
   <entry>
     <title>springBoot</title>
@@ -1844,44 +1887,6 @@ XML文件中可以存在以下特殊字符
 <ol>
 <li></li>
 </ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>my-first-blog</title>
-    <url>/2022/11/08/my-first-blog/</url>
-    <content><![CDATA[<p>你爹来啦狗</p>
-<h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><p><strong>今日目标：</strong></p>
-<blockquote>
-<ul>
-<li>完成MySQL的安装及登陆基本操作</li>
-<li>能通过SQL对数据库进行CRUD</li>
-<li>能通过SQL对表进行CRUD</li>
-<li>能通过SQL对数据进行CRUD</li>
-</ul>
-</blockquote>
-<h2 id="1，数据库相关概念"><a href="#1，数据库相关概念" class="headerlink" title="1，数据库相关概念"></a>1，数据库相关概念</h2><p>以前我们做系统，数据持久化的存储采用的是文件存储。存储到文件中可以达到系统关闭数据不会丢失的效果，当然文件存储也有它的弊端。</p>
-<p>假设在文件中存储以下的数据：</p>
-<pre><code>姓名    年龄    性别    住址
-张三    23    男    北京西三旗
-李四    24    女    北京西二旗
-王五    25    男    西安软件新城
-</code></pre>
-<p>现要修改李四这条数据的性别数据改为男，我们现学习的IO技术可以通过将所有的数据读取到内存中，然后进行修改再存到该文件中。通过这种方式操作存在很大问题，现在只有三条数据，如果文件中存储1T的数据，那么就会发现内存根本就存储不了。</p>
-<p>现需要既能持久化存储数据，也要能避免上述问题的技术使用在我们的系统中。数据库就是这样的一门技术。</p>
-<h3 id="1-1-数据库"><a href="#1-1-数据库" class="headerlink" title="1.1  数据库"></a>1.1  数据库</h3><ul>
-<li><p>==存储和管理数据的仓库，数据是有组织的进行存储。==</p>
-</li>
-<li><p>数据库英文名是 DataBase，简称DB。</p>
-</li>
-</ul>
-<p>数据库就是将数据存储在硬盘上，可以达到持久化存储的效果。那又是如何解决上述问题的？使用数据库管理系统。</p>
-<h3 id="1-2-数据库管理系统"><a href="#1-2-数据库管理系统" class="headerlink" title="1.2  数据库管理系统"></a>1.2  数据库管理系统</h3><ul>
-<li>==管理数据库的大型软件==</li>
-<li>英文：DataBase Management System，简称 DBMS</li>
-</ul>
-<p>在电脑上安装了数据库管理系统后，就可以通过数据库管理系统创建数据库来存储数据，也可以通过该系统对数据库中的数据进行数据的增删改查相关的操作。我们平时说的MySQL数据库其实是MySQL数据库管理系统。</p>
-<p><img src="https://github.com/llzzoomm/images/raw/main/image-20210721184354001.png" alt="这是一张图片"></p>
-<p>通过上面的描述，大家应该已经知道了 <code>数据库管理系统</code> 和 <code>数据库</code> 的关系。那么有有哪些常见的数据库管理系统呢？</p>
 ]]></content>
   </entry>
 </search>
