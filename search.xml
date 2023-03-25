@@ -2,13 +2,13 @@
 <search>
   <entry>
     <title>newpapername</title>
-    <url>/blog/mylog/2023/03/25/newpapername/</url>
+    <url>/2023/03/25/newpapername/</url>
     <content><![CDATA[<p>11111</p>
 ]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/blog/mylog/2023/01/14/rui-ji-wai-mai-day01/</url>
+    <url>/2023/01/14/rui-ji-wai-mai-day01/</url>
     <content><![CDATA[<h1 id="瑞吉外卖day01"><a href="#瑞吉外卖day01" class="headerlink" title="瑞吉外卖day01"></a>瑞吉外卖day01</h1><h3 id="1-软件开发整体介绍"><a href="#1-软件开发整体介绍" class="headerlink" title="1.软件开发整体介绍"></a>1.软件开发整体介绍</h3><h4 id="软件开发流程"><a href="#软件开发流程" class="headerlink" title="软件开发流程"></a>软件开发流程</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123130756-1733012196.png" alt="image"></p>
 <h4 id="角色分工"><a href="#角色分工" class="headerlink" title="角色分工"></a>角色分工</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123150314-650202841.png" alt="image"></p>
 <h4 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123204505-1863229436.png" alt="image"></p>
@@ -305,7 +305,7 @@ public class EmployeeController {
   </entry>
   <entry>
     <title></title>
-    <url>/blog/mylog/2023/01/14/xml/</url>
+    <url>/2023/01/14/xml/</url>
     <content><![CDATA[<h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><h3 id="XML-1"><a href="#XML-1" class="headerlink" title="XML"></a>XML</h3><h5 id="xml概述"><a href="#xml概述" class="headerlink" title="xml概述"></a>xml概述</h5><ul>
 <li><p>XML是可扩展标记语言（eXtensible Markup Language）的缩写，它是是一种数据表示格式，可以描述非常复杂的数据结构，常用于传输和存储数据。</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
@@ -632,12 +632,12 @@ XML文件中可以存在以下特殊字符
   </entry>
   <entry>
     <title></title>
-    <url>/blog/mylog/2023/01/14/java-huan-chong-liu/</url>
+    <url>/2023/01/14/java-huan-chong-liu/</url>
     <content><![CDATA[<h1 id="java缓冲流"><a href="#java缓冲流" class="headerlink" title="java缓冲流"></a>java缓冲流</h1>]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/blog/mylog/2022/11/17/maven-gao-ji/</url>
+    <url>/2022/11/17/maven-gao-ji/</url>
     <content><![CDATA[<h2 id="Maven高级"><a href="#Maven高级" class="headerlink" title="Maven高级"></a>Maven高级</h2><p><strong>今日目标</strong></p>
 <blockquote>
 <ul>
@@ -1794,7 +1794,7 @@ XML文件中可以存在以下特殊字符
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/blog/mylog/2022/11/16/hello-world/</url>
+    <url>/2022/11/16/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
 </code></pre>
@@ -1812,7 +1812,7 @@ XML文件中可以存在以下特殊字符
   </entry>
   <entry>
     <title>springBoot</title>
-    <url>/blog/mylog/2022/11/13/springboot/</url>
+    <url>/2022/11/13/springboot/</url>
     <content><![CDATA[<p>##springBoot项目的创建<br>创建sringboot项目的方式<br>###1.通过idea 基础流程创建<br>###2.通过直接官网创建</p>
 <ul>
 <li>以上两种都是通过访问国外网站进行访问，有时候访问不了，或者访问很慢<br>###3.基于aliyun进行访问国内网站yyds,值得推荐<blockquote>
@@ -1845,7 +1845,7 @@ XML文件中可以存在以下特殊字符
   </entry>
   <entry>
     <title>my-first-blog</title>
-    <url>/blog/mylog/2022/11/08/my-first-blog/</url>
+    <url>/2022/11/08/my-first-blog/</url>
     <content><![CDATA[<p>你爹来啦狗</p>
 <h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><p><strong>今日目标：</strong></p>
 <blockquote>
