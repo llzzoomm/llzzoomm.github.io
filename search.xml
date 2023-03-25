@@ -903,7 +903,9 @@
   <entry>
     <title>newpapername</title>
     <url>/2023/03/25/newpapername/</url>
-    <content><![CDATA[<p>11111</p>
+    <content><![CDATA[<h1 id="new"><a href="#new" class="headerlink" title="new"></a>new</h1><span id="more"></span>
+
+<p>11111</p>
 ]]></content>
   </entry>
   <entry>
@@ -993,9 +995,11 @@
     <content><![CDATA[<h1 id="java缓冲流"><a href="#java缓冲流" class="headerlink" title="java缓冲流"></a>java缓冲流</h1>]]></content>
   </entry>
   <entry>
-    <title></title>
+    <title>maven</title>
     <url>/2022/11/17/maven-gao-ji/</url>
-    <content><![CDATA[<h2 id="Maven高级"><a href="#Maven高级" class="headerlink" title="Maven高级"></a>Maven高级</h2><p><strong>今日目标</strong></p>
+    <content><![CDATA[<h2 id="Maven高级"><a href="#Maven高级" class="headerlink" title="Maven高级"></a>Maven高级</h2><span id="more"></span>
+
+<p><strong>今日目标</strong></p>
 <blockquote>
 <ul>
 <li>理解并实现分模块开发</li>
@@ -1614,12 +1618,17 @@
 <p><img src="/2022/11/17/maven-gao-ji/1630993028454.png" alt="1630993028454"></p>
 <p>至此私服的搭建就已经完成，相对来说有点麻烦，但是步骤都比较固定，后期大家如果需要的话，就可以参考上面的步骤一步步完成搭建即可。</p>
 ]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
   </entry>
   <entry>
     <title>Hello World</title>
     <url>/2022/11/16/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><span id="more"></span>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
@@ -1639,7 +1648,10 @@
   <entry>
     <title>springBoot</title>
     <url>/2022/11/13/springboot/</url>
-    <content><![CDATA[<p>##springBoot项目的创建<br>创建sringboot项目的方式<br>###1.通过idea 基础流程创建<br>###2.通过直接官网创建</p>
+    <content><![CDATA[<p>##springBoot项目的创建</p>
+<span id="more"></span>
+
+<p>创建sringboot项目的方式<br>###1.通过idea 基础流程创建<br>###2.通过直接官网创建</p>
 <ul>
 <li>以上两种都是通过访问国外网站进行访问，有时候访问不了，或者访问很慢<br>###3.基于aliyun进行访问国内网站yyds,值得推荐<blockquote>
 <ul>
@@ -1670,7 +1682,9 @@
   <entry>
     <title>MySQL基础</title>
     <url>/2022/11/08/my-first-blog/</url>
-    <content><![CDATA[<h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><p><strong>今日目标：</strong></p>
+    <content><![CDATA[<h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><span id="more"></span>
+
+<p><strong>今日目标：</strong></p>
 <blockquote>
 <ul>
 <li>完成MySQL的安装及登陆基本操作</li>
