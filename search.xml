@@ -3,7 +3,9 @@
   <entry>
     <title>Xml</title>
     <url>/2023/03/25/xml/</url>
-    <content><![CDATA[<h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><h3 id="XML-1"><a href="#XML-1" class="headerlink" title="XML"></a>XML</h3><h5 id="xml概述"><a href="#xml概述" class="headerlink" title="xml概述"></a>xml概述</h5><ul>
+    <content><![CDATA[<h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><h3 id="XML-1"><a href="#XML-1" class="headerlink" title="XML"></a>XML</h3><h5 id="xml概述"><a href="#xml概述" class="headerlink" title="xml概述"></a>xml概述</h5><span id="more"></span>
+
+<ul>
 <li><p>XML是可扩展标记语言（eXtensible Markup Language）的缩写，它是是一种数据表示格式，可以描述非常复杂的数据结构，常用于传输和存储数据。</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">version:xml默认的版本号码，该属性必须拥有的</span></span><br><span class="line"><span class="comment">encoding:本xml文件的编码</span></span><br><span class="line"><span class="comment">特殊的标签可以不成对，但是必须有结束标记，如:&lt;br/&gt;</span></span><br><span class="line"><span class="comment">XML文件中可以存在以下特殊字符</span></span><br><span class="line"><span class="comment">&amp;lt;    &lt;  小于</span></span><br><span class="line"><span class="comment">&amp;gt;    &gt;  大于</span></span><br><span class="line"><span class="comment">&amp;amp;   &amp;  和号</span></span><br><span class="line"><span class="comment">&amp;apos;  '  单引号</span></span><br><span class="line"><span class="comment">&amp;quot;  "  引号</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">--!&gt;</span></span><br><span class="line"><span class="comment">&lt;data&gt;    </span></span><br><span class="line"><span class="comment">    &lt;sender&gt;张三&lt;/sender&gt;</span></span><br><span class="line"><span class="comment">    &lt;receiver&gt;李四&lt;/receiver&gt; </span></span><br><span class="line"><span class="comment">    &lt;src&gt;</span></span><br><span class="line"><span class="comment">    	 &lt;addr&gt;北京&lt;/addr&gt;</span></span><br><span class="line"><span class="comment">        &lt;date&gt;2022-11-11 11:11:11&lt;/date&gt;</span></span><br><span class="line"><span class="comment">    &lt;/src&gt; </span></span><br><span class="line"><span class="comment">    &lt;current&gt;武汉&lt;/current&gt; </span></span><br><span class="line"><span class="comment">    &lt;dest&gt;广州&lt;/dest&gt;</span></span><br><span class="line"><span class="comment">&lt;/data&gt;</span></span><br><span class="line"><span class="comment"></span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -280,16 +282,8 @@
   <entry>
     <title>Maven高级</title>
     <url>/2023/03/25/test1/</url>
-    <content><![CDATA[<h2 id="Maven高级"><a href="#Maven高级" class="headerlink" title="Maven高级"></a>Maven高级</h2><p><strong>今日目标</strong></p>
-<blockquote>
-<ul>
-<li>理解并实现分模块开发</li>
-<li>能够使用聚合工程快速构建项目</li>
-<li>能够使用继承简化项目配置</li>
-<li>能够根据需求配置生成、开发、测试环境，并在各个环境间切换运行</li>
-<li>了解Maven的私服</li>
-</ul>
-</blockquote>
+    <content><![CDATA[<h2 id="Maven高级"><a href="#Maven高级" class="headerlink" title="Maven高级"></a>Maven高级</h2><span id="more"></span>
+
 <h2 id="1，分模块开发"><a href="#1，分模块开发" class="headerlink" title="1，分模块开发"></a>1，分模块开发</h2><h3 id="1-1-分模块开发设计"><a href="#1-1-分模块开发设计" class="headerlink" title="1.1 分模块开发设计"></a>1.1 分模块开发设计</h3><p>(1)按照功能拆分</p>
 <p>我们现在的项目都是在一个模块中，比如前面的SSM整合开发。虽然这样做功能也都实现了，但是也存在了一些问题，我们拿银行的项目为例来聊聊这个事。</p>
 <ul>
@@ -913,9 +907,11 @@
 ]]></content>
   </entry>
   <entry>
-    <title></title>
+    <title>瑞吉外卖day01</title>
     <url>/2023/01/14/rui-ji-wai-mai-day01/</url>
-    <content><![CDATA[<h1 id="瑞吉外卖day01"><a href="#瑞吉外卖day01" class="headerlink" title="瑞吉外卖day01"></a>瑞吉外卖day01</h1><h3 id="1-软件开发整体介绍"><a href="#1-软件开发整体介绍" class="headerlink" title="1.软件开发整体介绍"></a>1.软件开发整体介绍</h3><h4 id="软件开发流程"><a href="#软件开发流程" class="headerlink" title="软件开发流程"></a>软件开发流程</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123130756-1733012196.png" alt="image"></p>
+    <content><![CDATA[<h1 id="瑞吉外卖day01"><a href="#瑞吉外卖day01" class="headerlink" title="瑞吉外卖day01"></a>瑞吉外卖day01</h1><span id="more"></span>
+
+<h3 id="1-软件开发整体介绍"><a href="#1-软件开发整体介绍" class="headerlink" title="1.软件开发整体介绍"></a>1.软件开发整体介绍</h3><h4 id="软件开发流程"><a href="#软件开发流程" class="headerlink" title="软件开发流程"></a>软件开发流程</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123130756-1733012196.png" alt="image"></p>
 <h4 id="角色分工"><a href="#角色分工" class="headerlink" title="角色分工"></a>角色分工</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123150314-650202841.png" alt="image"></p>
 <h4 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123204505-1863229436.png" alt="image"></p>
 <h3 id="2-瑞吉外卖项目介绍"><a href="#2-瑞吉外卖项目介绍" class="headerlink" title="2.瑞吉外卖项目介绍"></a>2.瑞吉外卖项目介绍</h3><h4 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h4><p><img src="https://img2022.cnblogs.com/blog/2592691/202205/2592691-20220510123211801-1044758170.png" alt="image"></p>
@@ -984,6 +980,12 @@
 <figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//员工退出</span></span><br><span class="line"><span class="meta">@PostMapping("/logout")</span></span><br><span class="line"><span class="keyword">public</span> R&lt;String&gt; <span class="title function_">logout</span><span class="params">(HttpServletRequest request)</span>{</span><br><span class="line">    <span class="comment">//清理Session中保存的当前员工登录的id</span></span><br><span class="line">    request.getSession().removeAttribute(<span class="string">"employee"</span>);</span><br><span class="line">    <span class="keyword">return</span> R.success(<span class="string">"退出成功"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
 ]]></content>
+      <categories>
+        <category>瑞吉外卖</category>
+      </categories>
+      <tags>
+        <tag>瑞吉</tag>
+      </tags>
   </entry>
   <entry>
     <title></title>
