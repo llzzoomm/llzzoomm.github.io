@@ -328,27 +328,42 @@ XML文件中可以存在以下特殊字符
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/11/16/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+    <title>my-first-blog</title>
+    <url>/2022/11/08/my-first-blog/</url>
+    <content><![CDATA[<p>你爹来啦狗</p>
+<h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><p><strong>今日目标：</strong></p>
+<blockquote>
+<ul>
+<li>完成MySQL的安装及登陆基本操作</li>
+<li>能通过SQL对数据库进行CRUD</li>
+<li>能通过SQL对表进行CRUD</li>
+<li>能通过SQL对数据进行CRUD</li>
+</ul>
+</blockquote>
+<h2 id="1，数据库相关概念"><a href="#1，数据库相关概念" class="headerlink" title="1，数据库相关概念"></a>1，数据库相关概念</h2><p>以前我们做系统，数据持久化的存储采用的是文件存储。存储到文件中可以达到系统关闭数据不会丢失的效果，当然文件存储也有它的弊端。</p>
+<p>假设在文件中存储以下的数据：</p>
+<pre><code>姓名    年龄    性别    住址
+张三    23    男    北京西三旗
+李四    24    女    北京西二旗
+王五    25    男    西安软件新城
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>现要修改李四这条数据的性别数据改为男，我们现学习的IO技术可以通过将所有的数据读取到内存中，然后进行修改再存到该文件中。通过这种方式操作存在很大问题，现在只有三条数据，如果文件中存储1T的数据，那么就会发现内存根本就存储不了。</p>
+<p>现需要既能持久化存储数据，也要能避免上述问题的技术使用在我们的系统中。数据库就是这样的一门技术。</p>
+<h3 id="1-1-数据库"><a href="#1-1-数据库" class="headerlink" title="1.1  数据库"></a>1.1  数据库</h3><ul>
+<li><p>==存储和管理数据的仓库，数据是有组织的进行存储。==</p>
+</li>
+<li><p>数据库英文名是 DataBase，简称DB。</p>
+</li>
+</ul>
+<p>数据库就是将数据存储在硬盘上，可以达到持久化存储的效果。那又是如何解决上述问题的？使用数据库管理系统。</p>
+<h3 id="1-2-数据库管理系统"><a href="#1-2-数据库管理系统" class="headerlink" title="1.2  数据库管理系统"></a>1.2  数据库管理系统</h3><ul>
+<li>==管理数据库的大型软件==</li>
+<li>英文：DataBase Management System，简称 DBMS</li>
+</ul>
+<p>在电脑上安装了数据库管理系统后，就可以通过数据库管理系统创建数据库来存储数据，也可以通过该系统对数据库中的数据进行数据的增删改查相关的操作。我们平时说的MySQL数据库其实是MySQL数据库管理系统。</p>
+<p><img src="https://github.com/llzzoomm/images/raw/main/image-20210721184354001.png" alt="这是一张图片"></p>
+<p>通过上面的描述，大家应该已经知道了 <code>数据库管理系统</code> 和 <code>数据库</code> 的关系。那么有有哪些常见的数据库管理系统呢？</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/01/14/java-huan-chong-liu/</url>
-    <content><![CDATA[<h1 id="java缓冲流"><a href="#java缓冲流" class="headerlink" title="java缓冲流"></a>java缓冲流</h1>]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1508,41 +1523,21 @@ XML文件中可以存在以下特殊字符
 ]]></content>
   </entry>
   <entry>
-    <title>my-first-blog</title>
-    <url>/2022/11/08/my-first-blog/</url>
-    <content><![CDATA[<p>你爹来啦狗</p>
-<h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><p><strong>今日目标：</strong></p>
-<blockquote>
-<ul>
-<li>完成MySQL的安装及登陆基本操作</li>
-<li>能通过SQL对数据库进行CRUD</li>
-<li>能通过SQL对表进行CRUD</li>
-<li>能通过SQL对数据进行CRUD</li>
-</ul>
-</blockquote>
-<h2 id="1，数据库相关概念"><a href="#1，数据库相关概念" class="headerlink" title="1，数据库相关概念"></a>1，数据库相关概念</h2><p>以前我们做系统，数据持久化的存储采用的是文件存储。存储到文件中可以达到系统关闭数据不会丢失的效果，当然文件存储也有它的弊端。</p>
-<p>假设在文件中存储以下的数据：</p>
-<pre><code>姓名    年龄    性别    住址
-张三    23    男    北京西三旗
-李四    24    女    北京西二旗
-王五    25    男    西安软件新城
+    <title>Hello World</title>
+    <url>/2022/11/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
 </code></pre>
-<p>现要修改李四这条数据的性别数据改为男，我们现学习的IO技术可以通过将所有的数据读取到内存中，然后进行修改再存到该文件中。通过这种方式操作存在很大问题，现在只有三条数据，如果文件中存储1T的数据，那么就会发现内存根本就存储不了。</p>
-<p>现需要既能持久化存储数据，也要能避免上述问题的技术使用在我们的系统中。数据库就是这样的一门技术。</p>
-<h3 id="1-1-数据库"><a href="#1-1-数据库" class="headerlink" title="1.1  数据库"></a>1.1  数据库</h3><ul>
-<li><p>==存储和管理数据的仓库，数据是有组织的进行存储。==</p>
-</li>
-<li><p>数据库英文名是 DataBase，简称DB。</p>
-</li>
-</ul>
-<p>数据库就是将数据存储在硬盘上，可以达到持久化存储的效果。那又是如何解决上述问题的？使用数据库管理系统。</p>
-<h3 id="1-2-数据库管理系统"><a href="#1-2-数据库管理系统" class="headerlink" title="1.2  数据库管理系统"></a>1.2  数据库管理系统</h3><ul>
-<li>==管理数据库的大型软件==</li>
-<li>英文：DataBase Management System，简称 DBMS</li>
-</ul>
-<p>在电脑上安装了数据库管理系统后，就可以通过数据库管理系统创建数据库来存储数据，也可以通过该系统对数据库中的数据进行数据的增删改查相关的操作。我们平时说的MySQL数据库其实是MySQL数据库管理系统。</p>
-<p><img src="https://github.com/llzzoomm/images/raw/main/image-20210721184354001.png" alt="这是一张图片"></p>
-<p>通过上面的描述，大家应该已经知道了 <code>数据库管理系统</code> 和 <code>数据库</code> 的关系。那么有有哪些常见的数据库管理系统呢？</p>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -1583,6 +1578,11 @@ XML文件中可以存在以下特殊字符
     <url>/2023/03/25/newpapername/</url>
     <content><![CDATA[<p>11111</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/01/14/java-huan-chong-liu/</url>
+    <content><![CDATA[<h1 id="java缓冲流"><a href="#java缓冲流" class="headerlink" title="java缓冲流"></a>java缓冲流</h1>]]></content>
   </entry>
   <entry>
     <title></title>
