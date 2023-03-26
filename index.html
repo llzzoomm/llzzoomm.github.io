@@ -137,7 +137,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">11</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -195,6 +195,120 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://llzzoomm.github.io/2023/03/26/readme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="lz">
+      <meta itemprop="description" content="德玛西亚">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="llzzoomm">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/26/readme/" class="post-title-link" itemprop="url">java基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-26 10:08:04 / 修改时间：10:09:42" itemprop="dateCreated datePublished" datetime="2023-03-26T10:08:04+08:00">2023-03-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="javaReview"><a href="#javaReview" class="headerlink" title="javaReview"></a>javaReview</h1><h1 id="复习java基础"><a href="#复习java基础" class="headerlink" title="复习java基础"></a>复习java基础</h1><h1 id="一、配置环境变量（省略）与基础指令"><a href="#一、配置环境变量（省略）与基础指令" class="headerlink" title="一、配置环境变量（省略）与基础指令"></a>一、配置环境变量（省略）与基础指令</h1><ol>
+<li>编译代码：java xxx.java</li>
+<li>运行代码：java xxx</li>
+<li>编码问题使用：javac -encoding UTF-8 xxx.java</li>
+</ol>
+<h1 id="二、基础语法"><a href="#二、基础语法" class="headerlink" title="二、基础语法"></a>二、基础语法</h1><h2 id="（一）注意事项"><a href="#（一）注意事项" class="headerlink" title="（一）注意事项"></a>（一）注意事项</h2><ol>
+<li>大小写敏感</li>
+<li>类名通常首字符大写</li>
+<li>方法名使用小驼峰</li>
+<li>源文件名与类名相同</li>
+<li>主方法入口：所有的 Java 程序由 public static void main(String[] args) 方法开始执行</li>
+</ol>
+<h2 id="（二）标识符"><a href="#（二）标识符" class="headerlink" title="（二）标识符"></a>（二）标识符</h2><ol>
+<li>首字母以字母（A-Z 或者 a-z）,美元符（$）、或者下划线（_）开始</li>
+<li>之后可以是字母（A-Z 或者 a-z）,美元符（$）、下划线（_）或数字的任何字符组合（<strong>不能以数字开头</strong>）</li>
+</ol>
+<h2 id="（三）修饰符"><a href="#（三）修饰符" class="headerlink" title="（三）修饰符"></a>（三）修饰符</h2><ol>
+<li>访问控制修饰符 : default, public , protected, private</li>
+<li>非访问控制修饰符 : final, abstract, static, synchronized</li>
+</ol>
+<h2 id="（四）Java变量"><a href="#（四）Java变量" class="headerlink" title="（四）Java变量"></a>（四）Java变量</h2><ol>
+<li>局部变量:在方法、构造方法或者语句块中定义的变量被称为局部变量。变量声明和初始化都是在方法中，方法结束后，变量就会自动销毁。</li>
+<li>类变量（静态变量）:类变量也声明在类中，方法体之外，但必须声明为 static 类型。</li>
+<li>成员变量（非静态变量）:成员变量是定义在类中，方法体之外的变量。这种变量在创建对象的时候实例化。<strong>成员变量可以被类中方法、构造方法和特定类的语句块访问</strong></li>
+</ol>
+<h2 id="（五）Java数组"><a href="#（五）Java数组" class="headerlink" title="（五）Java数组"></a>（五）Java数组</h2><h2 id="（六）Java枚举（限制变量只能使用规定的值，减少bug出现）"><a href="#（六）Java枚举（限制变量只能使用规定的值，减少bug出现）" class="headerlink" title="（六）Java枚举（限制变量只能使用规定的值，减少bug出现）"></a>（六）Java枚举（限制变量只能使用规定的值，减少bug出现）</h2><h2 id="（七）Java关键词"><a href="#（七）Java关键词" class="headerlink" title="（七）Java关键词"></a>（七）Java关键词</h2><p><img src="https://github.com/Angryniu/javareview/blob/main/java%E5%85%B3%E9%94%AE%E5%AD%97.png" alt="alt Java关键词"></p>
+<h2 id="（八）Java注释"><a href="#（八）Java注释" class="headerlink" title="（八）Java注释"></a>（八）Java注释</h2><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*</span></span><br><span class="line"><span class="emphasis">*</span>多行注释</span><br><span class="line"><span class="emphasis">*多行注释</span></span><br><span class="line"><span class="emphasis">*</span>/</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>单行注释</span><br><span class="line"><span class="regexp">/*单行注释*/</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="（九）继承：利用继承的方法，可以重用已存在类的方法和属性，而不用重写这些代码。被继承的类称为超类（super-class），派生类称为子类（sub-class）"><a href="#（九）继承：利用继承的方法，可以重用已存在类的方法和属性，而不用重写这些代码。被继承的类称为超类（super-class），派生类称为子类（sub-class）" class="headerlink" title="（九）继承：利用继承的方法，可以重用已存在类的方法和属性，而不用重写这些代码。被继承的类称为超类（super class），派生类称为子类（sub class）"></a>（九）继承：利用继承的方法，可以重用已存在类的方法和属性，而不用重写这些代码。被继承的类称为超类（super class），派生类称为子类（sub class）</h2><h2 id="（十）接口：接口只定义派生要用到的方法，但是方法的具体实现完全取决于派生类（实现类）"><a href="#（十）接口：接口只定义派生要用到的方法，但是方法的具体实现完全取决于派生类（实现类）" class="headerlink" title="（十）接口：接口只定义派生要用到的方法，但是方法的具体实现完全取决于派生类（实现类）"></a>（十）接口：接口只定义派生要用到的方法，但是方法的具体实现完全取决于派生类（实现类）</h2><h1 id="三、对象和类"><a href="#三、对象和类" class="headerlink" title="三、对象和类"></a>三、对象和类</h1><h2 id="（一）面向对象的基本概念"><a href="#（一）面向对象的基本概念" class="headerlink" title="（一）面向对象的基本概念"></a>（一）面向对象的基本概念</h2><ol>
+<li>多态</li>
+<li>继承</li>
+<li>封装</li>
+<li>抽象</li>
+<li>类：类是一个模板，它描述一类对象的行为和状态</li>
+<li>对象：对象是类的一个实例</li>
+<li>实例</li>
+<li>重载</li>
+</ol>
+<h3 id="创建一个类"><a href="#创建一个类" class="headerlink" title="创建一个类"></a>创建一个类</h3><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Dog</span>{</span><br><span class="line">    String breed;</span><br><span class="line">    String color;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    *每个类都有构造方法。如果没有显式地为类定义构造方法，Java 编译器将会为该类提供一个默认构造方法。</span></span><br><span class="line"><span class="comment">    *在创建一个对象的时候，至少要调用一个构造方法。构造方法的名称必须与类同名，一个类可以有多个构造方法。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Dog</span><span class="params">(String bread,String color,<span class="type">int</span> age)</span>{ </span><br><span class="line">        <span class="built_in">this</span>.breed = breed;</span><br><span class="line">        <span class="built_in">this</span>.color = color;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span>{}</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span>{}</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">()</span>{}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://llzzoomm.github.io/2023/03/26/pw/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -209,7 +323,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/03/26/pw/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2023/03/26/pw/" class="post-title-link" itemprop="url">one day</a>
         </h2>
 
         <div class="post-meta">
@@ -220,7 +334,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-03-26 09:48:21 / 修改时间：09:58:09" itemprop="dateCreated datePublished" datetime="2023-03-26T09:48:21+08:00">2023-03-26</time>
+              <time title="创建时间：2023-03-26 09:48:21 / 修改时间：09:59:49" itemprop="dateCreated datePublished" datetime="2023-03-26T09:48:21+08:00">2023-03-26</time>
             </span>
 
           <br>
@@ -916,96 +1030,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://llzzoomm.github.io/2022/11/08/my-first-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="lz">
-      <meta itemprop="description" content="德玛西亚">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="llzzoomm">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/08/my-first-blog/" class="post-title-link" itemprop="url">MySQL基础</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-11-08 23:42:11" itemprop="dateCreated datePublished" datetime="2022-11-08T23:42:11+08:00">2022-11-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-26 00:41:41" itemprop="dateModified" datetime="2023-03-26T00:41:41+08:00">2023-03-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MySQL%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">MySQL基础</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>676</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/11/08/my-first-blog/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
   
 
@@ -1074,7 +1103,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1130,7 +1159,7 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">79k</span>
 </div>
 
 
@@ -1144,8 +1173,8 @@
       <span class="post-meta-item-text">站点总字数：</span>
     
 	<span title="post.totalcount">
-     31.6k字 </span>
-    <!--<span title="站点总字数">78k</span>-->
+     32.3k字 </span>
+    <!--<span title="站点总字数">79k</span>-->
   
   
   
