@@ -6,7 +6,7 @@
   <link href="https://llzzoomm.github.io/atom.xml" rel="self"/>
   
   <link href="https://llzzoomm.github.io/"/>
-  <updated>2023-03-25T15:00:53.612Z</updated>
+  <updated>2023-03-26T01:58:09.588Z</updated>
   <id>https://llzzoomm.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://llzzoomm.github.io/2023/03/26/pw/"/>
+    <id>https://llzzoomm.github.io/2023/03/26/pw/</id>
+    <published>2023-03-26T01:48:21.439Z</published>
+    <updated>2023-03-26T01:58:09.588Z</updated>
+    
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="bd9fc96b9ede8074a49e8acd11d4ad80c892ed09b7824962bd290244d6a4fd4f">4630436162ade97ba2718b7d0c4b3b634cab8a0e022e0ce5b27d21c7706095018a83376b84a77eee619266a3f515a00044d1c623364d865392ab453b6b290f06</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <summary type="html">有东西被加密了, 请输入密码查看.</summary>
+    
+    
+    
+    
+    <category term="作为日记加密" scheme="https://llzzoomm.github.io/tags/%E4%BD%9C%E4%B8%BA%E6%97%A5%E8%AE%B0%E5%8A%A0%E5%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Xml</title>
@@ -177,7 +196,7 @@
     <link href="https://llzzoomm.github.io/2022/11/08/my-first-blog/"/>
     <id>https://llzzoomm.github.io/2022/11/08/my-first-blog/</id>
     <published>2022-11-08T15:42:11.000Z</published>
-    <updated>2023-03-25T15:37:01.518Z</updated>
+    <updated>2023-03-25T16:41:41.132Z</updated>
     
     <content type="html"><![CDATA[<h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><span id="more"></span><p><strong>今日目标：</strong></p><blockquote><ul><li>完成MySQL的安装及登陆基本操作</li><li>能通过SQL对数据库进行CRUD</li><li>能通过SQL对表进行CRUD</li><li>能通过SQL对数据进行CRUD</li></ul></blockquote><h2 id="1，数据库相关概念"><a href="#1，数据库相关概念" class="headerlink" title="1，数据库相关概念"></a>1，数据库相关概念</h2><p>以前我们做系统，数据持久化的存储采用的是文件存储。存储到文件中可以达到系统关闭数据不会丢失的效果，当然文件存储也有它的弊端。</p><p>假设在文件中存储以下的数据：</p><figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">姓名年龄性别住址</span><br><span class="line">张三23男北京西三旗</span><br><span class="line">李四24女北京西二旗</span><br><span class="line">王五25男西安软件新城</span><br></pre></td></tr></tbody></table></figure><p>现要修改李四这条数据的性别数据改为男，我们现学习的IO技术可以通过将所有的数据读取到内存中，然后进行修改再存到该文件中。通过这种方式操作存在很大问题，现在只有三条数据，如果文件中存储1T的数据，那么就会发现内存根本就存储不了。</p><p>现需要既能持久化存储数据，也要能避免上述问题的技术使用在我们的系统中。数据库就是这样的一门技术。</p><h3 id="1-1-数据库"><a href="#1-1-数据库" class="headerlink" title="1.1  数据库"></a>1.1  数据库</h3><ul><li><p>==存储和管理数据的仓库，数据是有组织的进行存储。==</p></li><li><p>数据库英文名是 DataBase，简称DB。</p></li></ul><p>数据库就是将数据存储在硬盘上，可以达到持久化存储的效果。那又是如何解决上述问题的？使用数据库管理系统。</p><h3 id="1-2-数据库管理系统"><a href="#1-2-数据库管理系统" class="headerlink" title="1.2  数据库管理系统"></a>1.2  数据库管理系统</h3><ul><li>==管理数据库的大型软件==</li><li>英文：DataBase Management System，简称 DBMS</li></ul><p>在电脑上安装了数据库管理系统后，就可以通过数据库管理系统创建数据库来存储数据，也可以通过该系统对数据库中的数据进行数据的增删改查相关的操作。我们平时说的MySQL数据库其实是MySQL数据库管理系统。</p><p><img src="https://github.com/llzzoomm/images/raw/main/image-20210721184354001.png" alt="这是一张图片"></p><p>通过上面的描述，大家应该已经知道了 <code>数据库管理系统</code> 和 <code>数据库</code> 的关系。那么有有哪些常见的数据库管理系统呢？</p>]]></content>
     

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/03/26/pw/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="bd9fc96b9ede8074a49e8acd11d4ad80c892ed09b7824962bd290244d6a4fd4f">4630436162ade97ba2718b7d0c4b3b634cab8a0e022e0ce5b27d21c7706095018a83376b84a77eee619266a3f515a00044d1c623364d865392ab453b6b290f06</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>作为日记加密</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Xml</title>
     <url>/2023/03/25/xml/</url>
     <content><![CDATA[<h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><h3 id="XML-1"><a href="#XML-1" class="headerlink" title="XML"></a>XML</h3><h5 id="xml概述"><a href="#xml概述" class="headerlink" title="xml概述"></a>xml概述</h5><span id="more"></span>
