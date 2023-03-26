@@ -1197,7 +1197,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #85ff14;
+  background: #f232ac;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2738,6 +2738,9 @@ ul.breadcrumb li + li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+:root {
+  --content-bg-color: rgba(255,255,255,0.902);
 }
 body {
   background: url("/images/1.jpg");
