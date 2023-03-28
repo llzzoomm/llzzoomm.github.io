@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"llzzoomm.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="MySQL数据库软件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL数据库">
+<meta property="og:url" content="https://llzzoomm.github.io/2023/03/28/mysql/index.html">
+<meta property="og:site_name" content="llzzoomm">
+<meta property="og:description" content="MySQL数据库软件">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-28T09:26:38.286Z">
+<meta property="article:modified_time" content="2023-03-28T09:20:26.604Z">
+<meta property="article:author" content="lz">
+<meta property="article:tag" content="精简">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://llzzoomm.github.io/2023/03/28/mysql/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>MySQL数据库 | llzzoomm</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="llzzoomm" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">llzzoomm</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">德玛西亚</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">51</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://llzzoomm.github.io/2023/03/28/mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="lz">
+      <meta itemprop="description" content="德玛西亚">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="llzzoomm">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MySQL数据库
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-28 17:26:38 / 修改时间：17:20:26" itemprop="dateCreated datePublished" datetime="2023-03-28T17:26:38+08:00">2023-03-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%B2%BE%E7%AE%80/" itemprop="url" rel="index"><span itemprop="name">精简</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>12k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>MySQL数据库软件</strong></p>
+<span id="more"></span>
+
+<p>1. 安装</p>
+<p>* 参见《MySQL基础.pdf》</p>
+<p>2. 卸载</p>
+<p>1. 去mysql的安装目录找到my.ini文件</p>
+<p>* 复制 datadir=”C:/ProgramData/MySQL/MySQL Server 5.5/Data”</p>
+<p>2. 卸载MySQL</p>
+<p>3. 删除C:/ProgramData目录下的MySQL文件夹。</p>
+<p>3. 配置</p>
+<p>* MySQL服务启动</p>
+<p>1. 手动</p>
+<p>2. cmd–&gt; services.msc 打开服务的窗口</p>
+<p>3. 使用管理员打开cmd</p>
+<p>* net start mysql ：启动mysql的服务</p>
+<p>* net stop mysql ：关闭mysql的服务</p>
+<p>* MySQL登录</p>
+<p>1. mysql -uroot -p【password】</p>
+<p>2. mysql -h【ip】 -uroot -p【连接目标的password】</p>
+<p>3. mysql –host=【ip】 –user=root –password=【密码】</p>
+<p>* MySQL退出</p>
+<p>1. exit</p>
+<p>2. quit</p>
+<p>* MySQL目录结构</p>
+<p>1. MySQL安装目录</p>
+<p>* 配置文件 my.ini</p>
+<p>2. MySQL数据目录</p>
+<p>* 几个概念</p>
+<p>* 数据库：文件夹</p>
+<p>* 表：文件</p>
+<p>* 数据：数据</p>
+<p>SQL分类</p>
+<ol>
+<li><p>DDL(Data Definition Language)数据定义语言用来定义数据库对象：数据库，表，列等。关键字：create, drop,alter 等</p>
+</li>
+<li><p>DML(Data Manipulation Language)数据操作语言用来对数据库中表的数据进行增删改。关键字：insert, delete, update 等</p>
+</li>
+<li><p>DQL(Data Query Language)数据查询语言用来查询数据库中表的记录(数据)。关键字：select, where 等</p>
+</li>
+<li><p>DCL(Data Control Language)数据控制语言(了解)用来定义数据库的访问权限和安全级别，及创建用户。关键字：GRANT， REVOKE 等</p>
+</li>
+</ol>
+<h3 id="DDL：操作数据库、表"><a href="#DDL：操作数据库、表" class="headerlink" title="DDL：操作数据库、表"></a>DDL：操作数据库、表</h3><p>1. 操作数据库：CRUD</p>
+<p>1. C(Create):创建</p>
+<p>* 创建数据库：</p>
+<p>* create database 数据库名称;</p>
+<p>* 创建数据库，判断不存在，再创建：</p>
+<p>* create database if not exists 数据库名称;</p>
+<p>* 创建数据库，并指定字符集</p>
+<p>* create database 数据库名称 character set 字符集名;</p>
+<p>* 练习： 创建db4数据库，判断是否存在，并制定字符集为gbk</p>
+<p>* create database if not exists db4 character set gbk;</p>
+<p>2. R(Retrieve)：查询</p>
+<p>* 查询所有数据库的名称:</p>
+<p>* show databases;</p>
+<p>* 查询某个数据库的字符集:查询某个数据库的创建语句</p>
+<p>* show create database 数据库名称;</p>
+<p>3. U(Update):修改</p>
+<p>* 修改数据库的字符集</p>
+<p>* alter database 数据库名称 character set 字符集名称;</p>
+<p>4. D(Delete):删除</p>
+<p>* 删除数据库</p>
+<p>* drop database 数据库名称;</p>
+<p>* 判断数据库存在，存在再删除</p>
+<p>* drop database if exists 数据库名称;</p>
+<p>5. 使用数据库</p>
+<p>* 查询当前正在使用的数据库名称</p>
+<p>* select database();</p>
+<p>* 使用数据库</p>
+<p>* use 数据库名称;</p>
+<p>2. 操作表</p>
+<p>1. C(Create):创建</p>
+<p>1. 语法：</p>
+<p>create table 表名(</p>
+<p>列名1 数据类型1,</p>
+<p>列名2 数据类型2,</p>
+<p>….</p>
+<p>列名n 数据类型n</p>
+<p>);</p>
+<p>* 注意：最后一列，不需要加逗号（,）</p>
+<p>* 数据库类型：</p>
+<p>1. int：整数类型</p>
+<p>* age int,</p>
+<p>2. double:小数类型</p>
+<p>* score double(5,2)</p>
+<p>3. date:日期，只包含年月日，yyyy-MM-dd</p>
+<p>4. datetime:日期，包含年月日时分秒 yyyy-MM-dd HH:mm:ss</p>
+<p>5. timestamp:时间戳类型 包含年月日时分秒 yyyy-MM-dd HH:mm:ss</p>
+<p>* 如果将来不给这个字段赋值，或赋值为null，则默认使用当前的系统时间，来自动赋值</p>
+<p>6. varchar：字符串</p>
+<p>* name varchar(20):姓名最大20个字符</p>
+<p>* zhangsan 8个字符 张三 2个字符</p>
+<p>* 创建表：</p>
+<p>create table student(</p>
+<p>id int,</p>
+<p>name varchar(32),</p>
+<p>age int ,</p>
+<p>score double(4,1),</p>
+<p>birthday date,</p>
+<p>insert_time timestamp</p>
+<p>);</p>
+<p>* 复制表：</p>
+<p>* create table 表名 like 被复制的表名;</p>
+<p>2. R(Retrieve)：查询</p>
+<p>* 查询某个数据库中所有的表名称</p>
+<p>* show tables;</p>
+<p>* 查询表结构</p>
+<p>* desc 表名;</p>
+<p>3. U(Update):修改</p>
+<p>1. 修改表名</p>
+<p>alter table 表名 rename to 新的表名;</p>
+<p>2. 修改表的字符集</p>
+<p>alter table 表名 character set 字符集名称;</p>
+<p>3. 添加一列</p>
+<p>alter table 表名 add 列名 数据类型;</p>
+<p>4. 修改列名称 类型</p>
+<p>alter table 表名 change 列名 新列别 新数据类型;</p>
+<p>alter table 表名 modify 列名 新数据类型;</p>
+<p>5. 删除列</p>
+<p>alter table 表名 drop 列名;</p>
+<p>4. D(Delete):删除</p>
+<p>* drop table 表名;</p>
+<p>* drop table if exists 表名 ;</p>
+<p>添加数据：</p>
+<p>语法：</p>
+<p>insert into 表名(列名1,列名2,…列名n) values(值1,值2,…值n);</p>
+<p>注意：</p>
+<p>列名和值要一一对应。</p>
+<p>如果表名后，不定义列名，则默认给所有列添加值</p>
+<p>insert into 表名 values(值1,值2,…值n);</p>
+<p>除了数字类型，其他类型需要使用引号(单双都可以)引起来</p>
+<p>删除数据：</p>
+<p>语法：</p>
+<p>delete from 表名 [where 条件]</p>
+<p>注意：</p>
+<p>如果不加条件，则删除表中所有记录。</p>
+<p>如果要删除所有记录</p>
+<p>delete from 表名; – 不推荐使用。有多少条记录就会执行多少次删除操作</p>
+<p>TRUNCATE TABLE 表名; – 推荐使用，效率更高 先删除表，然后再创建一张一样的表。</p>
+<p>修改数据：</p>
+<p>语法：</p>
+<p>update 表名 set 列名1 = 值1, 列名2 = 值2,… [where 条件];</p>
+<p>注意：</p>
+<p>如果不加任何条件，则会将表中所有记录全部修改。</p>
+<h3 id="DQL：查询表中的记录"><a href="#DQL：查询表中的记录" class="headerlink" title="DQL：查询表中的记录"></a>DQL：查询表中的记录</h3><p>* select * from 表名;</p>
+<p>1. 语法：</p>
+<p>select</p>
+<p>字段列表</p>
+<p>from</p>
+<p>表名列表</p>
+<p>where</p>
+<p>条件列表</p>
+<p>group by</p>
+<p>分组字段</p>
+<p>having</p>
+<p>分组之后的条件</p>
+<p>order by</p>
+<p>排序</p>
+<p>limit</p>
+<p>分页限定</p>
+<p>2. 基础查询</p>
+<p>1. 多个字段的查询</p>
+<p>select 字段名1，字段名2… from 表名;</p>
+<p>* 注意：</p>
+<p>* 如果查询所有字段，则可以使用*来替代字段列表。</p>
+<p>2. 去除重复：</p>
+<p>* distinct</p>
+<p>3. 计算列</p>
+<p>* 一般可以使用四则运算计算一些列的值。（一般只会进行数值型的计算）</p>
+<p>* ifnull(表达式1,表达式2)：null参与的运算，计算结果都为null</p>
+<p>* 表达式1：哪个字段需要判断是否为null</p>
+<p>* 表达式2：如果该字段为null后的替换值。</p>
+<p>4. 起别名：</p>
+<p>* as：as也可以省略</p>
+<p>3. 条件查询</p>
+<p>1. where子句后跟条件</p>
+<p>2. 运算符</p>
+<p>* &gt; 、&lt; 、&lt;= 、&gt;= 、= 、&lt;&gt;</p>
+<p>* BETWEEN…AND</p>
+<p>* IN( 集合)</p>
+<p>* LIKE：模糊查询</p>
+<p>* 占位符：</p>
+<p>* _:单个任意字符</p>
+<p>* %：多个任意字符</p>
+<p>* IS NULL</p>
+<p>* and 或 &amp;&amp;</p>
+<p>* or 或 ||</p>
+<p>* not 或 !</p>
+<p>-- 查询年龄大于20岁</p>
+<p>SELECT * FROM student WHERE age &gt; 20;</p>
+<p>SELECT * FROM student WHERE age &gt;= 20;</p>
+<p>-- 查询年龄等于20岁</p>
+<p>SELECT * FROM student WHERE age = 20;</p>
+<p>-- 查询年龄不等于20岁</p>
+<p>SELECT * FROM student WHERE age != 20;</p>
+<p>SELECT * FROM student WHERE age &lt;&gt; 20;</p>
+<p>-- 查询年龄大于等于20 小于等于30</p>
+<p>SELECT * FROM student WHERE age &gt;= 20 &amp;&amp; age &lt;=30;</p>
+<p>SELECT * FROM student WHERE age &gt;= 20 AND age &lt;=30;</p>
+<p>SELECT * FROM student WHERE age BETWEEN 20 AND 30;</p>
+<p>-- 查询年龄22岁，18岁，25岁的信息</p>
+<p>SELECT * FROM student WHERE age = 22 OR age = 18 OR age = 25</p>
+<p>SELECT * FROM student WHERE age IN (22,18,25);</p>
+<p>-- 查询英语成绩为null</p>
+<p>SELECT * FROM student WHERE english = NULL; – 不对的。null值不能使用 = （!=） 判断</p>
+<p>SELECT * FROM student WHERE english IS NULL;</p>
+<p>-- 查询英语成绩不为null</p>
+<p>SELECT * FROM student WHERE english IS NOT NULL;</p>
+<p>-- 查询姓马的有哪些？ like</p>
+<p>SELECT * FROM student WHERE NAME LIKE ‘马%’;</p>
+<p>-- 查询姓名第二个字是化的人</p>
+<p>SELECT * FROM student WHERE NAME LIKE “_化%”;</p>
+<p>-- 查询姓名是3个字的人</p>
+<p>SELECT * FROM student WHERE NAME LIKE ‘___’;</p>
+<p>-- 查询姓名中包含德的人</p>
+<p>SELECT * FROM student WHERE NAME LIKE ‘%德%’;</p>
+<h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><p>* 查询语法：</p>
+<p>select</p>
+<p>列名列表</p>
+<p>from</p>
+<p>表名列表</p>
+<p>where….</p>
+<p>* 准备sql</p>
+<p># 创建部门表</p>
+<p>CREATE TABLE dept(</p>
+<p>id INT PRIMARY KEY AUTO_INCREMENT,</p>
+<p>NAME VARCHAR(20)</p>
+<p>);</p>
+<p>INSERT INTO dept (NAME) VALUES (‘开发部’),(‘市场部’),(‘财务部’);</p>
+<p># 创建员工表</p>
+<p>CREATE TABLE emp (</p>
+<p>id INT PRIMARY KEY AUTO_INCREMENT,</p>
+<p>NAME VARCHAR(10),</p>
+<p>gender CHAR(1), – 性别</p>
+<p>salary DOUBLE, – 工资</p>
+<p>join_date DATE, – 入职日期</p>
+<p>dept_id INT,</p>
+<p>FOREIGN KEY (dept_id) REFERENCES dept(id) – 外键，关联部门表(部门表的主键)</p>
+<p>);</p>
+<p>INSERT INTO emp(NAME,gender,salary,join_date,dept_id) VALUES(‘孙悟空’,’男’,7200,’2013-02-24’,1);</p>
+<p>INSERT INTO emp(NAME,gender,salary,join_date,dept_id) VALUES(‘猪八戒’,’男’,3600,’2010-12-02’,2);</p>
+<p>INSERT INTO emp(NAME,gender,salary,join_date,dept_id) VALUES(‘唐僧’,’男’,9000,’2008-08-08’,2);</p>
+<p>INSERT INTO emp(NAME,gender,salary,join_date,dept_id) VALUES(‘白骨精’,’女’,5000,’2015-10-07’,3);</p>
+<p>INSERT INTO emp(NAME,gender,salary,join_date,dept_id) VALUES(‘蜘蛛精’,’女’,4500,’2011-03-14’,1);</p>
+<p>* 笛卡尔积：</p>
+<p>* 有两个集合A,B .取这两个集合的所有组成情况。</p>
+<p>* 要完成多表查询，需要消除无用的数据</p>
+<p>* 多表查询的分类：</p>
+<p>1. 内连接查询：</p>
+<p>1. 隐式内连接：使用where条件消除无用数据</p>
+<p>* 例子：</p>
+<p>-- 查询所有员工信息和对应的部门信息</p>
+<p>SELECT * FROM emp,dept WHERE emp.`dept_id` = dept.`id`;</p>
+<p>-- 查询员工表的名称，性别。部门表的名称</p>
+<p>SELECT emp.name,emp.gender,dept.name FROM emp,dept WHERE emp.`dept_id` = dept.`id`;</p>
+<p>SELECT</p>
+<p>t1.name, – 员工表的姓名</p>
+<p>t1.gender,– 员工表的性别</p>
+<p>t2.name – 部门表的名称</p>
+<p>FROM</p>
+<p>emp t1,</p>
+<p>dept t2</p>
+<p>WHERE</p>
+<p>t1.`dept_id` = t2.`id`;</p>
+<p>2. 显式内连接：</p>
+<p>* 语法： select 字段列表 from 表名1 [inner] join 表名2 on 条件</p>
+<p>* 例如：</p>
+<p>* SELECT * FROM emp INNER JOIN dept ON emp.`dept_id` = dept.`id`;</p>
+<p>* SELECT * FROM emp JOIN dept ON emp.`dept_id` = dept.`id`;</p>
+<p>3. 内连接查询：</p>
+<p>1. 从哪些表中查询数据</p>
+<p>2. 条件是什么</p>
+<p>3. 查询哪些字段</p>
+<p>2. 外链接查询：</p>
+<p>1. 左外连接：</p>
+<p>* 语法：select 字段列表 from 表1 left [outer] join 表2 on 条件；</p>
+<p>* 查询的是左表所有数据以及其交集部分。</p>
+<p>* 例子：</p>
+<p>-- 查询所有员工信息，如果员工有部门，则查询部门名称，没有部门，则不显示部门名称</p>
+<p>SELECT t1.*,t2.`name` FROM emp t1 LEFT JOIN dept t2 ON t1.`dept_id` = t2.`id`;</p>
+<p>2. 右外连接：</p>
+<p>* 语法：select 字段列表 from 表1 right [outer] join 表2 on 条件；</p>
+<p>* 查询的是右表所有数据以及其交集部分。</p>
+<p>* 例子：</p>
+<p>SELECT * FROM dept t2 RIGHT JOIN emp t1 ON t1.`dept_id` = t2.`id`;</p>
+<p>3. 子查询：</p>
+<p>* 概念：查询中嵌套查询，称嵌套查询为子查询。</p>
+<p>-- 查询工资最高的员工信息</p>
+<p>-- 1 查询最高的工资是多少 9000</p>
+<p>SELECT MAX(salary) FROM emp;</p>
+<p>-- 2 查询员工信息，并且工资等于9000的</p>
+<p>SELECT * FROM emp WHERE emp.`salary` = 9000;</p>
+<p>-- 一条sql就完成这个操作。子查询</p>
+<p>SELECT * FROM emp WHERE emp.`salary` = (SELECT MAX(salary) FROM emp);</p>
+<p>* 子查询不同情况</p>
+<p>1. 子查询的结果是单行单列的：</p>
+<p>* 子查询可以作为条件，使用运算符去判断。 运算符： &gt; &gt;= &lt; &lt;= =</p>
+<p>*</p>
+<p>-- 查询员工工资小于平均工资的人</p>
+<p>SELECT * FROM emp WHERE emp.salary &lt; (SELECT AVG(salary) FROM emp);</p>
+<p>2. 子查询的结果是多行单列的：</p>
+<p>* 子查询可以作为条件，使用运算符in来判断</p>
+<p>-- 查询’财务部’和’市场部’所有的员工信息</p>
+<p>SELECT id FROM dept WHERE NAME = ‘财务部’ OR NAME = ‘市场部’;</p>
+<p>SELECT * FROM emp WHERE dept_id = 3 OR dept_id = 2;</p>
+<p>-- 子查询</p>
+<p>SELECT * FROM emp WHERE dept_id IN (SELECT id FROM dept WHERE NAME = ‘财务部’ OR NAME = ‘市场部’);</p>
+<p>3. 子查询的结果是多行多列的：</p>
+<p>* 子查询可以作为一张虚拟表参与查询</p>
+<p>-- 查询员工入职日期是2011-11-11日之后的员工信息和部门信息</p>
+<p>-- 子查询</p>
+<p>SELECT * FROM dept t1 ,(SELECT * FROM emp WHERE emp.`join_date` &gt; ‘2011-11-11’) t2</p>
+<p>WHERE t1.id = t2.dept_id;</p>
+<p>-- 普通内连接</p>
+<p>SELECT * FROM emp t1,dept t2 WHERE t1.`dept_id` = t2.`id` AND t1.`join_date` &gt; ‘2011-11-11’</p>
+<p>* 多表查询练习</p>
+<p>-- 部门表</p>
+<p>CREATE TABLE dept (</p>
+<p>id INT PRIMARY KEY PRIMARY KEY, – 部门id</p>
+<p>dname VARCHAR(50), – 部门名称</p>
+<p>loc VARCHAR(50) – 部门所在地</p>
+<p>);</p>
+<p>-- 添加4个部门</p>
+<p>INSERT INTO dept(id,dname,loc) VALUES</p>
+<p>(10,’教研部’,’北京’),</p>
+<p>(20,’学工部’,’上海’),</p>
+<p>(30,’销售部’,’广州’),</p>
+<p>(40,’财务部’,’深圳’);</p>
+<p>-- 职务表，职务名称，职务描述</p>
+<p>CREATE TABLE job (</p>
+<p>id INT PRIMARY KEY,</p>
+<p>jname VARCHAR(20),</p>
+<p>description VARCHAR(50)</p>
+<p>);</p>
+<p>-- 添加4个职务</p>
+<p>INSERT INTO job (id, jname, description) VALUES</p>
+<p>(1, ‘董事长’, ‘管理整个公司，接单’),</p>
+<p>(2, ‘经理’, ‘管理部门员工’),</p>
+<p>(3, ‘销售员’, ‘向客人推销产品’),</p>
+<p>(4, ‘文员’, ‘使用办公软件’);</p>
+<p>-- 员工表</p>
+<p>CREATE TABLE emp (</p>
+<p>id INT PRIMARY KEY, – 员工id</p>
+<p>ename VARCHAR(50), – 员工姓名</p>
+<p>job_id INT, – 职务id</p>
+<p>mgr INT , – 上级领导</p>
+<p>joindate DATE, – 入职日期</p>
+<p>salary DECIMAL(7,2), – 工资</p>
+<p>bonus DECIMAL(7,2), – 奖金</p>
+<p>dept_id INT, – 所在部门编号</p>
+<p>CONSTRAINT emp_jobid_ref_job_id_fk FOREIGN KEY (job_id) REFERENCES job (id),</p>
+<p>CONSTRAINT emp_deptid_ref_dept_id_fk FOREIGN KEY (dept_id) REFERENCES dept (id)</p>
+<p>);</p>
+<p>-- 添加员工</p>
+<p>INSERT INTO emp(id,ename,job_id,mgr,joindate,salary,bonus,dept_id) VALUES</p>
+<p>(1001,’孙悟空’,4,1004,’2000-12-17’,’8000.00’,NULL,20),</p>
+<p>(1002,’卢俊义’,3,1006,’2001-02-20’,’16000.00’,’3000.00’,30),</p>
+<p>(1003,’林冲’,3,1006,’2001-02-22’,’12500.00’,’5000.00’,30),</p>
+<p>(1004,’唐僧’,2,1009,’2001-04-02’,’29750.00’,NULL,20),</p>
+<p>(1005,’李逵’,4,1006,’2001-09-28’,’12500.00’,’14000.00’,30),</p>
+<p>(1006,’宋江’,2,1009,’2001-05-01’,’28500.00’,NULL,30),</p>
+<p>(1007,’刘备’,2,1009,’2001-09-01’,’24500.00’,NULL,10),</p>
+<p>(1008,’猪八戒’,4,1004,’2007-04-19’,’30000.00’,NULL,20),</p>
+<p>(1009,’罗贯中’,1,NULL,’2001-11-17’,’50000.00’,NULL,10),</p>
+<p>(1010,’吴用’,3,1006,’2001-09-08’,’15000.00’,’0.00’,30),</p>
+<p>(1011,’沙僧’,4,1004,’2007-05-23’,’11000.00’,NULL,20),</p>
+<p>(1012,’李逵’,4,1006,’2001-12-03’,’9500.00’,NULL,30),</p>
+<p>(1013,’小白龙’,4,1004,’2001-12-03’,’30000.00’,NULL,20),</p>
+<p>(1014,’关羽’,4,1007,’2002-01-23’,’13000.00’,NULL,10);</p>
+<p>-- 工资等级表</p>
+<p>CREATE TABLE salarygrade (</p>
+<p>grade INT PRIMARY KEY, – 级别</p>
+<p>losalary INT, – 最低工资</p>
+<p>hisalary INT – 最高工资</p>
+<p>);</p>
+<p>-- 添加5个工资等级</p>
+<p>INSERT INTO salarygrade(grade,losalary,hisalary) VALUES</p>
+<p>(1,7000,12000),</p>
+<p>(2,12010,14000),</p>
+<p>(3,14010,20000),</p>
+<p>(4,20010,30000),</p>
+<p>(5,30010,99990);</p>
+<p>-- 需求：</p>
+<p>-- 1.查询所有员工信息。查询员工编号，员工姓名，工资，职务名称，职务描述</p>
+<p>/*</p>
+<p>分析：</p>
+<p>1.员工编号，员工姓名，工资，需要查询emp表 职务名称，职务描述 需要查询job表</p>
+<p>2.查询条件 emp.job_id = job.id</p>
+<p>*/</p>
+<p>SELECT</p>
+<p>t1.`id`, – 员工编号</p>
+<p>t1.`ename`, – 员工姓名</p>
+<p>t1.`salary`,– 工资</p>
+<p>t2.`jname`, – 职务名称</p>
+<p>t2.`description` – 职务描述</p>
+<p>FROM</p>
+<p>emp t1, job t2</p>
+<p>WHERE</p>
+<p>t1.`job_id` = t2.`id`;</p>
+<p>-- 2.查询员工编号，员工姓名，工资，职务名称，职务描述，部门名称，部门位置</p>
+<p>/*</p>
+<p>分析：</p>
+<p>1. 员工编号，员工姓名，工资 emp 职务名称，职务描述 job 部门名称，部门位置 dept</p>
+<p>2. 条件： emp.job_id = job.id and emp.dept_id = dept.id</p>
+<p>*/</p>
+<p>SELECT</p>
+<p>t1.`id`, – 员工编号</p>
+<p>t1.`ename`, – 员工姓名</p>
+<p>t1.`salary`,– 工资</p>
+<p>t2.`jname`, – 职务名称</p>
+<p>t2.`description`, – 职务描述</p>
+<p>t3.`dname`, – 部门名称</p>
+<p>t3.`loc` – 部门位置</p>
+<p>FROM</p>
+<p>emp t1, job t2,dept t3</p>
+<p>WHERE</p>
+<p>t1.`job_id` = t2.`id` AND t1.`dept_id` = t3.`id`;</p>
+<p>-- 3.查询员工姓名，工资，工资等级</p>
+<p>/*</p>
+<p>分析：</p>
+<p>1.员工姓名，工资 emp 工资等级 salarygrade</p>
+<p>2.条件 emp.salary &gt;= salarygrade.losalary and emp.salary &lt;= salarygrade.hisalary</p>
+<p>emp.salary BETWEEN salarygrade.losalary and salarygrade.hisalary</p>
+<p>*/</p>
+<p>SELECT</p>
+<p>t1.ename ,</p>
+<p>t1.`salary`,</p>
+<p>t2.*</p>
+<p>FROM emp t1, salarygrade t2</p>
+<p>WHERE t1.`salary` BETWEEN t2.`losalary` AND t2.`hisalary`;</p>
+<p>-- 4.查询员工姓名，工资，职务名称，职务描述，部门名称，部门位置，工资等级</p>
+<p>/*</p>
+<p>分析：</p>
+<p>1. 员工姓名，工资 emp ， 职务名称，职务描述 job 部门名称，部门位置，dept 工资等级 salarygrade</p>
+<p>2. 条件： emp.job_id = job.id and emp.dept_id = dept.id and emp.salary BETWEEN salarygrade.losalary and salarygrade.hisalary</p>
+<p>*/</p>
+<p>SELECT</p>
+<p>t1.`ename`,</p>
+<p>t1.`salary`,</p>
+<p>t2.`jname`,</p>
+<p>t2.`description`,</p>
+<p>t3.`dname`,</p>
+<p>t3.`loc`,</p>
+<p>t4.`grade`</p>
+<p>FROM</p>
+<p>emp t1,job t2,dept t3,salarygrade t4</p>
+<p>WHERE</p>
+<p>t1.`job_id` = t2.`id`</p>
+<p>AND t1.`dept_id` = t3.`id`</p>
+<p>AND t1.`salary` BETWEEN t4.`losalary` AND t4.`hisalary`;</p>
+<p>-- 5.查询出部门编号、部门名称、部门位置、部门人数</p>
+<p>/*</p>
+<p>分析：</p>
+<p>1.部门编号、部门名称、部门位置 dept 表。 部门人数 emp表</p>
+<p>2.使用分组查询。按照emp.dept_id完成分组，查询count(id)</p>
+<p>3.使用子查询将第2步的查询结果和dept表进行关联查询</p>
+<p>*/</p>
+<p>SELECT</p>
+<p>t1.`id`,t1.`dname`,t1.`loc` , t2.total</p>
+<p>FROM</p>
+<p>dept t1,</p>
+<p>(SELECT</p>
+<p>dept_id,COUNT(id) total</p>
+<p>FROM</p>
+<p>emp</p>
+<p>GROUP BY dept_id) t2</p>
+<p>WHERE t1.`id` = t2.dept_id;</p>
+<p>-- 6.查询所有员工的姓名及其直接上级的姓名,没有领导的员工也需要查询</p>
+<p>/*</p>
+<p>分析：</p>
+<p>1.姓名 emp， 直接上级的姓名 emp</p>
+<p>* emp表的id 和 mgr 是自关联</p>
+<p>2.条件 emp.id = emp.mgr</p>
+<p>3.查询左表的所有数据，和 交集数据</p>
+<p>* 使用左外连接查询</p>
+<p>*/</p>
+<p>/*</p>
+<p>select</p>
+<p>t1.ename,</p>
+<p>t1.mgr,</p>
+<p>t2.`id`,</p>
+<p>t2.ename</p>
+<p>from emp t1, emp t2</p>
+<p>where t1.mgr = t2.`id`;</p>
+<p>*/</p>
+<p>SELECT</p>
+<p>t1.ename,</p>
+<p>t1.mgr,</p>
+<p>t2.`id`,</p>
+<p>t2.`ename`</p>
+<p>FROM emp t1</p>
+<p>LEFT JOIN emp t2</p>
+<p>ON t1.`mgr` = t2.`id`;</p>
+<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>1. 事务的基本介绍</p>
+<p>1. 概念：</p>
+<p>* 如果一个包含多个步骤的业务操作，被事务管理，那么这些操作要么同时成功，要么同时失败</p>
+<p>2. 操作：</p>
+<p>1. 开启事务：start transection</p>
+<p>2. 回滚：rollback</p>
+<p>3. 提交：commit</p>
+<p>3. MySQL数据库中事务默认提交</p>
+<p>* 事务提交的两种方式：</p>
+<p>* 自动提交：</p>
+<p>* mysql就是自动提交的</p>
+<p>* 一条DML(增删改)语句会自动提交一次事务。</p>
+<p>* 手动提交：</p>
+<p>* Oracle数据库默认是手动提交事务</p>
+<p>* 需要先开启事务，再提交</p>
+<p>* 修改事务的默认提交方式：</p>
+<p>* 查看事务的默认提交方式：SELECT @@autocommit; – 1 代表自动提交 0 代表手动提交</p>
+<p>* 修改默认提交方式： set @@autocommit = 0;</p>
+<p>2. 事务的四大特征</p>
+<p>1. 原子性：是不可分割的最小操作单位，要么同时成功，要么同时失败。</p>
+<p>2. 持久性：当事务提交或回滚后，数据库会持久化的保存数据。</p>
+<p>3. 隔离性：多个事务之间。相互独立。</p>
+<p>4. 一致性：事务操作前后，数据总量不变</p>
+<p>3. 事务的隔离级别（了解）</p>
+<p>* 概念：多个事务之间隔离的，相互独立的。但是如果多个事务操作同一批数据，则会引发一些问题，设置不同的隔离级别就可以解决这些问题。</p>
+<p>* 存在问题：</p>
+<p>1. 脏读：一个事务，读取到另一个事务中没有提交的数据</p>
+<p>2. 不可重复读(虚读)：在同一个事务中，两次读取到的数据不一样。</p>
+<p>3. 幻读：一个事务操作(DML)数据表中所有记录，另一个事务添加了一条数据，则第一个事务查询不到自己的修改。</p>
+<p>* 隔离级别：</p>
+<p>1. read uncommitted：读未提交</p>
+<p>* 产生的问题：脏读、不可重复读、幻读</p>
+<p>2. read committed：读已提交 （Oracle）</p>
+<p>* 产生的问题：不可重复读、幻读</p>
+<p>3. repeatable read：可重复读 （MySQL默认）</p>
+<p>* 产生的问题：幻读</p>
+<p>4. serializable：串行化</p>
+<p>* 可以解决所有的问题</p>
+<p>* 注意：隔离级别从小到大安全性越来越高，但是效率越来越低</p>
+<p>* 数据库查询隔离级别：</p>
+<p>* select @@tx_isolation;</p>
+<p>* 数据库设置隔离级别：</p>
+<p>* set global transaction isolation level 级别字符串;</p>
+<p>* 演示：</p>
+<p>set global transaction isolation level read uncommitted;</p>
+<p>start transaction;</p>
+<p>-- 转账操作</p>
+<p>update account set balance = balance - 500 where id = 1;</p>
+<p>update account set balance = balance + 500 where id = 2;</p>
+<h3 id="DCL"><a href="#DCL" class="headerlink" title="DCL"></a>DCL</h3><p>* SQL分类：</p>
+<p>1. DDL：操作数据库和表</p>
+<p>2. DML：增删改表中数据</p>
+<p>3. DQL：查询表中数据</p>
+<p>4. DCL：管理用户，授权</p>
+<p>* DBA：数据库管理员</p>
+<p>* DCL：管理用户，授权</p>
+<p>1. 管理用户</p>
+<p>1. 添加用户：</p>
+<p>* 语法：CREATE USER ‘用户名‘@’主机名’ IDENTIFIED BY ‘密码’;</p>
+<p>2. 删除用户：</p>
+<p>* 语法：DROP USER ‘用户名‘@’主机名’;</p>
+<p>3. 修改用户密码：</p>
+<p>UPDATE USER SET PASSWORD = PASSWORD(‘新密码’) WHERE USER = ‘用户名’;</p>
+<p>UPDATE USER SET PASSWORD = PASSWORD(‘abc’) WHERE USER = ‘lisi’;</p>
+<p>SET PASSWORD FOR ‘用户名‘@’主机名’ = PASSWORD(‘新密码’);</p>
+<p>SET PASSWORD FOR ‘root‘@’localhost’ = PASSWORD(‘123’);</p>
+<p>* mysql中忘记了root用户的密码？</p>
+<p>1. cmd – &gt; net stop mysql 停止mysql服务</p>
+<p>* 需要管理员运行该cmd</p>
+<p>2. 使用无验证方式启动mysql服务： mysqld –skip-grant-tables</p>
+<p>3. 打开新的cmd窗口,直接输入mysql命令，敲回车。就可以登录成功</p>
+<p>4. use mysql;</p>
+<p>5. update user set password = password(‘你的新密码’) where user = ‘root’;</p>
+<p>6. 关闭两个窗口</p>
+<p>7. 打开任务管理器，手动结束mysqld.exe 的进程</p>
+<p>8. 启动mysql服务</p>
+<p>9. 使用新密码登录。</p>
+<p>4. 查询用户：</p>
+<p>-- 1. 切换到mysql数据库</p>
+<p>USE myql;</p>
+<p>-- 2. 查询user表</p>
+<p>SELECT * FROM USER;</p>
+<p>* 通配符： % 表示可以在任意主机使用用户登录数据库</p>
+<p>2. 权限管理：</p>
+<p>1. 查询权限：</p>
+<p>-- 查询权限</p>
+<p>SHOW GRANTS FOR ‘用户名‘@’主机名’;</p>
+<p>SHOW GRANTS FOR ‘lisi‘@’%’;</p>
+<p>2. 授予权限：</p>
+<p>-- 授予权限</p>
+<p>grant 权限列表 on 数据库名.表名 to ‘用户名‘@’主机名’;</p>
+<p>-- 给张三用户授予所有权限，在任意数据库任意表上</p>
+<p>GRANT ALL ON *.* TO ‘zhangsan‘@’localhost’;</p>
+<p>3. 撤销权限：</p>
+<p>-- 撤销权限：</p>
+<p>revoke 权限列表 on 数据库名.表名 from ‘用户名‘@’主机名’;</p>
+<p>REVOKE UPDATE ON db3.`account` FROM ‘lisi‘@’%’;</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>you can reward me here. Thank you!</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="lz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="lz 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>lz
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://llzzoomm.github.io/2023/03/28/mysql/" title="MySQL数据库">https://llzzoomm.github.io/2023/03/28/mysql/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%B2%BE%E7%AE%80/" rel="tag"><i class="fa fa-tag"></i> 精简</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/03/28/mybatis-plus00/" rel="prev" title="mybatis-plus">
+      <i class="fa fa-chevron-left"></i> mybatis-plus
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/03/28/request00/" rel="next" title="request">
+      request <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#DDL%EF%BC%9A%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E8%A1%A8"><span class="nav-text">DDL：操作数据库、表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DQL%EF%BC%9A%E6%9F%A5%E8%AF%A2%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="nav-text">DQL：查询表中的记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="nav-text">多表查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E5%8A%A1"><span class="nav-text">事务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DCL"><span class="nav-text">DCL</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lz"
+      src="/images/author.jpg">
+  <p class="site-author-name" itemprop="name">lz</p>
+  <div class="site-description" itemprop="description">德玛西亚</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+	  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=290 height=250 src="//music.163.com/outchain/player?type=0&id=4911950047&auto=1&height=430"></iframe> 
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+  
+  
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lz</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.1m</span>
+</div>
+
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+	<span title="post.totalcount">
+     402.5k字 </span>
+    <!--<span title="站点总字数">1.1m</span>-->
+  
+  
+  
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("08/10/2020 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
