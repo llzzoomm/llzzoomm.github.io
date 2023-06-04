@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"llzzoomm.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="记忆曲线">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测试基础02">
+<meta property="og:url" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/index.html">
+<meta property="og:site_name" content="llzzoomm">
+<meta property="og:description" content="记忆曲线">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024093736975.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024100114584.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024100035335.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024100050599.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024105553905.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024105615224.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024105638861.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024114728995.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024120514746.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024120527142.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024122700482.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024122639248.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024145308985.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024151030120.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024152741189.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024152653900.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024152731367.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024155837308.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024155853521.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024155907864.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024160136120.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024162459688.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024165931247.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024165946258.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024170008639.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024171017117.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024171521876.png">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024171551244.png">
+<meta property="article:published_time" content="2023-06-04T06:51:41.916Z">
+<meta property="article:modified_time" content="2023-06-04T06:59:26.463Z">
+<meta property="article:author" content="lz">
+<meta property="article:tag" content="测试基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://llzzoomm.github.io/2023/06/04/day02ceshi/image-20211024093736975.png">
+
+<link rel="canonical" href="https://llzzoomm.github.io/2023/06/04/day02ceshi/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>测试基础02 | llzzoomm</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="llzzoomm" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">llzzoomm</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">德玛西亚</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">13</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">12</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">58</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://llzzoomm.github.io/2023/06/04/day02ceshi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="lz">
+      <meta itemprop="description" content="德玛西亚">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="llzzoomm">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          测试基础02
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-04 14:51:41 / 修改时间：14:59:26" itemprop="dateCreated datePublished" datetime="2023-06-04T14:51:41+08:00">2023-06-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">测试基础</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="记忆曲线"><a href="#记忆曲线" class="headerlink" title="记忆曲线"></a>记忆曲线</h3><span id="more"></span>
+
+<p><img src="/2023/06/04/day02ceshi/image-20211024093736975.png" alt="image-20211024093736975"></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="一、解决穷举场景"><a href="#一、解决穷举场景" class="headerlink" title="一、解决穷举场景"></a>一、解决穷举场景</h3><blockquote>
+<p>重点：使用等价类划分法</p>
+</blockquote>
+<h4 id="1-1-等价类划分法"><a href="#1-1-等价类划分法" class="headerlink" title="1.1 等价类划分法"></a>1.1 等价类划分法</h4><p><img src="/2023/06/04/day02ceshi/image-20211024100114584.png" alt="image-20211024100114584"></p>
+<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">重点：有效等价和单个无效等价各取1个即可。</span><br><span class="line">步骤：</span><br><span class="line">	1、明确需求</span><br><span class="line">	2、确定有效和无效等价</span><br><span class="line">	3、根据有效和无效造数据编写用例</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h4 id="1-2-案例（qq合法验证）"><a href="#1-2-案例（qq合法验证）" class="headerlink" title="1.2 案例（qq合法验证）"></a>1.2 案例（qq合法验证）</h4><blockquote>
+<p>需求：验证6~10自然数的qq合法</p>
+<p>自然数：<em>自然数</em>由0开始，一个接一个，组成一个无穷的集体</p>
+</blockquote>
+<p><img src="/2023/06/04/day02ceshi/image-20211024100035335.png" alt="image-20211024100035335"></p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024100050599.png" alt="image-20211024100050599"></p>
+<h4 id="1-3-案例（城市电话验证）"><a href="#1-3-案例（城市电话验证）" class="headerlink" title="1.3 案例（城市电话验证）"></a>1.3 案例（城市电话验证）</h4><p><img src="/2023/06/04/day02ceshi/image-20211024105553905.png" alt="image-20211024105553905"></p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024105615224.png" alt="image-20211024105615224"></p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024105638861.png" alt="image-20211024105638861"></p>
+<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">重点：</span><br><span class="line">	1、正向用例：一条尽可能覆盖多条</span><br><span class="line">	2、逆向用例：每一条数据，都是一条单独用例。</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="1-4-总结（应用场景）"><a href="#1-4-总结（应用场景）" class="headerlink" title="1.4 总结（应用场景）"></a>1.4 总结（应用场景）</h4><figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">针对：需要有大量数据测试输入，但是没法穷举测试的地方。 </span><br><span class="line"> 输入框</span><br><span class="line"> 下拉列表</span><br><span class="line"> 单选复选框</span><br><span class="line">典型代表：页面的输入框类测试。</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>友情提示：</strong>完整的用例应该是等价类和边界值一块写。</p>
+<h3 id="二、解决边界限制问题"><a href="#二、解决边界限制问题" class="headerlink" title="二、解决边界限制问题"></a>二、解决边界限制问题</h3><blockquote>
+<p>说明：使用边界值解决边界位数限制问题。2.1 边界值说明</p>
+</blockquote>
+<p><img src="/2023/06/04/day02ceshi/image-20211024114728995.png" alt="image-20211024114728995"></p>
+<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">提示：</span><br><span class="line">	1、有关范围限制，最多7条用例（暂时未优化）</span><br><span class="line">	2、边界值能解决位数限制问题，但是不能解决类型问题（要结合等价类）</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="2-2-步骤"><a href="#2-2-步骤" class="headerlink" title="2.2 步骤"></a>2.2 步骤</h4><figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、明确需求</span><br><span class="line">2、确定有效和无效等价</span><br><span class="line">3、确定边界范围</span><br><span class="line">4、提取数据编写用例</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="2-3-案例1"><a href="#2-3-案例1" class="headerlink" title="2.3 案例1"></a>2.3 案例1</h4><p><img src="/2023/06/04/day02ceshi/image-20211024120514746.png" alt="image-20211024120514746"></p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024120527142.png" alt="image-20211024120527142"></p>
+<h4 id="2-4-案例2"><a href="#2-4-案例2" class="headerlink" title="2.4 案例2"></a>2.4 案例2</h4><p><img src="/2023/06/04/day02ceshi/image-20211024122700482.png" alt="image-20211024122700482"></p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024122639248.png" alt="image-20211024122639248"></p>
+<h4 id="2-5-优化（7点优化5点）"><a href="#2-5-优化（7点优化5点）" class="headerlink" title="2.5 优化（7点优化5点）"></a>2.5 优化（7点优化5点）</h4><blockquote>
+<p>重点：开内闭外（开区间选包含的点，闭区选不包含的点）</p>
+<p>开区间：不包含边界上的点（没有等号）。如：a&lt;10</p>
+<p>闭区间：包含边界上的点（有等号）。 如:a&lt;=10</p>
+</blockquote>
+<p>优化策略：</p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024145308985.png" alt="image-20211024145308985"></p>
+<h4 id="2-6-总结"><a href="#2-6-总结" class="headerlink" title="2.6 总结"></a>2.6 总结</h4><blockquote>
+<p>强调：单个输入框，常用的方式 边界+等价类</p>
+<p>面试题：最常用的用例设计方法有哪些？–等价类、边界值</p>
+</blockquote>
+<figure class="highlight makefile"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在等价类的基础上针对有边界范围的测试数据输入的地方(重点关注边界) </span><br><span class="line"><span class="section">常见词语描述:大小、尺寸、重量、最大、最小、至多、至少等修饰词语 </span></span><br><span class="line"><span class="section">典型代表:有边界范围的输入框类测试</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="三、解决多条件有依赖关系测试"><a href="#三、解决多条件有依赖关系测试" class="headerlink" title="三、解决多条件有依赖关系测试"></a>三、解决多条件有依赖关系测试</h3><blockquote>
+<p>重点：使用判定表</p>
+</blockquote>
+<h4 id="3-1-介绍"><a href="#3-1-介绍" class="headerlink" title="3.1 介绍"></a>3.1 介绍</h4><p><img src="/2023/06/04/day02ceshi/image-20211024151030120.png" alt="image-20211024151030120"></p>
+<h4 id="3-2-步骤"><a href="#3-2-步骤" class="headerlink" title="3.2 步骤"></a>3.2 步骤</h4><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、明确需求</span><br><span class="line"><span class="number">2</span>、画出判定表</span><br><span class="line"> 	<span class="number">1</span>）、列出条件桩和动作桩 </span><br><span class="line"> 	<span class="number">2</span>）、填写条件项，对条件进行全组合 </span><br><span class="line"> 	<span class="number">3</span>）、根据条件项的组合确定动作项 </span><br><span class="line"> 	<span class="number">4</span>）、简化、合并相似规则<span class="comment">(有相同的动作)</span></span><br><span class="line"><span class="number">3</span>、根据规则编写测试用例</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="3-3-案例（订单）"><a href="#3-3-案例（订单）" class="headerlink" title="3.3 案例（订单）"></a>3.3 案例（订单）</h4><ul>
+<li><p>需求</p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024152741189.png" alt="image-20211024152741189"></p>
+</li>
+<li><p>判定表</p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024152653900.png" alt="image-20211024152653900"></p>
+</li>
+<li><p>用例</p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024152731367.png" alt="image-20211024152731367"></p>
+</li>
+</ul>
+<h4 id="3-4-练习（文件修改）"><a href="#3-4-练习（文件修改）" class="headerlink" title="3.4 练习（文件修改）"></a>3.4 练习（文件修改）</h4><ul>
+<li><p>需求</p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024155837308.png" alt="image-20211024155837308"></p>
+</li>
+<li><p>判定表</p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024155853521.png" alt="image-20211024155853521"></p>
+</li>
+<li><p>用例</p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024155907864.png" alt="image-20211024155907864"></p>
+</li>
+</ul>
+<h4 id="3-5-判定表总结"><a href="#3-5-判定表总结" class="headerlink" title="3.5 判定表总结"></a>3.5 判定表总结</h4><p><img src="/2023/06/04/day02ceshi/image-20211024160136120.png" alt="image-20211024160136120"></p>
+<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">提示：</span><br><span class="line">	1、多条件之间有依赖关系，使用判定表来进行测试覆盖。</span><br><span class="line">	2、判定表一般适合4个以内条件依赖关系</span><br><span class="line">	3、如果条件超过4个，就不适合覆盖所有条件，应采用（正交法）来解决。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="四、业务测试覆盖"><a href="#四、业务测试覆盖" class="headerlink" title="四、业务测试覆盖"></a>四、业务测试覆盖</h3><blockquote>
+<p> 重点:</p>
+<p>​    1、覆盖业务测试,需要使用流程图法</p>
+<p>​    2、先测试业务，在测试单功能、单模块、单页面</p>
+</blockquote>
+<h4 id="4-1-流程图"><a href="#4-1-流程图" class="headerlink" title="4.1 流程图"></a>4.1 流程图</h4><blockquote>
+<p> 提示:业务用例是根据流程图来梳理的,需要先了解流程图</p>
+</blockquote>
+<p><img src="/2023/06/04/day02ceshi/image-20211024162459688.png" alt="image-20211024162459688"></p>
+<figure class="highlight makefile"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">作用:梳理业务用例</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>练习流程图工具：</p>
+<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、线上工具：https:<span class="regexp">//</span>processon.com<span class="regexp">/diagraming/</span><span class="number">605880</span>af07912927bd71c388</span><br><span class="line"><span class="number">2</span>、离线工具：visio</span><br><span class="line"><span class="number">3</span>、其他工具：Excel</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="4-2-案例（ATM）"><a href="#4-2-案例（ATM）" class="headerlink" title="4.2 案例（ATM）"></a>4.2 案例（ATM）</h4><ul>
+<li><p>流程图</p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024165931247.png" alt="image-20211024165931247"></p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024165946258.png" alt="image-20211024165946258"></p>
+</li>
+<li><p>用例</p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024170008639.png" alt="image-20211024170008639"></p>
+</li>
+</ul>
+<h3 id="五、错误推荐法"><a href="#五、错误推荐法" class="headerlink" title="五、错误推荐法"></a>五、错误推荐法</h3><blockquote>
+<p>应用场景：当项目用例都执行完毕，且BUG修复完成，离上线还有一段时间，在这段时间中可是使用错误推荐法复测主要业务或测试未覆盖的功能。</p>
+</blockquote>
+<p><img src="/2023/06/04/day02ceshi/image-20211024171017117.png" alt="image-20211024171017117"></p>
+<h3 id="六、作业"><a href="#六、作业" class="headerlink" title="六、作业"></a>六、作业</h3><p><img src="/2023/06/04/day02ceshi/image-20211024171521876.png" alt="image-20211024171521876"></p>
+<p><img src="/2023/06/04/day02ceshi/image-20211024171551244.png" alt="image-20211024171551244"></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>you can reward me here. Thank you!</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="lz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="lz 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>lz
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://llzzoomm.github.io/2023/06/04/day02ceshi/" title="测试基础02">https://llzzoomm.github.io/2023/06/04/day02ceshi/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fa fa-tag"></i> 测试基础</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/06/04/day01ceshi/" rel="prev" title="测试基础01">
+      <i class="fa fa-chevron-left"></i> 测试基础01
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/06/04/day03ceshi/" rel="next" title="测试基础03">
+      测试基础03 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%B0%E5%BF%86%E6%9B%B2%E7%BA%BF"><span class="nav-text">记忆曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%A7%A3%E5%86%B3%E7%A9%B7%E4%B8%BE%E5%9C%BA%E6%99%AF"><span class="nav-text">一、解决穷举场景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-%E7%AD%89%E4%BB%B7%E7%B1%BB%E5%88%92%E5%88%86%E6%B3%95"><span class="nav-text">1.1 等价类划分法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E6%A1%88%E4%BE%8B%EF%BC%88qq%E5%90%88%E6%B3%95%E9%AA%8C%E8%AF%81%EF%BC%89"><span class="nav-text">1.2 案例（qq合法验证）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-%E6%A1%88%E4%BE%8B%EF%BC%88%E5%9F%8E%E5%B8%82%E7%94%B5%E8%AF%9D%E9%AA%8C%E8%AF%81%EF%BC%89"><span class="nav-text">1.3 案例（城市电话验证）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-%E6%80%BB%E7%BB%93%EF%BC%88%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%89"><span class="nav-text">1.4 总结（应用场景）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%A7%A3%E5%86%B3%E8%BE%B9%E7%95%8C%E9%99%90%E5%88%B6%E9%97%AE%E9%A2%98"><span class="nav-text">二、解决边界限制问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E6%AD%A5%E9%AA%A4"><span class="nav-text">2.2 步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E6%A1%88%E4%BE%8B1"><span class="nav-text">2.3 案例1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-%E6%A1%88%E4%BE%8B2"><span class="nav-text">2.4 案例2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-%E4%BC%98%E5%8C%96%EF%BC%887%E7%82%B9%E4%BC%98%E5%8C%965%E7%82%B9%EF%BC%89"><span class="nav-text">2.5 优化（7点优化5点）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-%E6%80%BB%E7%BB%93"><span class="nav-text">2.6 总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%A7%A3%E5%86%B3%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9C%89%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%B5%8B%E8%AF%95"><span class="nav-text">三、解决多条件有依赖关系测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-%E4%BB%8B%E7%BB%8D"><span class="nav-text">3.1 介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-%E6%AD%A5%E9%AA%A4"><span class="nav-text">3.2 步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-%E6%A1%88%E4%BE%8B%EF%BC%88%E8%AE%A2%E5%8D%95%EF%BC%89"><span class="nav-text">3.3 案例（订单）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-%E7%BB%83%E4%B9%A0%EF%BC%88%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%EF%BC%89"><span class="nav-text">3.4 练习（文件修改）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-%E5%88%A4%E5%AE%9A%E8%A1%A8%E6%80%BB%E7%BB%93"><span class="nav-text">3.5 判定表总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%B8%9A%E5%8A%A1%E6%B5%8B%E8%AF%95%E8%A6%86%E7%9B%96"><span class="nav-text">四、业务测试覆盖</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-text">4.1 流程图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E6%A1%88%E4%BE%8B%EF%BC%88ATM%EF%BC%89"><span class="nav-text">4.2 案例（ATM）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%94%99%E8%AF%AF%E6%8E%A8%E8%8D%90%E6%B3%95"><span class="nav-text">五、错误推荐法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%BD%9C%E4%B8%9A"><span class="nav-text">六、作业</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lz"
+      src="/images/author.jpg">
+  <p class="site-author-name" itemprop="name">lz</p>
+  <div class="site-description" itemprop="description">德玛西亚</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+	  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=52 src="//music.163.com/outchain/player?type=0&id=8264726996&auto=1&height=32"></iframe>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+  
+  
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lz</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.3m</span>
+</div>
+
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+	<span title="post.totalcount">
+     451.6k字 </span>
+    <!--<span title="站点总字数">1.3m</span>-->
+  
+  
+  
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("08/10/2020 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
