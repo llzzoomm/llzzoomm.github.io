@@ -20,14 +20,13 @@
     var CONFIG = {"hostname":"llzzoomm.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="教学目标1&gt;了解NoSQL概念 2&gt;了解Redis概念，定位，优点，缺点 3&gt;掌握Redis常用五大类型 4&gt;掌握Redis Key 与Value值设计 5&gt;掌握Redis全局命令 6&gt;掌握Redis 安全与事务操作 7&gt;了解Redis持久化策略 8&gt;了解Redis内存淘汰机制与过期Key清理 9&gt;掌握Java集成Redis操作 10&gt;">
+  <meta name="description" content="学习目标">
 <meta property="og:type" content="article">
-<meta property="og:title" content="llzzoomm">
+<meta property="og:title" content="Redis">
 <meta property="og:url" content="https://llzzoomm.github.io/2023/07/11/redis/index.html">
 <meta property="og:site_name" content="llzzoomm">
-<meta property="og:description" content="教学目标1&gt;了解NoSQL概念 2&gt;了解Redis概念，定位，优点，缺点 3&gt;掌握Redis常用五大类型 4&gt;掌握Redis Key 与Value值设计 5&gt;掌握Redis全局命令 6&gt;掌握Redis 安全与事务操作 7&gt;了解Redis持久化策略 8&gt;了解Redis内存淘汰机制与过期Key清理 9&gt;掌握Java集成Redis操作 10&gt;">
+<meta property="og:description" content="学习目标">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://llzzoomm.github.io/2023/07/11/redis/redis.jpg">
 <meta property="og:image" content="https://llzzoomm.github.io/2023/07/11/redis/%E9%98%BF%E9%87%8C%E5%B9%B6%E5%8F%91.jpg">
 <meta property="og:image" content="https://llzzoomm.github.io/2023/07/11/redis/image-20220829191301206.png">
 <meta property="og:image" content="https://llzzoomm.github.io/2023/07/11/redis/image-20220829191453155.png">
@@ -55,10 +54,11 @@
 <meta property="og:image" content="https://llzzoomm.github.io/2023/07/11/redis/image-20220716145807103.png">
 <meta property="og:image" content="https://llzzoomm.github.io/2023/07/11/redis/image-20220902213752150.png">
 <meta property="article:published_time" content="2023-07-11T11:32:04.806Z">
-<meta property="article:modified_time" content="2023-07-11T11:28:31.689Z">
+<meta property="article:modified_time" content="2023-07-11T11:38:37.684Z">
 <meta property="article:author" content="lz">
+<meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://llzzoomm.github.io/2023/07/11/redis/redis.jpg">
+<meta name="twitter:image" content="https://llzzoomm.github.io/2023/07/11/redis/%E9%98%BF%E9%87%8C%E5%B9%B6%E5%8F%91.jpg">
 
 <link rel="canonical" href="https://llzzoomm.github.io/2023/07/11/redis/">
 
@@ -73,7 +73,7 @@
   };
 </script>
 
-  <title> | llzzoomm</title>
+  <title>Redis | llzzoomm</title>
   
 
 
@@ -157,12 +157,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">13</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">14</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">12</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -239,7 +239,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          Redis
         </h1>
 
         <div class="post-meta">
@@ -250,7 +250,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-07-11 19:32:04 / 修改时间：19:28:31" itemprop="dateCreated datePublished" datetime="2023-07-11T19:32:04+08:00">2023-07-11</time>
+              <time title="创建时间：2023-07-11 19:32:04 / 修改时间：19:38:37" itemprop="dateCreated datePublished" datetime="2023-07-11T19:32:04+08:00">2023-07-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Redis/" itemprop="url" rel="index"><span itemprop="name">Redis</span></a>
+                </span>
             </span>
 
           
@@ -278,8 +287,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="/2023/07/11/redis/redis.jpg" alt="img"></p>
-<h1 id="教学目标"><a href="#教学目标" class="headerlink" title="教学目标"></a>教学目标</h1><p>1&gt;了解NoSQL概念</p>
+        <h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><span id="more"></span>
+
+<p>1&gt;了解NoSQL概念</p>
 <p>2&gt;了解Redis概念，定位，优点，缺点</p>
 <p>3&gt;掌握Redis常用五大类型</p>
 <p>4&gt;掌握Redis Key 与Value值设计</p>
@@ -1180,7 +1190,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://llzzoomm.github.io/2023/07/11/redis/" title="">https://llzzoomm.github.io/2023/07/11/redis/</a>
+    <a href="https://llzzoomm.github.io/2023/07/11/redis/" title="Redis">https://llzzoomm.github.io/2023/07/11/redis/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -1190,6 +1200,10 @@
 
 
       <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Redis/" rel="tag"><i class="fa fa-tag"></i> Redis</a>
+          </div>
 
         
 
@@ -1259,7 +1273,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%99%E5%AD%A6%E7%9B%AE%E6%A0%87"><span class="nav-text">教学目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A4%E8%AF%86-Redis"><span class="nav-text">认识 Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%86%E7%B1%BB"><span class="nav-text">数据库分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NoSQL%E5%88%86%E7%B1%BB"><span class="nav-text">NoSQL分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFRedis"><span class="nav-text">什么是Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis%E7%AE%80%E4%BB%8B"><span class="nav-text">Redis简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%81%E5%9C%A8%E7%94%A8Redis"><span class="nav-text">谁在用Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%AD%A6redis"><span class="nav-text">怎么学redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-text">Redis的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-text">服务端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E2%80%93redisclient"><span class="nav-text">客户端–redisclient</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E2%80%93RedisDesktopClient"><span class="nav-text">客户端–RedisDesktopClient</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E2%80%93rdm"><span class="nav-text">客户端–rdm</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%86%B5"><span class="nav-text">概况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB%E5%9E%8B"><span class="nav-text">String类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">非常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash%E7%B1%BB%E5%9E%8B"><span class="nav-text">Hash类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4-1"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E7%B1%BB%E5%9E%8B"><span class="nav-text">List类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4-2"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-1"><span class="nav-text">非常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-2"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set%E7%B1%BB%E5%9E%8B"><span class="nav-text">Set类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4-3"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-2"><span class="nav-text">非常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-3"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sorted-set-%E7%B1%BB%E5%9E%8B"><span class="nav-text">Sorted set 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4-4"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-3"><span class="nav-text">非常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-4"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93"><span class="nav-text">类型总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Value%E8%AE%BE%E8%AE%A1"><span class="nav-text">Value设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Key%E8%AE%BE%E8%AE%A1"><span class="nav-text">Key设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%94%AF%E4%B8%80%E6%80%A7"><span class="nav-text">唯一性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%AF%BB%E6%80%A7"><span class="nav-text">可读性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%81%B5%E6%B4%BB%E6%80%A7%E2%80%93%E9%A1%B9%E7%9B%AE%E4%BA%8C%E9%87%8D%E7%82%B9%E8%AE%B2"><span class="nav-text">灵活性–项目二重点讲</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E6%95%88%E6%80%A7"><span class="nav-text">时效性</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E5%85%A8%E5%B1%80%E5%91%BD%E4%BB%A4"><span class="nav-text">Redis全局命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E5%AE%89%E5%85%A8%E6%80%A7"><span class="nav-text">Redis安全性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E4%BA%8B%E5%8A%A1-%E6%8B%93%E5%B1%95"><span class="nav-text">Redis事务[拓展]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E6%8C%81%E4%B9%85%E5%8C%96%E6%9C%BA%E5%88%B6-%E6%8B%93%E5%B1%95"><span class="nav-text">Redis持久化机制[拓展]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RDB%E6%96%B9%E5%BC%8F"><span class="nav-text">RDB方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91%E6%9C%BA%E5%88%B6"><span class="nav-text">触发机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9"><span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOF%E6%96%B9%E5%BC%8F"><span class="nav-text">AOF方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9-1"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9-1"><span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RDB-AOF%E6%B7%B7%E5%90%88%E6%96%B9%E5%BC%8F"><span class="nav-text">RDB-AOF混合方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%81%E4%B9%85%E5%8C%96%E6%9C%BA%E5%88%B6%E9%80%89%E6%8B%A9"><span class="nav-text">持久化机制选择</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0%E6%9C%BA%E5%88%B6-%E6%8B%93%E5%B1%95"><span class="nav-text">Redis内存淘汰机制[拓展]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80-1"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95"><span class="nav-text">内存淘汰算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5"><span class="nav-text">Redis淘汰策略</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%87%E6%9C%9FKey%E5%A4%84%E7%90%86-%E6%8B%93%E5%B1%95"><span class="nav-text">过期Key处理[拓展]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E7%BC%96%E7%A8%8B"><span class="nav-text">Redis编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%86%B5-1"><span class="nav-text">概况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jedis"><span class="nav-text">Jedis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lettuce"><span class="nav-text">Lettuce</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E6%A1%88%E4%BE%8B"><span class="nav-text">小案例</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A4%E8%AF%86-Redis"><span class="nav-text">认识 Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%86%E7%B1%BB"><span class="nav-text">数据库分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NoSQL%E5%88%86%E7%B1%BB"><span class="nav-text">NoSQL分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFRedis"><span class="nav-text">什么是Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis%E7%AE%80%E4%BB%8B"><span class="nav-text">Redis简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%81%E5%9C%A8%E7%94%A8Redis"><span class="nav-text">谁在用Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%AD%A6redis"><span class="nav-text">怎么学redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-text">Redis的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-text">服务端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E2%80%93redisclient"><span class="nav-text">客户端–redisclient</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E2%80%93RedisDesktopClient"><span class="nav-text">客户端–RedisDesktopClient</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E2%80%93rdm"><span class="nav-text">客户端–rdm</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%86%B5"><span class="nav-text">概况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB%E5%9E%8B"><span class="nav-text">String类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">非常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash%E7%B1%BB%E5%9E%8B"><span class="nav-text">Hash类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4-1"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E7%B1%BB%E5%9E%8B"><span class="nav-text">List类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4-2"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-1"><span class="nav-text">非常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-2"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set%E7%B1%BB%E5%9E%8B"><span class="nav-text">Set类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4-3"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-2"><span class="nav-text">非常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-3"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sorted-set-%E7%B1%BB%E5%9E%8B"><span class="nav-text">Sorted set 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4-4"><span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-3"><span class="nav-text">非常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-4"><span class="nav-text">应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93"><span class="nav-text">类型总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Value%E8%AE%BE%E8%AE%A1"><span class="nav-text">Value设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Key%E8%AE%BE%E8%AE%A1"><span class="nav-text">Key设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%94%AF%E4%B8%80%E6%80%A7"><span class="nav-text">唯一性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%AF%BB%E6%80%A7"><span class="nav-text">可读性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%81%B5%E6%B4%BB%E6%80%A7%E2%80%93%E9%A1%B9%E7%9B%AE%E4%BA%8C%E9%87%8D%E7%82%B9%E8%AE%B2"><span class="nav-text">灵活性–项目二重点讲</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E6%95%88%E6%80%A7"><span class="nav-text">时效性</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E5%85%A8%E5%B1%80%E5%91%BD%E4%BB%A4"><span class="nav-text">Redis全局命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E5%AE%89%E5%85%A8%E6%80%A7"><span class="nav-text">Redis安全性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E4%BA%8B%E5%8A%A1-%E6%8B%93%E5%B1%95"><span class="nav-text">Redis事务[拓展]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E6%8C%81%E4%B9%85%E5%8C%96%E6%9C%BA%E5%88%B6-%E6%8B%93%E5%B1%95"><span class="nav-text">Redis持久化机制[拓展]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RDB%E6%96%B9%E5%BC%8F"><span class="nav-text">RDB方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91%E6%9C%BA%E5%88%B6"><span class="nav-text">触发机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9"><span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOF%E6%96%B9%E5%BC%8F"><span class="nav-text">AOF方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9-1"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9-1"><span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RDB-AOF%E6%B7%B7%E5%90%88%E6%96%B9%E5%BC%8F"><span class="nav-text">RDB-AOF混合方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%81%E4%B9%85%E5%8C%96%E6%9C%BA%E5%88%B6%E9%80%89%E6%8B%A9"><span class="nav-text">持久化机制选择</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0%E6%9C%BA%E5%88%B6-%E6%8B%93%E5%B1%95"><span class="nav-text">Redis内存淘汰机制[拓展]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80-1"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95"><span class="nav-text">内存淘汰算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5"><span class="nav-text">Redis淘汰策略</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%87%E6%9C%9FKey%E5%A4%84%E7%90%86-%E6%8B%93%E5%B1%95"><span class="nav-text">过期Key处理[拓展]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis%E7%BC%96%E7%A8%8B"><span class="nav-text">Redis编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%86%B5-1"><span class="nav-text">概况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jedis"><span class="nav-text">Jedis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lettuce"><span class="nav-text">Lettuce</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E6%A1%88%E4%BE%8B"><span class="nav-text">小案例</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1282,13 +1296,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
