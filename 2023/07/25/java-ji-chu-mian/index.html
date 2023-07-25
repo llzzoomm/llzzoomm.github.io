@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"llzzoomm.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Java基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础面">
+<meta property="og:url" content="https://llzzoomm.github.io/2023/07/25/java-ji-chu-mian/index.html">
+<meta property="og:site_name" content="llzzoomm">
+<meta property="og:description" content="Java基础">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://llzzoomm.github.io/2023/07/25/java-ji-chu-mian/Users/32191/AppData/Roaming/Typora/typora-user-images/image-20230724160954295.png">
+<meta property="article:published_time" content="2023-07-25T13:33:57.514Z">
+<meta property="article:modified_time" content="2023-07-25T13:35:44.382Z">
+<meta property="article:author" content="lz">
+<meta property="article:tag" content="面">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://llzzoomm.github.io/2023/07/25/java-ji-chu-mian/Users/32191/AppData/Roaming/Typora/typora-user-images/image-20230724160954295.png">
+
+<link rel="canonical" href="https://llzzoomm.github.io/2023/07/25/java-ji-chu-mian/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Java基础面 | llzzoomm</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="llzzoomm" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">llzzoomm</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">德玛西亚</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">16</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">70</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://llzzoomm.github.io/2023/07/25/java-ji-chu-mian/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="lz">
+      <meta itemprop="description" content="德玛西亚">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="llzzoomm">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java基础面
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-25 21:33:57 / 修改时间：21:35:44" itemprop="dateCreated datePublished" datetime="2023-07-25T21:33:57+08:00">2023-07-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9D%A2/" itemprop="url" rel="index"><span itemprop="name">面</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.7k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><span id="more"></span>
+
+<h3 id="1-的作用"><a href="#1-的作用" class="headerlink" title="1.==的作用"></a>1.==的作用</h3><ul>
+<li><p>基本类型，比较具体的值</p>
+</li>
+<li><p>引用类型，比较地址值</p>
+</li>
+</ul>
+<h3 id="2-equals的作用"><a href="#2-equals的作用" class="headerlink" title="2.equals的作用"></a>2.equals的作用</h3><ul>
+<li><p>Object类中默认的是== ，但是会重写</p>
+</li>
+<li><p>String类中比较字符串是否相同，区分大小写。</p>
+</li>
+</ul>
+<h3 id="3-字符串常用API"><a href="#3-字符串常用API" class="headerlink" title="3.字符串常用API"></a>3.字符串常用API</h3><p>将take字符串中的TMD用***替代，</p>
+<p>take.replace(“TMD”，”***”);</p>
+<p>将take字符串进行截取，从0到3截取</p>
+<p>take.substring(0, 3);</p>
+<p>将take字符串一个一个遍历出来，</p>
+<p>take.charAr(i)；</p>
+<h3 id="4-什么是面向对象"><a href="#4-什么是面向对象" class="headerlink" title="4.什么是面向对象"></a>4.什么是面向对象</h3><ul>
+<li>面向对象相对于面向过程，是两种不同的处理问题方式</li>
+<li>面向过程，关注一件事情的步骤和顺序，比较直接高效高效</li>
+<li>面向对象关注一件事情的所有参与者（对象），各自做什么，注重可复用，维护，拓展。</li>
+</ul>
+<h3 id="5-1-封装"><a href="#5-1-封装" class="headerlink" title="5.1 封装"></a>5.1 封装</h3><ul>
+<li>封装的意义，明确标识出允许外部使用的成员函数和数据源内部细节对外部调用透明</li>
+<li>外部调用无需修改或者关心内部实现</li>
+</ul>
+<h3 id="5-2-继承"><a href="#5-2-继承" class="headerlink" title="5.2 继承"></a>5.2 继承</h3><ul>
+<li>子类继承父类的方法，子类和父类共性的方法或属性，可以直接用父类的，不需要自己定义，只需要个性化扩展</li>
+</ul>
+<h3 id="5-3-多态"><a href="#5-3-多态" class="headerlink" title="5.3 多态"></a>5.3 多态</h3><ul>
+<li>基于对象所属类的不同，外部对同一个方法的调用，实际执行的逻辑不同</li>
+<li>继承，方法重写，父类引用指向子类对象，不可以调用子类特有的方法</li>
+</ul>
+<h3 id="6-JDK-JRE-JVM"><a href="#6-JDK-JRE-JVM" class="headerlink" title="6.JDK,JRE,JVM"></a>6.JDK,JRE,JVM</h3><ul>
+<li>JDK java开发工具</li>
+<li>JRE Java运行时环境</li>
+<li>JVM java虚拟机</li>
+<li>JDK包括JRE 和java工具</li>
+<li>JRE包含bin(JVM)、lib(类库)</li>
+</ul>
+<h3 id="7-hashCode-和equals"><a href="#7-hashCode-和equals" class="headerlink" title="7.hashCode()和equals()"></a>7.hashCode()和equals()</h3><ul>
+<li><p>hashCode()的作用是获取哈希码，也成为散列码</p>
+</li>
+<li><p>哈希码的作用是在哈希表中确定具体的位置</p>
+</li>
+<li><p>hashCode()定义在Object类里，所有的类都含有hashCode()</p>
+</li>
+<li><p>哈希表存储的是键值对对象，可以根据哈希码快速的确定位置</p>
+</li>
+<li><p>根据hashCode()讲述为什么hashSet里面存储的对象是不重复的</p>
+<ul>
+<li>hash会根据hashCode()获取的哈希码，找到该对象的位置，然后判断这个位置是否有值，没有值则插入</li>
+<li>如果有值则调用equals方法判断这两个值是否相同，如果相同则该对象插入失败，如果不同则重新散列到其他位置</li>
+<li>这样减少了equals的比较次数，提高了执行效率</li>
+</ul>
+</li>
+<li><p>hashCode()的默认行为是对堆上的对象产生独特值。如果没有重写hashCode()，则该class的两个 对象无论如何都不会相等（即使这两个对象指向相同的数据）</p>
+</li>
+</ul>
+<h3 id="8-final"><a href="#8-final" class="headerlink" title="8.final"></a>8.final</h3><ul>
+<li>修饰类表示这个类不可以被继承</li>
+<li>修饰方法该方法不能被重写，但能重载</li>
+<li>修饰变量被赋值后就不能再被修改</li>
+</ul>
+<h4 id="（1）修饰成员变量"><a href="#（1）修饰成员变量" class="headerlink" title="（1）修饰成员变量"></a>（1）修饰成员变量</h4><ul>
+<li>final修饰的类变量，只能在静态代码块或者声明是指定初始值（final static int a = 0）</li>
+<li>final修饰的成员变量，只能在非静态代码块或者声明时或者构造器中指定初始值（final int b = 0）</li>
+</ul>
+<h4 id="（2）修饰局部变量"><a href="#（2）修饰局部变量" class="headerlink" title="（2）修饰局部变量"></a>（2）修饰局部变量</h4><ul>
+<li>局部变量系统不会指定默认值，只可以由程序员指定默认值，声明时不一定需要赋值，但是只能被赋值一次</li>
+</ul>
+<h4 id="（3）修饰基本类型和引用类型"><a href="#（3）修饰基本类型和引用类型" class="headerlink" title="（3）修饰基本类型和引用类型"></a>（3）修饰基本类型和引用类型</h4><ul>
+<li>基本类型被赋值后不可修改</li>
+<li>引用类型被赋值后便不能再指向其他的对象，但是引用的值是可以改变的</li>
+</ul>
+<h4 id="（4）为什么局部内部类和匿名内部类只能访问final修饰的局部变量"><a href="#（4）为什么局部内部类和匿名内部类只能访问final修饰的局部变量" class="headerlink" title="（4）为什么局部内部类和匿名内部类只能访问final修饰的局部变量"></a>（4）为什么局部内部类和匿名内部类只能访问final修饰的局部变量</h4><ul>
+<li>首先内部类和外部类的是同一个级别，外部类的生命周期结束不代表内部类的生命周期结束</li>
+<li>内部类只有当没有对象使用时才会结束</li>
+<li>当内部类调用局部变量时，如果外部类已经销毁那么局部类也没了，所以将局部变量复制了一份作为内部类对象</li>
+<li>但是这个时候这两个变量的值不一定相同</li>
+<li>所有就需要使用final修饰，用来确保内部类调用的变量是一致的</li>
+</ul>
+<h3 id="9-String、StringBuffer、StringBuilder"><a href="#9-String、StringBuffer、StringBuilder" class="headerlink" title="9.String、StringBuffer、StringBuilder"></a>9.String、StringBuffer、StringBuilder</h3><ul>
+<li>String是不可变的，由final修饰，每次操作都会产生一个新的String对象</li>
+<li>StringBuffer是线程安全的由synchronized修饰</li>
+<li>StringBuilder线程不安全</li>
+<li>性能StringBuilder&gt;StringBuiffer&gt;String</li>
+</ul>
+<h3 id="10-重载和重写的区别"><a href="#10-重载和重写的区别" class="headerlink" title="10.重载和重写的区别"></a>10.重载和重写的区别</h3><ul>
+<li>重载发生在同一个类中，方法名必须相同，参数的顺序、数量、类型不同，返回值和访问修饰符可以不同，发生在编译时</li>
+<li>重写发生在父子类中，方法名、参数列表必须相同，返回值的范围小于或等于父类，抛出异常范围小于或等于父类，修饰符大于或等于父类</li>
+</ul>
+<h3 id="11-接口和实现类的区别"><a href="#11-接口和实现类的区别" class="headerlink" title="11.接口和实现类的区别"></a>11.接口和实现类的区别</h3><ul>
+<li>抽象类可以含有普通方法，而接口只能有public abstract方法</li>
+<li>接口可以多实现，而继承只能继承一个</li>
+<li>抽象类中的成员变量可以是多种类型的，而接口中只能是public static final类型 </li>
+</ul>
+<p>接口的设计目的是约束类的行为，可以强制不同的类具有不同的行为，但是如何实现可以不一样</p>
+<p>抽象类的设计目的是提高代码的复用，父类和子类通用的方法可以继承，不一样的方法就单独实现</p>
+<p>使用场景：当你关注一个事物的本质时用抽象类，关注操作时用接口</p>
+<p>抽象类的功能远超接口，但是定义抽象类的代价高因为一个类只能继承一个类，那么就得将父子类的共识全部写出，</p>
+<p>虽然接口的功能较弱，但是是针对动作的描述，而且一个类可多实现接口</p>
+<h3 id="12-List和set的区别"><a href="#12-List和set的区别" class="headerlink" title="12.List和set的区别"></a>12.List和set的区别</h3><ul>
+<li>List可重复，有序，根据进入的顺序保存，可以含有多个null对象，可以使用Iterator取出，再逐一遍历，也可以使用get(index)取出</li>
+<li>set不可重复，无序，只能含有一个null对象，只能使用Iterator取出，再逐一遍历.</li>
+</ul>
+<h3 id="13-ArrayList和linkedList的区别"><a href="#13-ArrayList和linkedList的区别" class="headerlink" title="13.ArrayList和linkedList的区别"></a>13.ArrayList和linkedList的区别</h3><ul>
+<li>ArrayList基于动态数组，存储在连续的内存，适合下标访问（随机访问），扩容机制：因为数组长度固定，超出长度需要重新创建数组，将老数组拷贝到新数组中，如果不是尾部插入数组还会使得都数组都移动，使用尾插法并指定初始容量可以极大地节省性能</li>
+<li>LinkedList基于链表存储，可以存储在分散的内存，适合做数据插入和删除，不适合查询：需要逐一遍历</li>
+<li>遍历LinkedList必须使用Iterator不能使用for因为for每次都会重新遍历,极大地消耗性能</li>
+<li>不要尝试使用indexOf等返回元素索引，并利用其进行遍历，使用indexOf遍历list,当结果为空时会重新遍历整个列表</li>
+</ul>
+<h3 id="14-hashMap和hashTable的区别，底层实现原理是什么"><a href="#14-hashMap和hashTable的区别，底层实现原理是什么" class="headerlink" title="14.hashMap和hashTable的区别，底层实现原理是什么"></a>14.hashMap和hashTable的区别，底层实现原理是什么</h3><p>区别：</p>
+<ul>
+<li>hashMap没有synchronized修饰，线程不安全，hashTable线程安全</li>
+<li>hashMap允许key和value为null,hashTable不允许</li>
+</ul>
+<p>底层实现：</p>
+<ul>
+<li>数组＋链表实现</li>
+<li>jdk8开始链表高度大于8，数组长度大于64自动转变为红黑树，元素以内部类node结点存在</li>
+<li>长度低于6将红黑树转回列表</li>
+</ul>
+<h3 id="15-ConcurrentHashMap简介"><a href="#15-ConcurrentHashMap简介" class="headerlink" title="15.ConcurrentHashMap简介"></a>15.ConcurrentHashMap简介</h3><ul>
+<li>ConcurrentHashMap性对于hashMap是线程安全的，在多线程高并发的情况下常常用到</li>
+<li>JDK1.8的实现已经抛弃了Segment分段锁机制，利用CAS+Synchronized来保证并发更新的安全，采用的数据结构（数组+链表+[红黑树]）</li>
+</ul>
+<h3 id="16-什么是字节码，使用字节码的好处是什么"><a href="#16-什么是字节码，使用字节码的好处是什么" class="headerlink" title="16.什么是字节码，使用字节码的好处是什么"></a>16.什么是字节码，使用字节码的好处是什么</h3><p>Java中的解释器和编译器</p>
+<ul>
+<li>Java中引入了虚拟机的概念，既在程序编译之后会生成字节码文件，该字节码文件供虚拟机访问，然后虚拟机解释执行该字节码文件转变成目标机器能识别的机器码，这也就解释了Java解释和编译并存的特点</li>
+</ul>
+<p>字节码的好处</p>
+<ul>
+<li>在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言易移植性的特点</li>
+<li>所以java语言运行效率高，只要编译了字节码文件，到其他目标机器上运行，不需要重新编译就可以运行</li>
+</ul>
+<h3 id="17-Java中的异常体系"><a href="#17-Java中的异常体系" class="headerlink" title="17.Java中的异常体系"></a>17.Java中的异常体系</h3><ul>
+<li>Java中所有的异常都来源于顶级父类Throwable</li>
+<li>Throwable有两个子类分别是Exception和Error</li>
+<li>Error是程序无法解决的错误，一旦发生程序就会终止</li>
+<li>Exception不要导致程序终止，又分为RunTimeException运行时异常，会导致当前线程执行失败。CheckedException检查时异常发生在编译阶段会导致编译不通过</li>
+</ul>
+<h3 id="18-Java类加载器"><a href="#18-Java类加载器" class="headerlink" title="18.Java类加载器"></a>18.Java类加载器</h3><p>JDK自带三个类加载器分别是BootStrapClassLoader、ExtClassLoader、AppClassLoader</p>
+<ul>
+<li>BootStrapClassLoader是ExtClassLoader的父类加载%JAVA_HOME%/bin下的jar包和class文件</li>
+<li>ExtClassLoader是AppClassLoader的父类加载%JAVA_HOME%/bin/ext下的jar包和class文件</li>
+<li>AppClassLoader是自定义加载器的父类，负责加载classPath下的类文件</li>
+<li>继承ClassLoader实现自定义加载器类</li>
+</ul>
+<h3 id="19-双亲委托模型"><a href="#19-双亲委托模型" class="headerlink" title="19.双亲委托模型"></a>19.双亲委托模型</h3><p><img src="/2023/07/25/java-ji-chu-mian/Users\32191\AppData\Roaming\Typora\typora-user-images\image-20230724160954295.png" alt="image-20230724160954295"></p>
+<p>向上查找缓存，向下查找加载路径</p>
+<p>好处</p>
+<ul>
+<li>主要是为了安全性，避免自己编写的类覆盖掉核心类比如：String</li>
+<li>也防止了类的重复记载，因为JVM区分不同的类，不仅仅是根据类名，相同的class文件由不同的类加载器加载就是不同的类</li>
+</ul>
+<h3 id="20-GC如何判断对象可以被回收"><a href="#20-GC如何判断对象可以被回收" class="headerlink" title="20.GC如何判断对象可以被回收"></a>20.GC如何判断对象可以被回收</h3><p>有两种方式</p>
+<ul>
+<li>引用计数法，每个对象有一个引用计数属性，新增引用+1，释放引用-1，当为0时回收</li>
+<li>可达性分析法：GC Roots开始向下搜索，搜索所走过的路径称为引用链，当没有引用链时判断对象是可回收的</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>you can reward me here. Thank you!</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="lz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="lz 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>lz
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://llzzoomm.github.io/2023/07/25/java-ji-chu-mian/" title="Java基础面">https://llzzoomm.github.io/2023/07/25/java-ji-chu-mian/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E9%9D%A2/" rel="tag"><i class="fa fa-tag"></i> 面</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/25/xian-cheng-bing-fa-xiang-guan/" rel="prev" title="线程并发相关">
+      <i class="fa fa-chevron-left"></i> 线程并发相关
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/07/25/spring-xi-lie/" rel="next" title="Spring系列">
+      Spring系列 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java%E5%9F%BA%E7%A1%80"><span class="nav-text">Java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-text">1.&#x3D;&#x3D;的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-equals%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-text">2.equals的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8API"><span class="nav-text">3.字符串常用API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-text">4.什么是面向对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E5%B0%81%E8%A3%85"><span class="nav-text">5.1 封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E7%BB%A7%E6%89%BF"><span class="nav-text">5.2 继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-%E5%A4%9A%E6%80%81"><span class="nav-text">5.3 多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-JDK-JRE-JVM"><span class="nav-text">6.JDK,JRE,JVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-hashCode-%E5%92%8Cequals"><span class="nav-text">7.hashCode()和equals()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-final"><span class="nav-text">8.final</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E4%BF%AE%E9%A5%B0%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="nav-text">（1）修饰成员变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E4%BF%AE%E9%A5%B0%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-text">（2）修饰局部变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BF%AE%E9%A5%B0%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="nav-text">（3）修饰基本类型和引用类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E4%B8%BA%E4%BB%80%E4%B9%88%E5%B1%80%E9%83%A8%E5%86%85%E9%83%A8%E7%B1%BB%E5%92%8C%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E5%8F%AA%E8%83%BD%E8%AE%BF%E9%97%AEfinal%E4%BF%AE%E9%A5%B0%E7%9A%84%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-text">（4）为什么局部内部类和匿名内部类只能访问final修饰的局部变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-String%E3%80%81StringBuffer%E3%80%81StringBuilder"><span class="nav-text">9.String、StringBuffer、StringBuilder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">10.重载和重写的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%AE%9E%E7%8E%B0%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">11.接口和实现类的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-List%E5%92%8Cset%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">12.List和set的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-ArrayList%E5%92%8ClinkedList%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">13.ArrayList和linkedList的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-hashMap%E5%92%8ChashTable%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">14.hashMap和hashTable的区别，底层实现原理是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-ConcurrentHashMap%E7%AE%80%E4%BB%8B"><span class="nav-text">15.ConcurrentHashMap简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E8%8A%82%E7%A0%81%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%AD%97%E8%8A%82%E7%A0%81%E7%9A%84%E5%A5%BD%E5%A4%84%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">16.什么是字节码，使用字节码的好处是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-Java%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB"><span class="nav-text">17.Java中的异常体系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-Java%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="nav-text">18.Java类加载器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%89%98%E6%A8%A1%E5%9E%8B"><span class="nav-text">19.双亲委托模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-GC%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AF%B9%E8%B1%A1%E5%8F%AF%E4%BB%A5%E8%A2%AB%E5%9B%9E%E6%94%B6"><span class="nav-text">20.GC如何判断对象可以被回收</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lz"
+      src="/images/author.jpg">
+  <p class="site-author-name" itemprop="name">lz</p>
+  <div class="site-description" itemprop="description">德玛西亚</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+	  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=52 src="//music.163.com/outchain/player?type=0&id=8264726996&auto=1&height=32"></iframe>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+  
+  
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lz</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.5m</span>
+</div>
+
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+	<span title="post.totalcount">
+     515.5k字 </span>
+    <!--<span title="站点总字数">1.5m</span>-->
+  
+  
+  
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("08/10/2020 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>

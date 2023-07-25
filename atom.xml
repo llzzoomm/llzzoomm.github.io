@@ -6,7 +6,7 @@
   <link href="https://llzzoomm.github.io/atom.xml" rel="self"/>
   
   <link href="https://llzzoomm.github.io/"/>
-  <updated>2023-07-20T11:30:45.935Z</updated>
+  <updated>2023-07-25T13:37:46.779Z</updated>
   <id>https://llzzoomm.github.io/</id>
   
   <author>
@@ -15,6 +15,90 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL面</title>
+    <link href="https://llzzoomm.github.io/2023/07/25/mysql-mian/"/>
+    <id>https://llzzoomm.github.io/2023/07/25/mysql-mian/</id>
+    <published>2023-07-25T13:38:13.438Z</published>
+    <updated>2023-07-25T13:37:46.779Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><span id="more"></span><h3 id="1-索引的基本原理"><a href="#1-索引的基本原理" class="headerlink" title="1.索引的基本原理"></a>1.索引的基本原理</h3><ul><li>索引用来快速的寻找那些具有特定值的记录，如果没有索引就要遍历整个表</li><li>索引的原理就是把无序的数据变成有序的数据<ul><li>把创建了索引的列的内容进行排序</li><li>对排序结果生成倒排表</li><li>在倒排表上拼上数据地址链</li><li>在查询数据时，先找到倒排表内容，再找数据地址链，然后再查询到具体数据</li></ul></li></ul><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;MySQL&quot;&gt;&lt;a href=&quot;#MySQL&quot; class=&quot;headerlink&quot; title=&quot;MySQL&quot;&gt;&lt;/a&gt;MySQL&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="面" scheme="https://llzzoomm.github.io/categories/%E9%9D%A2/"/>
+    
+    
+    <category term="面" scheme="https://llzzoomm.github.io/tags/%E9%9D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring系列</title>
+    <link href="https://llzzoomm.github.io/2023/07/25/spring-xi-lie/"/>
+    <id>https://llzzoomm.github.io/2023/07/25/spring-xi-lie/</id>
+    <published>2023-07-25T13:33:57.515Z</published>
+    <updated>2023-07-25T13:36:41.989Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><span id="more"></span><h3 id="1-如何实现一个IOC容器"><a href="#1-如何实现一个IOC容器" class="headerlink" title="1.如何实现一个IOC容器"></a>1.如何实现一个IOC容器</h3><ul><li>配置文件配置包扫描路径</li><li>递归包扫描获取.class文件</li><li>反射、确定需要交给IOC管理的类</li><li>对需要注入的类进行依赖注入<ul><li>配置文件中指定需要扫描的包路径</li><li>定义一些注解，分别表示访问控制层、数据业务层、数据持久层、依赖注入注解、获取配置文件注解</li><li>从配置文件中获取需要扫描的包路径、获取到当前路径下的文件信息和文件夹信息，将当前路径下的所有.class文件放入set集合中进行存储</li><li>遍历这个set集合，获取在类上有指定注解的类，并将其交给IOC容器，定义一个安全的map用来存储这些对象</li><li>遍历这个IOC容器，获取到每一个实例，看是否有依赖其他类的实例，然后进行递归注入</li></ul></li></ul><h3 id="2-Spring是什么"><a href="#2-Spring是什么" class="headerlink" title="2.Spring是什么"></a>2.Spring是什么</h3><ul><li>轻量级的J2EE框架。他是一个容器框架，用来装javaBean,中间层框架，可以起一个连接作用，让我们的企业开发更快更简洁</li><li>Spring是一个轻量级用来控制反转（IOC）和面向切面（AOP）的容器框架<ul><li>无论是大小还是开销，Spring都是轻量的</li><li>通过控制反转达到松耦合的目的</li><li>提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑和系统级服务进行内聚性的开发</li></ul></li></ul><h3 id="3-谈谈你对AOP的理解"><a href="#3-谈谈你对AOP的理解" class="headerlink" title="3.谈谈你对AOP的理解"></a>3.谈谈你对AOP的理解</h3><ul><li>将一个程序中的交叉业务（安全，事务，日志等），封装成一个切面，然后注入到目标对象中去，AOP可以对某些对象或某些对象的功能进行增强，比如对象中的方法进行增强，比如某些方法执行前做些什么，执行后做些什么</li><li>在OOP设计中，具有大量的重复代码，不利于各个模块的重复使用</li></ul><h3 id="4-谈谈你对IOC的理解"><a href="#4-谈谈你对IOC的理解" class="headerlink" title="4.谈谈你对IOC的理解"></a>4.谈谈你对IOC的理解</h3><ul><li><p>容器概念</p></li><li><p>控制反转</p><ul><li>对象A依赖对象B,当A需要使用B时，主动调用或者主动创建，主动权在自己手中，当使用到控制反转时，需要使用则由IOC主动创建对象B给对象A，主动权变了，这就是控制反转</li><li>全部对象的控制权都上交给了IOC，IOC成为了系统的核心，起到了类似粘合剂的作用</li></ul></li><li><p>依赖注入</p><ul><li>依赖注入是实现IOC容器的方法，IOC运行状态时，动态的将依赖注入到对象中</li></ul></li></ul><h3 id="5-BeanFactory和ApplicationContext有什么区别"><a href="#5-BeanFactory和ApplicationContext有什么区别" class="headerlink" title="5.BeanFactory和ApplicationContext有什么区别"></a>5.BeanFactory和ApplicationContext有什么区别</h3><p>ApplicationContext是BeanFactory的子接口，因此其提供了更完整的功能</p><ul><li>BeanFactory采用的是延迟加载的方式来注入Bean,既只有在使用到某个Bean的时候才会调用（getBean()方法），才会对该Bean加载实例化，这样就不能发现一些潜在的Spring配置问题</li><li>ApplicationContext采用的是一次性加载Bean,这样容器启动的时候就能看到Spring中存在的配置错误，并且确保当需要使用的时候已经创建好了，可以直接使用，不用等待</li><li>相对于BeanFactory，ApplicationContext唯一的不足就是占用内容空间，当Bean较多时，程序启动就会较慢</li><li>BeanFactory通常用编程创建，ApplicationContext通常使用声明创建，例如ContextLoader</li><li>他们都支持BeanPostProcessor、BeanFoctoryPostProcessor，但是BeanFactory是手动注册，ApplicationContext是自动注册</li></ul><h3 id="6-描述Spring-Bean的生命周期"><a href="#6-描述Spring-Bean的生命周期" class="headerlink" title="6.描述Spring Bean的生命周期"></a>6.描述Spring Bean的生命周期</h3><ol><li>解析类得到BeanDefiniton</li><li>如果有多个构造方法，推断使用哪个构造方法</li><li>确定构造方法，进行实例化对象</li><li>在实例化的对象加入@Autowired注解的属性进行属性填充</li><li>回调Aware方法</li><li>调用BeanPostProcesser的初始化前的方法</li><li>调用初始化方法</li><li>调用BeanPostProcesser初始化后的方法，在这里会进行AOP</li><li>如果当前创建的Bean是单例就会放入到单例池</li><li>使用Bean</li><li>Spring容器关闭时调用DisposableBean中的destory()方法</li></ol><h3 id="7-解释Spring支持的几种Bean的作用域"><a href="#7-解释Spring支持的几种Bean的作用域" class="headerlink" title="7.解释Spring支持的几种Bean的作用域"></a>7.解释Spring支持的几种Bean的作用域</h3><ul><li>singleton:默认，每个容器中只有一个Bean实例，单例的模式由BeanFactory自身来维护，该对象的生命周期和Spring IOC容器一致（但只有在第一次被注入时才会创建）</li><li>prototype: 为每一个Bean请求提供实例，在每次注入时都会创建一个新的对象</li><li>request: Bean被定义为每一个Http请求中创建一个单例对象，也就是单个请求都会复用这一个单例对象</li><li>session:确保每一个session中有一个实例对象，当session过期时，也随之失效</li><li>application:Bean被定义在一个servletContext的生命周期中，复用一个对象</li><li>webSocket:Bean被定义子webSocket生命周期中复用一个对象</li><li>global-session: 全局作用域与servlet中的session作用域效果相同</li></ul><h3 id="8-Spring框架中单例Bean是线程安全的吗"><a href="#8-Spring框架中单例Bean是线程安全的吗" class="headerlink" title="8.Spring框架中单例Bean是线程安全的吗"></a>8.Spring框架中单例Bean是线程安全的吗</h3><ul><li><p>Spring中的Bean默认是单例的，框架并没有对Bean进行多线程的封装处理</p></li><li><p>如果Bean是有状态的就必须要开发人员自己来进行线程安全的保证，最简单的方法就是修改作用域，把singleton改为prototype这样每次请求Bean就都会访问一个新的Bean就能保证线程安全了</p><ul><li>有状态就是有数据存储功能</li><li>无状态就是没有数据存储</li></ul></li><li><p>不要在Bean中声明有状态的实例变量或类变量，如果必须如此就使用ThreadLocal使变量变为线程私有，如果需要被多个线程共享就需要使用到synchronized、lock、CAS等线程同步方法了</p></li></ul><h3 id="9-Spring框架中用到了哪些设计模式"><a href="#9-Spring框架中用到了哪些设计模式" class="headerlink" title="9.Spring框架中用到了哪些设计模式"></a>9.Spring框架中用到了哪些设计模式</h3><ul><li><p>简单工厂</p><ul><li>由一个工厂类根据传入的参数，动态的决定应该创建那个产品类</li><li>Spring中的BeanFactory就是简单工厂模式的体现，根据传入的标识来获得Bean对象，但是是在传入前创建还是传入后创建，根据具体情况来定</li></ul></li><li><p>工厂方法</p><ul><li>实现了FactoryBean接口的Bean是一类叫做factory的bean</li></ul></li><li><p>单例模式</p><ul><li>保证一个类只有一个实例，并提供一个访问他全局访问点</li><li>Spring对单例的实现，只完成了上面后半句，既提供了全局访问点BeanFactory.但没有从构造器级别去控制单例，这是因为Spring管理的是任意的java对象</li></ul></li><li><p>适配器模式</p><ul><li>Spring定义了一个适配器接口，使得每一个Controller都有一种对应的适配器实现类，让适配器代替Controller执行相应的方法，这样在拓展Controller时只需要增加一个适配器类就完成了SpringMVC的拓展了</li></ul></li><li><p>装饰器模式</p><ul><li>动态的给类增加某些工能，比生成子类更加灵活</li><li>在Spring的类名上有两种体现，一个是Decorator，一个是wrapper</li></ul></li><li><p>动态代理</p><ul><li>切面在应用运行的时候被织入，一般情况下，在织入切面时，AOP容器会动态的为目标对象创建一个代理对象，SpringAOP就是以这种方式织入切面</li><li>织入：把切面应用到目标对象并创建新的代理对象的过程</li></ul></li><li><p>观察者模式</p><ul><li>Spring的事件驱动模型使用得就是观察者模式，常用的地方是listener的实现</li></ul></li><li><p>策略模式</p><ul><li>资源访问Resource接口，该接口提供了强大的资源访问能力，大量使用了该接口访问底层接口</li></ul></li><li><p>模板方法</p><ul><li>父类定义了骨架，某些特定方法由子类实现</li><li>最大的好处，代码复用，减少重复代码</li></ul></li></ul><h3 id="10-Spring事务的实现方式和原理以及隔离级别"><a href="#10-Spring事务的实现方式和原理以及隔离级别" class="headerlink" title="10.Spring事务的实现方式和原理以及隔离级别"></a>10.Spring事务的实现方式和原理以及隔离级别</h3><ul><li><p>在Spring中有两种实现方式，一种是编程式，一种则是声明式的</p></li><li><p>@transactional就是声明式的</p></li><li><p>首先事务是数据库层面的，Spring只是做了一些扩展，提供了一些让程序员更方便操作事务的方法</p></li><li><p>在一个方法上加入了Transactional注解之后，Spring会基于这个类生成一个代理对象，会将这个代理对象作为一个Bean，当在使用这个代理对象的方法时，如果这个方法上存在该注解，那么代理逻辑会先把自动提交事务改成false,如果没有出现异常，则提交事务，反之回滚</p></li><li><p>Spring中事务隔离级别就是数据库隔离级别</p><ul><li>read uncommitted(未提交读)</li><li>read committed(提交读，不可重复读)</li><li>repeatable read(可重复读)</li><li>serializable（可串行化）<ul><li>当数据库隔离级别和Spring隔离级别不同时，以Spring配置为准，如果Spring配置的隔离级别数据库不支持，效果取决于数据库</li></ul></li></ul></li></ul><h3 id="11-Spring事务传播机制"><a href="#11-Spring事务传播机制" class="headerlink" title="11.Spring事务传播机制"></a>11.Spring事务传播机制</h3><p>多个事务方法相互调用时，事务如何在这些方法间传播</p><blockquote><p>方法A是一个事务的方法，方法A执行过程中调用了方法B，那么方法B有无事务以及方法B对事务的要求不同都 会对方法A的事务具体执行造成影响，同时方法A的事务对方法B的事务执行也有影响，这种影响具体是什么就 由两个方法所定义的事务传播类型所决定。</p></blockquote><ul><li>REQUIRED(Spring默认的事务传播类型)：如果当前没有事务则自己创建一个，如果有则加入这个事务</li><li>SUPPORTS:当前存在事务则加入事务，没有则以非事务方法执行</li><li>MANDATORY(mandatory):当前有则加入，没有则抛出异常</li><li>REQUIRES_NEW:创建一个新的事务，如果存在当前事务，则将该事务挂起</li><li>NOT_SUPPORTED:以非事务方法执行，如果当前存在事务，则挂起当前事务</li><li>NEVER:不使用事务，如果当前事务存在，则抛出事务</li><li>NESTED:如果当前事务存在则镶套事务中运行，否则和REQUIRED一样</li></ul><h3 id="12-Spring事务什么时候失效"><a href="#12-Spring事务什么时候失效" class="headerlink" title="12.Spring事务什么时候失效"></a>12.Spring事务什么时候失效</h3><p>Spring事务的原理是SpringAOP,进行了切面增强，那么失效的根本原因就是这个AOP不起作用了，常见的情况有以下几种</p><ul><li><p>发生自调用，类里面的this调用本类的方法（This通常省略），此时这个this不是代理类的，而是UserService对象本身解决方法就是把这个this变成UserService的代理</p></li><li><p>方法不是public的</p><blockquote><p>@Transactional只能用在public方法上，否则事务会失效，如果一定要在非public方法上，可以开启Aspectj代理模式</p></blockquote></li><li><p>数据库不支持事务</p></li><li><p>没有被Spring管理</p></li><li><p>异常被吃掉，事务没有回滚（或者是抛出的异常没有被定义，默认为RuntimeException）</p></li></ul><h3 id="13-什么是Bean的自动装配，有哪些形式"><a href="#13-什么是Bean的自动装配，有哪些形式" class="headerlink" title="13.什么是Bean的自动装配，有哪些形式"></a>13.什么是Bean的自动装配，有哪些形式</h3><p>开启自动装配只需要在XML配置文件，配置Autowire属性</p><blockquote><bean id="cutomer" class="com.xxx.xxx.Customer" autowire=""></bean></blockquote><p>autowire属性有五种装配方式</p><ul><li>no 缺省情况下是通过ref属性手动配置</li></ul><blockquote><p>手动装配：以value或ref的方式明确指定属性值都是手动装配。 需要通过‘ref’属性来连接bean。</p></blockquote><ul><li><p>byName通过Bean的属性名称自动装配</p><blockquote><p>Cutomer的属性名称是person，Spring会将bean id为person的bean通过setter方法进行自动装 配。</p><bean id="cutomer" class="com.xxx.xxx.Cutomer" autowire="byName"><bean id="person" class="com.xxx.xxx.Person"></bean></bean></blockquote></li><li><p>byType根据Bean的类型自动装配</p></li><li><p>constructor-类似byType，不过是应用于构造器的参数。如果一个bean与构造器参数的类型形 同，则进行自动装配，否则导致异常。</p></li><li><p>autodetect如果有默认的构造器，则通过constructor方式进行自动装配，否则使用byType方式装配</p></li></ul><p>@Autowired自动装配Bean,可以在字段名，setter方法，构造函数上使用</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Spring&quot;&gt;&lt;a href=&quot;#Spring&quot; class=&quot;headerlink&quot; title=&quot;Spring&quot;&gt;&lt;/a&gt;Spring&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="面" scheme="https://llzzoomm.github.io/categories/%E9%9D%A2/"/>
+    
+    
+    <category term="面" scheme="https://llzzoomm.github.io/tags/%E9%9D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java基础面</title>
+    <link href="https://llzzoomm.github.io/2023/07/25/java-ji-chu-mian/"/>
+    <id>https://llzzoomm.github.io/2023/07/25/java-ji-chu-mian/</id>
+    <published>2023-07-25T13:33:57.514Z</published>
+    <updated>2023-07-25T13:35:44.382Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><span id="more"></span><h3 id="1-的作用"><a href="#1-的作用" class="headerlink" title="1.==的作用"></a>1.==的作用</h3><ul><li><p>基本类型，比较具体的值</p></li><li><p>引用类型，比较地址值</p></li></ul><h3 id="2-equals的作用"><a href="#2-equals的作用" class="headerlink" title="2.equals的作用"></a>2.equals的作用</h3><ul><li><p>Object类中默认的是== ，但是会重写</p></li><li><p>String类中比较字符串是否相同，区分大小写。</p></li></ul><h3 id="3-字符串常用API"><a href="#3-字符串常用API" class="headerlink" title="3.字符串常用API"></a>3.字符串常用API</h3><p>将take字符串中的TMD用***替代，</p><p>take.replace(“TMD”，”***”);</p><p>将take字符串进行截取，从0到3截取</p><p>take.substring(0, 3);</p><p>将take字符串一个一个遍历出来，</p><p>take.charAr(i)；</p><h3 id="4-什么是面向对象"><a href="#4-什么是面向对象" class="headerlink" title="4.什么是面向对象"></a>4.什么是面向对象</h3><ul><li>面向对象相对于面向过程，是两种不同的处理问题方式</li><li>面向过程，关注一件事情的步骤和顺序，比较直接高效高效</li><li>面向对象关注一件事情的所有参与者（对象），各自做什么，注重可复用，维护，拓展。</li></ul><h3 id="5-1-封装"><a href="#5-1-封装" class="headerlink" title="5.1 封装"></a>5.1 封装</h3><ul><li>封装的意义，明确标识出允许外部使用的成员函数和数据源内部细节对外部调用透明</li><li>外部调用无需修改或者关心内部实现</li></ul><h3 id="5-2-继承"><a href="#5-2-继承" class="headerlink" title="5.2 继承"></a>5.2 继承</h3><ul><li>子类继承父类的方法，子类和父类共性的方法或属性，可以直接用父类的，不需要自己定义，只需要个性化扩展</li></ul><h3 id="5-3-多态"><a href="#5-3-多态" class="headerlink" title="5.3 多态"></a>5.3 多态</h3><ul><li>基于对象所属类的不同，外部对同一个方法的调用，实际执行的逻辑不同</li><li>继承，方法重写，父类引用指向子类对象，不可以调用子类特有的方法</li></ul><h3 id="6-JDK-JRE-JVM"><a href="#6-JDK-JRE-JVM" class="headerlink" title="6.JDK,JRE,JVM"></a>6.JDK,JRE,JVM</h3><ul><li>JDK java开发工具</li><li>JRE Java运行时环境</li><li>JVM java虚拟机</li><li>JDK包括JRE 和java工具</li><li>JRE包含bin(JVM)、lib(类库)</li></ul><h3 id="7-hashCode-和equals"><a href="#7-hashCode-和equals" class="headerlink" title="7.hashCode()和equals()"></a>7.hashCode()和equals()</h3><ul><li><p>hashCode()的作用是获取哈希码，也成为散列码</p></li><li><p>哈希码的作用是在哈希表中确定具体的位置</p></li><li><p>hashCode()定义在Object类里，所有的类都含有hashCode()</p></li><li><p>哈希表存储的是键值对对象，可以根据哈希码快速的确定位置</p></li><li><p>根据hashCode()讲述为什么hashSet里面存储的对象是不重复的</p><ul><li>hash会根据hashCode()获取的哈希码，找到该对象的位置，然后判断这个位置是否有值，没有值则插入</li><li>如果有值则调用equals方法判断这两个值是否相同，如果相同则该对象插入失败，如果不同则重新散列到其他位置</li><li>这样减少了equals的比较次数，提高了执行效率</li></ul></li><li><p>hashCode()的默认行为是对堆上的对象产生独特值。如果没有重写hashCode()，则该class的两个 对象无论如何都不会相等（即使这两个对象指向相同的数据）</p></li></ul><h3 id="8-final"><a href="#8-final" class="headerlink" title="8.final"></a>8.final</h3><ul><li>修饰类表示这个类不可以被继承</li><li>修饰方法该方法不能被重写，但能重载</li><li>修饰变量被赋值后就不能再被修改</li></ul><h4 id="（1）修饰成员变量"><a href="#（1）修饰成员变量" class="headerlink" title="（1）修饰成员变量"></a>（1）修饰成员变量</h4><ul><li>final修饰的类变量，只能在静态代码块或者声明是指定初始值（final static int a = 0）</li><li>final修饰的成员变量，只能在非静态代码块或者声明时或者构造器中指定初始值（final int b = 0）</li></ul><h4 id="（2）修饰局部变量"><a href="#（2）修饰局部变量" class="headerlink" title="（2）修饰局部变量"></a>（2）修饰局部变量</h4><ul><li>局部变量系统不会指定默认值，只可以由程序员指定默认值，声明时不一定需要赋值，但是只能被赋值一次</li></ul><h4 id="（3）修饰基本类型和引用类型"><a href="#（3）修饰基本类型和引用类型" class="headerlink" title="（3）修饰基本类型和引用类型"></a>（3）修饰基本类型和引用类型</h4><ul><li>基本类型被赋值后不可修改</li><li>引用类型被赋值后便不能再指向其他的对象，但是引用的值是可以改变的</li></ul><h4 id="（4）为什么局部内部类和匿名内部类只能访问final修饰的局部变量"><a href="#（4）为什么局部内部类和匿名内部类只能访问final修饰的局部变量" class="headerlink" title="（4）为什么局部内部类和匿名内部类只能访问final修饰的局部变量"></a>（4）为什么局部内部类和匿名内部类只能访问final修饰的局部变量</h4><ul><li>首先内部类和外部类的是同一个级别，外部类的生命周期结束不代表内部类的生命周期结束</li><li>内部类只有当没有对象使用时才会结束</li><li>当内部类调用局部变量时，如果外部类已经销毁那么局部类也没了，所以将局部变量复制了一份作为内部类对象</li><li>但是这个时候这两个变量的值不一定相同</li><li>所有就需要使用final修饰，用来确保内部类调用的变量是一致的</li></ul><h3 id="9-String、StringBuffer、StringBuilder"><a href="#9-String、StringBuffer、StringBuilder" class="headerlink" title="9.String、StringBuffer、StringBuilder"></a>9.String、StringBuffer、StringBuilder</h3><ul><li>String是不可变的，由final修饰，每次操作都会产生一个新的String对象</li><li>StringBuffer是线程安全的由synchronized修饰</li><li>StringBuilder线程不安全</li><li>性能StringBuilder&gt;StringBuiffer&gt;String</li></ul><h3 id="10-重载和重写的区别"><a href="#10-重载和重写的区别" class="headerlink" title="10.重载和重写的区别"></a>10.重载和重写的区别</h3><ul><li>重载发生在同一个类中，方法名必须相同，参数的顺序、数量、类型不同，返回值和访问修饰符可以不同，发生在编译时</li><li>重写发生在父子类中，方法名、参数列表必须相同，返回值的范围小于或等于父类，抛出异常范围小于或等于父类，修饰符大于或等于父类</li></ul><h3 id="11-接口和实现类的区别"><a href="#11-接口和实现类的区别" class="headerlink" title="11.接口和实现类的区别"></a>11.接口和实现类的区别</h3><ul><li>抽象类可以含有普通方法，而接口只能有public abstract方法</li><li>接口可以多实现，而继承只能继承一个</li><li>抽象类中的成员变量可以是多种类型的，而接口中只能是public static final类型 </li></ul><p>接口的设计目的是约束类的行为，可以强制不同的类具有不同的行为，但是如何实现可以不一样</p><p>抽象类的设计目的是提高代码的复用，父类和子类通用的方法可以继承，不一样的方法就单独实现</p><p>使用场景：当你关注一个事物的本质时用抽象类，关注操作时用接口</p><p>抽象类的功能远超接口，但是定义抽象类的代价高因为一个类只能继承一个类，那么就得将父子类的共识全部写出，</p><p>虽然接口的功能较弱，但是是针对动作的描述，而且一个类可多实现接口</p><h3 id="12-List和set的区别"><a href="#12-List和set的区别" class="headerlink" title="12.List和set的区别"></a>12.List和set的区别</h3><ul><li>List可重复，有序，根据进入的顺序保存，可以含有多个null对象，可以使用Iterator取出，再逐一遍历，也可以使用get(index)取出</li><li>set不可重复，无序，只能含有一个null对象，只能使用Iterator取出，再逐一遍历.</li></ul><h3 id="13-ArrayList和linkedList的区别"><a href="#13-ArrayList和linkedList的区别" class="headerlink" title="13.ArrayList和linkedList的区别"></a>13.ArrayList和linkedList的区别</h3><ul><li>ArrayList基于动态数组，存储在连续的内存，适合下标访问（随机访问），扩容机制：因为数组长度固定，超出长度需要重新创建数组，将老数组拷贝到新数组中，如果不是尾部插入数组还会使得都数组都移动，使用尾插法并指定初始容量可以极大地节省性能</li><li>LinkedList基于链表存储，可以存储在分散的内存，适合做数据插入和删除，不适合查询：需要逐一遍历</li><li>遍历LinkedList必须使用Iterator不能使用for因为for每次都会重新遍历,极大地消耗性能</li><li>不要尝试使用indexOf等返回元素索引，并利用其进行遍历，使用indexOf遍历list,当结果为空时会重新遍历整个列表</li></ul><h3 id="14-hashMap和hashTable的区别，底层实现原理是什么"><a href="#14-hashMap和hashTable的区别，底层实现原理是什么" class="headerlink" title="14.hashMap和hashTable的区别，底层实现原理是什么"></a>14.hashMap和hashTable的区别，底层实现原理是什么</h3><p>区别：</p><ul><li>hashMap没有synchronized修饰，线程不安全，hashTable线程安全</li><li>hashMap允许key和value为null,hashTable不允许</li></ul><p>底层实现：</p><ul><li>数组＋链表实现</li><li>jdk8开始链表高度大于8，数组长度大于64自动转变为红黑树，元素以内部类node结点存在</li><li>长度低于6将红黑树转回列表</li></ul><h3 id="15-ConcurrentHashMap简介"><a href="#15-ConcurrentHashMap简介" class="headerlink" title="15.ConcurrentHashMap简介"></a>15.ConcurrentHashMap简介</h3><ul><li>ConcurrentHashMap性对于hashMap是线程安全的，在多线程高并发的情况下常常用到</li><li>JDK1.8的实现已经抛弃了Segment分段锁机制，利用CAS+Synchronized来保证并发更新的安全，采用的数据结构（数组+链表+[红黑树]）</li></ul><h3 id="16-什么是字节码，使用字节码的好处是什么"><a href="#16-什么是字节码，使用字节码的好处是什么" class="headerlink" title="16.什么是字节码，使用字节码的好处是什么"></a>16.什么是字节码，使用字节码的好处是什么</h3><p>Java中的解释器和编译器</p><ul><li>Java中引入了虚拟机的概念，既在程序编译之后会生成字节码文件，该字节码文件供虚拟机访问，然后虚拟机解释执行该字节码文件转变成目标机器能识别的机器码，这也就解释了Java解释和编译并存的特点</li></ul><p>字节码的好处</p><ul><li>在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言易移植性的特点</li><li>所以java语言运行效率高，只要编译了字节码文件，到其他目标机器上运行，不需要重新编译就可以运行</li></ul><h3 id="17-Java中的异常体系"><a href="#17-Java中的异常体系" class="headerlink" title="17.Java中的异常体系"></a>17.Java中的异常体系</h3><ul><li>Java中所有的异常都来源于顶级父类Throwable</li><li>Throwable有两个子类分别是Exception和Error</li><li>Error是程序无法解决的错误，一旦发生程序就会终止</li><li>Exception不要导致程序终止，又分为RunTimeException运行时异常，会导致当前线程执行失败。CheckedException检查时异常发生在编译阶段会导致编译不通过</li></ul><h3 id="18-Java类加载器"><a href="#18-Java类加载器" class="headerlink" title="18.Java类加载器"></a>18.Java类加载器</h3><p>JDK自带三个类加载器分别是BootStrapClassLoader、ExtClassLoader、AppClassLoader</p><ul><li>BootStrapClassLoader是ExtClassLoader的父类加载%JAVA_HOME%/bin下的jar包和class文件</li><li>ExtClassLoader是AppClassLoader的父类加载%JAVA_HOME%/bin/ext下的jar包和class文件</li><li>AppClassLoader是自定义加载器的父类，负责加载classPath下的类文件</li><li>继承ClassLoader实现自定义加载器类</li></ul><h3 id="19-双亲委托模型"><a href="#19-双亲委托模型" class="headerlink" title="19.双亲委托模型"></a>19.双亲委托模型</h3><p><img src="/2023/07/25/java-ji-chu-mian/Users\32191\AppData\Roaming\Typora\typora-user-images\image-20230724160954295.png" alt="image-20230724160954295"></p><p>向上查找缓存，向下查找加载路径</p><p>好处</p><ul><li>主要是为了安全性，避免自己编写的类覆盖掉核心类比如：String</li><li>也防止了类的重复记载，因为JVM区分不同的类，不仅仅是根据类名，相同的class文件由不同的类加载器加载就是不同的类</li></ul><h3 id="20-GC如何判断对象可以被回收"><a href="#20-GC如何判断对象可以被回收" class="headerlink" title="20.GC如何判断对象可以被回收"></a>20.GC如何判断对象可以被回收</h3><p>有两种方式</p><ul><li>引用计数法，每个对象有一个引用计数属性，新增引用+1，释放引用-1，当为0时回收</li><li>可达性分析法：GC Roots开始向下搜索，搜索所走过的路径称为引用链，当没有引用链时判断对象是可回收的</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Java基础&quot;&gt;&lt;a href=&quot;#Java基础&quot; class=&quot;headerlink&quot; title=&quot;Java基础&quot;&gt;&lt;/a&gt;Java基础&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="面" scheme="https://llzzoomm.github.io/categories/%E9%9D%A2/"/>
+    
+    
+    <category term="面" scheme="https://llzzoomm.github.io/tags/%E9%9D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线程并发相关</title>
+    <link href="https://llzzoomm.github.io/2023/07/25/xian-cheng-bing-fa-xiang-guan/"/>
+    <id>https://llzzoomm.github.io/2023/07/25/xian-cheng-bing-fa-xiang-guan/</id>
+    <published>2023-07-25T13:33:57.512Z</published>
+    <updated>2023-07-25T13:36:12.070Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="线程并发相关"><a href="#线程并发相关" class="headerlink" title="线程并发相关"></a>线程并发相关</h2><span id="more"></span><h3 id="1-线程的生命周期，线程有哪几种状态"><a href="#1-线程的生命周期，线程有哪几种状态" class="headerlink" title="1.线程的生命周期，线程有哪几种状态"></a>1.线程的生命周期，线程有哪几种状态</h3><ul><li><p>线程有新建、就绪、运行、阻塞、死亡五种状态</p></li><li><p>其中阻塞有三种</p><ol><li>等待阻塞：线程执行wait()方法，该线程会释放占用的资源，JVM会将该线程放入等待池中，不会自动唤醒，必须依靠其他线程调用notify或者notifyAll方法才行，wait是Object类的方法</li><li>同步阻塞：运行的线程获取某个对象的同步锁时，如果该同步锁被其他的线程占用，则JVM会把该线程放入锁池</li><li>其他阻塞：运行的线程执行sleep方法或者join方法，或者发出IO请求时，JVM会把该线程置于阻塞状态，当这些方法终止，会把线程重新转入就绪状态</li></ol></li><li><p>就绪状态：当线程对象创建后，其他线程调用start()方法，线程进入可运行状态，等待获取CPU使用权</p></li><li><p>死亡状态：当线程出现异常退出run()方法，或程序终止时，该线程的生命周期也就结束了</p></li></ul><h3 id="2-sleep-、wait-、join-、yield-方法的区别"><a href="#2-sleep-、wait-、join-、yield-方法的区别" class="headerlink" title="2.sleep()、wait()、join()、yield()方法的区别"></a>2.sleep()、wait()、join()、yield()方法的区别</h3><ul><li><p>锁池</p><ol><li>所有需要竞争同步锁的线程都会放在锁池里面</li></ol></li><li><p>等待池</p><ol><li>当我们调用wait()方法之后，线程就会进入等待池，等待池的线程不会竞争同步锁。只有调用了notify和notifyAll方法的线程才能竞同步锁，notify()是随机选出一个线程放到线程池</li></ol></li><li><p>sleep()是Thread类的静态本地方法，wait()是Object类的方法</p></li><li><p>sleep()不会释放lock,wait()会释放,而且会加入到等待队列</p></li><li><p>sleep()不依赖同步器关键字synchronized，不需要被唤醒，一般用于当前线程休眠，或者轮询暂停操作会让出cpu执行时间，并强制上下文转换</p></li><li><p>wait()依赖同步器关键字synchronized，需要被唤醒，多用于多线程之间的通信，wait()后可能有再次竞争到锁执行的机会</p></li><li><p>yield()方法之后线程进入就绪状态，马上释放了cpu的执行权，但是依然保留了cpu的执行资格</p></li><li><p>join()执行后线程就如阻塞状态，例如在线程B中调用线程A的join（），那线程B会进入到阻塞队 列，直到线程A结束或中断线程</p></li></ul><h3 id="3-对线程安全的理解"><a href="#3-对线程安全的理解" class="headerlink" title="3.对线程安全的理解"></a>3.对线程安全的理解</h3><p>线程安全应该是内存安全，堆内存是共享的，可以被所有的线程访问</p><ul><li>如果多个线程调用访问一个对象，不用进行同步控制或者其他的协调操作，调用这个对象的行为都可以获得正确的结果，我们就说这个线程是安全的<ul><li>堆内存是每个线程和进程共有空间，分为局部堆和全局堆，全局堆是没有分配到空间，局部堆是用户分配的空间</li><li>堆在操作系统对进程初始化时分配，运行过程中也可以向系统中要额外的堆，但是用完了要还给操作系统，不然就是内存泄露</li><li>栈内存是每个线程独有的，保存其运行状态和局部自动变量</li></ul></li></ul><h3 id="4-Thread和Runnable的区别"><a href="#4-Thread和Runnable的区别" class="headerlink" title="4.Thread和Runnable的区别"></a>4.Thread和Runnable的区别</h3><p>他们本质上是继承关系，没有可比性，无论使用哪个方法都是先new Thread,然后执行run(),如果是复杂线程需求用Thread，如果是简单的执行一个线程方法用Runnable</p><h3 id="5-对守护线程的理解"><a href="#5-对守护线程的理解" class="headerlink" title="5.对守护线程的理解"></a>5.对守护线程的理解</h3><ul><li><p>守护线程是为了守护所有非守护线程，是他们的保姆</p></li><li><p>守护线程的终止自身无法控制</p></li><li><p>他的生死无关重要但却依赖整个进程而运行</p></li><li><p>应用场景</p><ul><li>来为其他线程提供服务的情况</li><li>在任何情况下，当程序结束这个线程仍正常并且立刻结束就可以当做守护线程使用，不能用于去访问固有资源</li></ul></li><li><p>Java自带的线程池，会将守护线程转换为用户线程，所以如果要使用后台线程就不能用java的线程池</p></li></ul><h3 id="6-ThreadLocal的原理和使用场景"><a href="#6-ThreadLocal的原理和使用场景" class="headerlink" title="6.ThreadLocal的原理和使用场景"></a>6.ThreadLocal的原理和使用场景</h3><ul><li>每一个Thread对象都含有一个ThreadLocalMap类型的 threadLocals成员变量，而这个变量里面存储着本线程所有的threadLocal对象和其对应的值</li><li>ThreadLocalMap是由一个个entry对象构成</li><li>由于每一个线程都有一个私有的ThreadLocalMap容器，这些容器相互独立，而且互不影响，因此不存在线程安全问题，不需要使用同步机制来保证多条线程访问容器的互斥性</li><li>应用场景<ul><li>在使用对象跨层传递的时候，可以避免ThreadLocal的多次传递，打破层次间的约束</li><li>线程间的数据隔离</li><li>进行事务操作，用于存储线程事务信息</li><li>数据库连接，session会话管理</li></ul></li></ul><h3 id="7-ThreadLocal内存泄露原因，如何避免"><a href="#7-ThreadLocal内存泄露原因，如何避免" class="headerlink" title="7.ThreadLocal内存泄露原因，如何避免"></a>7.ThreadLocal内存泄露原因，如何避免</h3><ul><li>内存泄露就是当线程申请内存资源之后，无法释放已申请的内存的，一次内存泄露的危害可以忽略，但是多次内存泄露之后，内存也迟早会用完</li><li>不再被使用的对象或变量仍占用内存不被回收，就是内存泄露</li><li>强引用就是普遍的new引用，一个对象具有强引用，就不会被内存回收，当内存空间不足，JVM宁愿抛出异常，程序终止，也不会回收此类对象</li><li>弱引用就是当JVM进行垃圾回收时，无论内存是否充足，都会先回收被弱引用的关联对象</li><li>ThreadLocal内存泄露的根本原因是ThreadLocalMap的生命周期和Thread一样长，如果没有手动删除对应的key就会导致内存泄露，而不是因为弱引用</li><li>ThreadLocal的正确使用方法<ul><li>每次使用完都调用ThreadLocal的remove()清除数据</li><li>将ThreadLocal的变量声明成private satatic，这样就会一直存在ThrealLocal的强引用，也就能通过ThreadLocal的弱引用访问到entry的value值，进而清除掉</li></ul></li></ul><h3 id="8-并行、并发、串行的区别"><a href="#8-并行、并发、串行的区别" class="headerlink" title="8.并行、并发、串行的区别"></a>8.并行、并发、串行的区别</h3><ul><li>串行不存在时间重叠，一件事情一件事情的接着做，前一个任务没搞定，后一个任务只能等着</li><li>并行存在时间重叠，同一时间做多件事情，互不干扰同时执行</li><li>并发允许两个任务互相干扰，同一时间点只有一个任务执行，交替执行</li></ul><h3 id="9-并发的三大特征"><a href="#9-并发的三大特征" class="headerlink" title="9.并发的三大特征"></a>9.并发的三大特征</h3><ul><li>原子性</li><li>可见性</li><li>有序性</li></ul><h3 id="10-volatile"><a href="#10-volatile" class="headerlink" title="10.volatile"></a>10.volatile</h3><ul><li>使用volatile关键字可以强制将修改的值立即写入主存</li><li>volatile关键字，当线程二进行修改时，会导致线程一的缓存变量缓存行失效</li><li>由于线程一的缓存失效，所以当线程需要使用时，就会去主存访问</li><li>volatile不能保证线程安全</li></ul><h3 id="11-为什么使用线程池，解释线程池的参数"><a href="#11-为什么使用线程池，解释线程池的参数" class="headerlink" title="11.为什么使用线程池，解释线程池的参数"></a>11.为什么使用线程池，解释线程池的参数</h3><ul><li>提高响应速度；当有任务进来就直接有线程可以使用</li><li>降低资源消耗；节省了创建线程和销毁线程的性能</li><li>提高线程的可管理性；线程是稀缺资源，统一调优分配监控</li><li>线程池参数<ul><li>corePoolSize,核心线程数，这类线程是常驻线程，正常情况下创建的工作线程数</li><li>maxinumPoolSize最大线程数，和核心线程数对应，当核心线程不够用时，就会创建新的线程，但是最大线程数不会超过最大线程数</li><li>keepAliveTime、unit表示超出核心线程数的线程能空闲存活时间，可以用setKeepAliveTime设置空闲时间</li><li>workQueue用来存放待处理任务，当核心线程用完时，还有任务就会放入待处理任务，当处理区任务存满时就会开始创建新的线程</li><li>ThreadFactory线程工厂，默认的线程工厂创建的是优先级相同的线程，而且不会有守护线程，所以一般都是自定义线程工厂</li><li>Handler任务拒绝策略，有两种情况，调用shutdown等方法关闭线程池后，线程池提交任务就会拒绝，另一种就是达到最大线程数之后已经没有线程来处理新提交的任务时，也会拒绝</li></ul></li></ul><h3 id="12-简述线程池处理流程"><a href="#12-简述线程池处理流程" class="headerlink" title="12.简述线程池处理流程"></a>12.简述线程池处理流程</h3><p>线程池执行任务，判断核心线程是否已满，未满则创建，已满则判断任务队列是否已满，未满则放入队列，已满则判断最大线程池是否已满，未满则创建新的临时线程执行，已满则任务拒绝策略，拒接任务</p><p><img src="/2023/07/25/xian-cheng-bing-fa-xiang-guan/Users\32191\AppData\Roaming\Typora\typora-user-images\image-20230725111934115.png" alt="image-20230725111934115"></p><h3 id="13-线程池中阻塞队列的作用，为什么是先添加队列而不是创建最大线程"><a href="#13-线程池中阻塞队列的作用，为什么是先添加队列而不是创建最大线程" class="headerlink" title="13.线程池中阻塞队列的作用，为什么是先添加队列而不是创建最大线程"></a>13.线程池中阻塞队列的作用，为什么是先添加队列而不是创建最大线程</h3><ul><li><p>一般队列只能保证作为一个有限长度的缓冲区，如果超出了有效长度，就无法保留当前任务了，阻塞队列可以通过阻塞，保留住当前想要继续进入队列的任务</p><ul><li>阻塞队列自带阻塞和唤醒功能，不需要额为处理</li></ul></li><li><p>在创建新的线程时，是需要重新获得全局锁的，这个时候其他的就得阻塞了，影响了整体效率</p><ul><li>就好比一个企业里面有10个（core）正式工的名额，最多招10个正式工，要是任务超过正式工人数 （task &gt; core）的情况下，工厂领导（线程池）不是首先扩招工人，还是这10人，但是任务可以稍微积 压一下，即先放到队列去（代价低）。10个正式工慢慢干，迟早会干完的，要是任务还在继续增加，超 过正式工的加班忍耐极限了（队列满了），就的招外包帮忙了（注意是临时工）要是正式工加上外包还 是不能完成任务，那新来的任务就会被领导拒绝了（线程池的拒绝策略）。</li></ul></li></ul><h3 id="14-线程池中线程复用原理"><a href="#14-线程池中线程复用原理" class="headerlink" title="14.线程池中线程复用原理"></a>14.线程池中线程复用原理</h3><ul><li>线程池将线程和任务解耦，线程是线程，任务是任务，摆脱了之前用Thread创建一个线程必须对应一个任务的限制</li><li>在线程池中，可以不断的从阻塞队列中获取新任务执行，其原理在于对Thread进行了封装，每次任务结束并不是每次都再调用start()方法重新创建线程，而是让每个线程去执行一个“循环任务”，不断检查是否有任务需要执行，如果有就执行，也就是调用run()方法；</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;线程并发相关&quot;&gt;&lt;a href=&quot;#线程并发相关&quot; class=&quot;headerlink&quot; title=&quot;线程并发相关&quot;&gt;&lt;/a&gt;线程并发相关&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="面" scheme="https://llzzoomm.github.io/categories/%E9%9D%A2/"/>
+    
+    
+    <category term="面" scheme="https://llzzoomm.github.io/tags/%E9%9D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>分布式搜索引擎02</title>
@@ -343,90 +427,6 @@
     
     
     <summary type="html">&lt;p&gt;AJAX&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="精简" scheme="https://llzzoomm.github.io/categories/%E7%B2%BE%E7%AE%80/"/>
-    
-    
-    <category term="精简" scheme="https://llzzoomm.github.io/tags/%E7%B2%BE%E7%AE%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注解开发</title>
-    <link href="https://llzzoomm.github.io/2023/03/28/zhujie00/"/>
-    <id>https://llzzoomm.github.io/2023/03/28/zhujie00/</id>
-    <published>2023-03-28T09:26:38.296Z</published>
-    <updated>2023-03-28T09:30:26.219Z</updated>
-    
-    <content type="html"><![CDATA[<p>注解开发</p><span id="more"></span><p><img src="/2023/03/28/zhujie00/06790b87760779a3939f72ea88c112d9.png"></p><p><img src="/2023/03/28/zhujie00/eca9b2f24aa734d1eb377498ec12c2d2.png"></p><p>纯注解开发也就是定义一个config 包，然后包下有一个springconfig类通过添加注解来开发</p><p><img src="/2023/03/28/zhujie00/16720081f0972f1abf3649e4ea7b787b.png"></p><p><img src="/2023/03/28/zhujie00/ce4f1a0243b33f42d8585acc348692e7.png"></p><p><img src="/2023/03/28/zhujie00/510c113521c97e8a76157d27af48c88d.png"></p><p><img src="/2023/03/28/zhujie00/e12d5be51ebca37453a2432eb011c3c6.png"></p><p><img src="/2023/03/28/zhujie00/111b726c55fc9cde4af1b66de50a8bf5.png"></p><p><img src="/2023/03/28/zhujie00/5a17888ac5458f4d90c5f2ab60095dd0.png"></p><p><img src="/2023/03/28/zhujie00/5f845ca0239f58432a47f5dc3c27c899.png"></p><p>下面这种方法不方便，在需要管理很多第三方的时候就会很多</p><p><img src="/2023/03/28/zhujie00/5bdb37465d1b3666755c8bec015169a9.png"></p><p><img src="/2023/03/28/zhujie00/dc82cebf7accb18b2411caf5d7188f66.png"></p><p>建议使用方式一</p><p><img src="/2023/03/28/zhujie00/6b8dc039a7397f6c37336a3349e5dc40.png"></p><p><img src="/2023/03/28/zhujie00/138e95c81b22b2cc332000744c855d08.png"></p><p><img src="/2023/03/28/zhujie00/96a297c41e01f54e022cca01e8ae506c.png"></p><p><img src="/2023/03/28/zhujie00/6aceae78dc6b64c0c7f78d354d61e694.png"></p><p><img src="/2023/03/28/zhujie00/52f14c33cfa8f1988cceb62fc9e32ea6.png"></p><p><img src="/2023/03/28/zhujie00/60416b6decbe847f8ff5156692114798.png"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;注解开发&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="精简" scheme="https://llzzoomm.github.io/categories/%E7%B2%BE%E7%AE%80/"/>
-    
-    
-    <category term="精简" scheme="https://llzzoomm.github.io/tags/%E7%B2%BE%E7%AE%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>条件查询</title>
-    <link href="https://llzzoomm.github.io/2023/03/28/tiaojianchaxun00/"/>
-    <id>https://llzzoomm.github.io/2023/03/28/tiaojianchaxun00/</id>
-    <published>2023-03-28T09:26:38.295Z</published>
-    <updated>2023-03-28T09:26:18.163Z</updated>
-    
-    <content type="html"><![CDATA[<p>条件查询</p><span id="more"></span><p><img src="/2023/03/28/tiaojianchaxun00/202120a82fb78c63fb4301778b4cc96a.png"></p><p>更推荐使用格式4</p><p><img src="/2023/03/28/tiaojianchaxun00/25d62edd172f00d22c8076411b7770c9.png"></p><p><img src="/2023/03/28/tiaojianchaxun00/ef28378d73a8aee2b9a492b74091d43e.png"></p><p>Lqw.ge()中三个参数第一个是boolen类型，为真执行此操作，为假则不执行</p><p><img src="/2023/03/28/tiaojianchaxun00/0a9bdc8ce2e622eefedd8b94d3abefc4.png"></p><p><img src="/2023/03/28/tiaojianchaxun00/26b1f6f5da2a60415e53d927b9a2fbe3.png"></p><p><img src="/2023/03/28/tiaojianchaxun00/fd8e1acb6d2bac2739e110f9b7b823c3.png"></p><p><img src="/2023/03/28/tiaojianchaxun00/af94b710e4dc460d021c33a74a76f997.png"></p><p>当数据库的·表和pojo实体类的表结构不一样时，使用以下注解</p><p><img src="/2023/03/28/tiaojianchaxun00/c00f0088b2641d1aa66827e3a4cc6e90.png"></p><p>当实体表中的数据，数据库表中没有时，使用注解</p><p><img src="/2023/03/28/tiaojianchaxun00/162867c74d9dc88b7d4787134ef734e2.png"></p><p>当数据需要保密，从而不加载出来，使用属性select</p><p><img src="/2023/03/28/tiaojianchaxun00/b98ca2b1436d5c5176ffc02cd3478c71.png"></p><p>使用@TableName注解设置当前类和数据表名称相同</p><p><img src="/2023/03/28/tiaojianchaxun00/6a5cc1454044a14bbb1101131bb23ca6.png"></p><p>在yml文件配置中进行配置，可以使全局数据库以tbl_开头，使用@TableId注解修改id增长方式</p><p><img src="/2023/03/28/tiaojianchaxun00/c38bfba4e8388dbb81641c1b5a332325.png"><img src="/2023/03/28/tiaojianchaxun00/cfe8dfb2918a8bb74f8e7ac70b19ee9f.png"></p><p><img src="/2023/03/28/tiaojianchaxun00/24c1020bb816672980344e282da7ef94.png"></p><p><img src="/2023/03/28/tiaojianchaxun00/bfc271ff790ca0598cd8c23412bfdaf9.png"></p><p><img src="/2023/03/28/tiaojianchaxun00/292ee135046be3b2414040241ecf523d.png"></p><p><img src="/2023/03/28/tiaojianchaxun00/4d0adb52d09dbebcca92414f665e6169.png"></p><p>删除语句将变成修改语句，被标记的数据是不能被mybatisplus的API查询到，如果要访问</p><p>需要自己重写sql语句</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;条件查询&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="精简" scheme="https://llzzoomm.github.io/categories/%E7%B2%BE%E7%AE%80/"/>
-    
-    
-    <category term="精简" scheme="https://llzzoomm.github.io/tags/%E7%B2%BE%E7%AE%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>乐观锁+代码生成器</title>
-    <link href="https://llzzoomm.github.io/2023/03/28/leguansuo00/"/>
-    <id>https://llzzoomm.github.io/2023/03/28/leguansuo00/</id>
-    <published>2023-03-28T09:26:38.294Z</published>
-    <updated>2023-03-28T09:02:01.500Z</updated>
-    
-    <content type="html"><![CDATA[<p>乐观锁+代码生成器</p><span id="more"></span><p><img src="/2023/03/28/leguansuo00/93800b1aa0669ccc8a1c3523ad23f233.png"></p><p><img src="/2023/03/28/leguansuo00/cdba0fed79fc19109bf40e47cd79458b.png"></p><p><img src="/2023/03/28/leguansuo00/23e65b8bfef404d7f1598288251c90a5.png"></p><p><img src="/2023/03/28/leguansuo00/e3d16b8fa236bd14f325896803a239dc.png"></p><p><img src="/2023/03/28/leguansuo00/36af52cdca388ea16ca94aba1b90162e.png"></p><p><img src="/2023/03/28/leguansuo00/795ae14afaee558be018749562c606ac.png"></p><p><img src="/2023/03/28/leguansuo00/5587e7914ba19ad9c760c2dd50f534b4.png"></p><p><img src="/2023/03/28/leguansuo00/0b276fb60deafef6955d6c7439174998.png"></p><p><img src="/2023/03/28/leguansuo00/9045be13a187eb985f5e9b955100432c.png"></p><p><img src="/2023/03/28/leguansuo00/07f93a8384927a6bdbe4257c6f0e94ac.png"></p><p><img src="/2023/03/28/leguansuo00/384e4020157fef1231013a4301ab2664.png"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;乐观锁+代码生成器&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="精简" scheme="https://llzzoomm.github.io/categories/%E7%B2%BE%E7%AE%80/"/>
-    
-    
-    <category term="精简" scheme="https://llzzoomm.github.io/tags/%E7%B2%BE%E7%AE%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue</title>
-    <link href="https://llzzoomm.github.io/2023/03/28/vue00/"/>
-    <id>https://llzzoomm.github.io/2023/03/28/vue00/</id>
-    <published>2023-03-28T09:26:38.293Z</published>
-    <updated>2023-03-28T09:25:44.391Z</updated>
-    
-    <content type="html"><![CDATA[<p>vue</p><span id="more"></span><p><img src="/2023/03/28/vue00/d9191d341851de525d70b3b931e2dad7.png"></p><p><img src="/2023/03/28/vue00/c0f6bc34bbcf63d3564b0b88fc6fffd4.png"></p><p><img src="/2023/03/28/vue00/cf1d27d0acf2dde0886900d79c98287e.png"></p><p><img src="/2023/03/28/vue00/32b34de65390b7384260366caac54066.png"></p><p><img src="/2023/03/28/vue00/5f945cd6f5619a19cc3f81ae3536a949.png"></p><p>基于vue，开发的一种更方便的框架</p><p><img src="/2023/03/28/vue00/a6adc4ab3d337ee43bb12a7d5152e415.png"></p><p><img src="/2023/03/28/vue00/15261ca3445f69abba6a55d437f69acd.png"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;vue&lt;/p&gt;</summary>
     
     
     
